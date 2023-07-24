@@ -4,9 +4,8 @@ import styled from "@emotion/styled";
 import LookCover from "../assets/cover-look.jpg";
 import FeelCover from "../assets/cover-feel.jpg";
 
-const MainCategory = ({ landing, setLanding }) => {
-  
-    // Styles
+const MainCategoryDecisionPage = ({ landing, setLanding, journeySelection, setJourneySelection }) => {
+  // Styles
 
   const CategoryWrapperBox = styled(Box)([
     {
@@ -19,12 +18,14 @@ const MainCategory = ({ landing, setLanding }) => {
       right: "0",
       bottom: "0",
       opacity: "0",
+      visibility: "hidden",
       zIndex: "1",
       transition: "all ease 2s",
     },
 
     landing && {
       opacity: "1",
+      visibility: "visible"
     },
   ]);
 
@@ -54,18 +55,39 @@ const MainCategory = ({ landing, setLanding }) => {
     justifyContent: "center",
   });
 
-  // End Styles 
+  const CategoryButton = styled(Button)(
+    {
+      fontWeight: '800px',
+      fontSize: '64px',
+      textTransform: 'uppercase',
+      color: 'white'
+      
+    }
+  )
+
+  // End Styles
+
+  const categoryClickHandler = (e) => {
+    let text = e.target.innerText;
+    if(text === "LOOK") {
+        setJourneySelection("look")
+    } else if (text === "FEEL") {
+        setJourneySelection("feel")
+    } else {
+        console.log('error')
+    }
+  }
 
   return (
     <CategoryWrapperBox>
       <LeftCategoryBox>
-        <Button>Look</Button>
+        <CategoryButton onClick={categoryClickHandler}>Look</CategoryButton>
       </LeftCategoryBox>
       <RightCategoryBox>
-        <Button variant="text">Feel</Button>
+        <CategoryButton onClick={categoryClickHandler}>Feel</CategoryButton>
       </RightCategoryBox>
     </CategoryWrapperBox>
   );
 };
 
-export default MainCategory;
+export default MainCategoryDecisionPage;

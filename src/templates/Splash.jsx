@@ -40,6 +40,7 @@ const Splash = ({ landing, setLanding }) => {
         },
         landing && {
           opacity: "0",
+          visibility: "hidden",
         },
       ]}
       className={"active"}
