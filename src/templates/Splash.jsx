@@ -12,6 +12,7 @@ const Splash = ({ landing, setLanding }) => {
   const enterButtonClickHandler = () => {
     setLanding(true);
     console.log("Landing page set");
+    //TO DO: find a way to disable this button on click so it doesn't show through
   };
 
   console.log(backgroundImage);
