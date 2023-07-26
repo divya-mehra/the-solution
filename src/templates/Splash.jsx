@@ -36,7 +36,7 @@ const Splash = ({ landing, setLanding }) => {
           bottom: "0",
           opacity: "1",
           zIndex: "2",
-          transition: "all ease 1s"
+          transition: "all ease 1s",
         },
         landing && {
           opacity: "0",
@@ -46,7 +46,7 @@ const Splash = ({ landing, setLanding }) => {
       className={"active"}
     >
       <Typography variant="h2">
-        Welcome to The Solution<sup>TM</sup>
+        Welcome to Alkhemy<sup>TM</sup>
       </Typography>
       <Typography variant="h6">We're thrilled to have you here.</Typography>
       <CustomButton onClick={enterButtonClickHandler}> Enter </CustomButton>

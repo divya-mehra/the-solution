@@ -1,6 +1,6 @@
 import { Box, Typography } from "@mui/material";
 import styled from "@emotion/styled";
-import { alignProperty } from "@mui/material/styles/cssUtils";
+import LookImage from "../assets/look-page.jpg";
 
 const CategoryPage = ({ journeySelection }) => {
   console.log(journeySelection);
@@ -26,6 +26,8 @@ const CategoryPage = ({ journeySelection }) => {
   const FlexChild = styled.div({
     flex: "1 1 0", // Make the flex children equal width
     textAlign: "right",
+    height: "100%",
+    margin: 4*5
   });
 
   return (
@@ -53,19 +55,22 @@ const CategoryPage = ({ journeySelection }) => {
             </p>
           </Typography>
         </FlexChild>
-        <FlexChild>
-          <Typography sx={{ textAlign: "right" }}>hi</Typography>
+        <FlexChild
+          
+        >
+          {/* <Typography sx={{ textAlign: "right" }}></Typography> */}
+          <Box sx={{ backgroundImage: `url(${LookImage})`, backgroundSize: "cover", height: "100%" }}></Box>
         </FlexChild>
       </MainBox>
       <MainBoxSmall>
         <div></div>
         <Typography variant="h3" sx={{ textAlign: "right" }}>
-          As Easy As 1-2-3
+          Aklhemy is as easy as 1-2-3
         </Typography>
       </MainBoxSmall>
       <MainBox>
         <Typography variant="h3" sx={{ textAlign: "right" }}>
-          Start with CC-1
+          Start with CC LOOK-1
         </Typography>
       </MainBox>
     </>
