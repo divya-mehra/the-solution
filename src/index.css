@@ -8,8 +8,20 @@
 @font-face {
   font-family: 'DIN';
   src: url('/src/assets/DIN.ttf') format('truetype');
+  font-weight: 400;
 }
 
+@font-face {
+  font-family: 'DIN';
+  src: url('/src/assets/DIN Medium.ttf') format('truetype');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'DIN';
+  src: url('/src/assets/DIN\ Bold.ttf') format('truetype');
+  font-weight: 600;
+}
 
 
 :root {

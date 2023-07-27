@@ -3,14 +3,19 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import Landing from "./templates/Landing";
 import { ThemeProvider, createTheme } from "@mui/material";
-import { red } from "@mui/material/colors";
+import { red, grey } from "@mui/material/colors";
 import CssBaseline from "@mui/material/CssBaseline";
 
 const theme = createTheme({
   palette: { primary: { main: "#000" }, secondary: { main: "#ccc" } },
   typography: {
     fontFamily: ["DIN"],
-    variantTest: { fontSize: "6rem", color: red[200] },
+    hero: { 
+      fontFamily: "DIN", 
+      fontSize: 64, 
+      fontWeight: 400,
+      color: grey[100]
+     },
     h1: {
       fontFamily: "Optima",
       fontWeight: 300,
@@ -26,8 +31,9 @@ const theme = createTheme({
     },
     body1: {
       fontFamily: "DIN",
-      fontWeight: 400
-    }
+      fontWeight: 400,
+      fontSize: 18
+    },
   },
 });
 
