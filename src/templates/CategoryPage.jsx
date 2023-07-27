@@ -27,11 +27,14 @@ const CategoryPage = ({ journeySelection }) => {
     flex: "1 1 0", // Make the flex children equal width
     textAlign: "right",
     height: "100%",
-    margin: 4*5
+    margin: 4 * 5,
   });
 
   return (
     <>
+      <MainBox>
+        <FlexChild>Two women smiling.</FlexChild>
+      </MainBox>
       <MainBox>
         <FlexChild>
           <Typography variant="h3" sx={{ textAlign: "left", paddingBottom: 1 }}>
@@ -42,30 +45,41 @@ const CategoryPage = ({ journeySelection }) => {
           </Typography>
           <Typography sx={{ textAlign: "left" }}>
             <p>
-              We know it's hard to keep your wellness in check. How you look
-              influences how you feel and that where we come in. We have the
-              products to make you look 100% so you can feel your best.
+              We know life gets hard. You are expected to rise at the crack of
+              dawn, put on your best face, and move through the day while
+              supporting a family, a career, a house, whole lives other than your own.
+            </p>
+      
+            <p>
+              But wellness doesn't have to be a problem. Not when you've got The
+              Solution.
+            </p>
+            <p>
+              How you look influences how you feel. We have the products to make
+              you look 100% so you can feel on top of the world. 200%. (Can someone check the math on this?)
             </p>
             <p>
               In our homegrown LOOK category, we derive the highest-quality
               ingredients from the Mediterranean, India, and the Far East.
-              Believe it or not, we've actually got scouts out there.These
-              solutions are tried and tested in our scientific labratories
-              before even being considered for you.
+              These solutions are tried and tested in our scientific labratories, where some of the brightest minds come together to develop the right balance of ingredients for you.
             </p>
           </Typography>
         </FlexChild>
-        <FlexChild
-          
-        >
+        <FlexChild>
           {/* <Typography sx={{ textAlign: "right" }}></Typography> */}
-          <Box sx={{ backgroundImage: `url(${LookImage})`, backgroundSize: "cover", height: "100%" }}></Box>
+          <Box
+            sx={{
+              backgroundImage: `url(${LookImage})`,
+              backgroundSize: "cover",
+              height: "100%",
+            }}
+          ></Box>
         </FlexChild>
       </MainBox>
       <MainBoxSmall>
         <div></div>
         <Typography variant="h3" sx={{ textAlign: "right" }}>
-          Aklhemy is as easy as 1-2-3
+          As easy as 1-2-3
         </Typography>
       </MainBoxSmall>
       <MainBox>

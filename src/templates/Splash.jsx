@@ -45,10 +45,10 @@ const Splash = ({ landing, setLanding }) => {
       ]}
       className={"active"}
     >
-      <Typography variant="h2">
-        Welcome to Alkhemy<sup>TM</sup>
+      <Typography variant="h1">
+        Welcome to The Solution<sup>TM</sup>
       </Typography>
-      <Typography variant="h6">We're thrilled to have you here.</Typography>
+      <Typography variant="h5">We're thrilled to have you here.</Typography>
       <CustomButton onClick={enterButtonClickHandler}> Enter </CustomButton>
     </Box>
   );

@@ -1,4 +1,4 @@
-import { Box, Button } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 import { useState } from "react";
 import styled from "@emotion/styled";
 import LookCover from "../assets/cover-look.jpg";
@@ -60,7 +60,8 @@ const MainCategoryDecisionPage = ({ landing, setLanding, journeySelection, setJo
       fontWeight: '800px',
       fontSize: '64px',
       textTransform: 'uppercase',
-      color: 'white'
+      color: 'white',
+      fontFamily: 'Optima'
       
     }
   )
@@ -82,9 +83,11 @@ const MainCategoryDecisionPage = ({ landing, setLanding, journeySelection, setJo
     <CategoryWrapperBox>
       <LeftCategoryBox>
         <CategoryButton onClick={categoryClickHandler}>Look</CategoryButton>
+        <Typography sx={{color: "white"}}>Seductive, non-threatening. Freckled skin, but not overdone. Anon face.</Typography>
       </LeftCategoryBox>
       <RightCategoryBox>
         <CategoryButton onClick={categoryClickHandler}>Feel</CategoryButton>
+        <Typography sx={{color: "white"}}>Something that could be anything. Dewy petals? Glittery sleeve? Light & floaty.</Typography>
       </RightCategoryBox>
     </CategoryWrapperBox>
   );
