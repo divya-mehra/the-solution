@@ -1,6 +1,10 @@
 import { Box, Typography } from "@mui/material";
 import styled from "@emotion/styled";
 import LookImage from "../assets/look_one.jpg";
+import LookImageTwo from "../assets/look_two.jpg";
+import Footer from "../components/Footer";
+import MedBox from "../components/CategoryPage/MedBox"
+
 
 const CategoryPage = ({ journeySelection }) => {
   console.log(journeySelection);
@@ -8,6 +12,8 @@ const CategoryPage = ({ journeySelection }) => {
   const Wrapper = styled(Box)({
     display: "flex",
     flexDirection: "column",
+    height: "100%",
+    flexGrow: 1,
   });
 
   const MainBox = styled(Box)({
@@ -37,9 +43,21 @@ const CategoryPage = ({ journeySelection }) => {
     right: 0,
     // border: "1px solid black",
     height: "700px",
-    width: "800px",
+    width: "50%",
     backgroundImage: `url(${LookImage})`,
     backgroundSize: "cover",
+  });
+
+  const ImageElementLeft = styled.div({
+    position: "absolute",
+    left: 0,
+    // border: "1px solid black",
+    aspectRatio: "1/1",
+    width: "50%",
+    backgroundImage: `url(${LookImageTwo})`,
+    backgroundSize: "cover",
+    marginBottom: 4*4,
+    
   });
 
   const MainBoxSmall = styled(Box)({
@@ -68,31 +86,21 @@ const CategoryPage = ({ journeySelection }) => {
     margin: 4 * 5,
     padding: 4 * 10,
     border: "1px solid grey",
-  });
+    });
 
   const MainBoxThree = styled(Box)({
     
-      display: "flex", 
-      justifyContent: "center", 
-      width: "100%",
-      padding: 4 * 4,
-      gap: 4 * 20,
-  
-    
-  })
+    margin: "0 auto",
+    width: "90%",
+    display: "grid",
+    gridTemplateColumns: "auto",
+    gridTemplateRows: "1fr",
+    padding: 4 * 40,
+})
 
-  const SmallBox = styled(Box)({
-    border: "1px solid black",
-    flex: "1 1 1 0",
-    aspectRatio: "1/1",
-    flexGrow: "1",
-    padding: 4 * 4,
-    
-
-  })
 
   return (
-    <Wrapper>
+    <><Wrapper>
       <MainBox>
         <ImageBox>
           <Typography variant="hero">
@@ -145,27 +153,17 @@ const CategoryPage = ({ journeySelection }) => {
         >
           As easy as 1-2-3
         </Typography>
-        <MainBoxThree>
-          <SmallBox>
-            <p>Step 1</p>
-            <p>Renew</p>
-          </SmallBox>
-          <SmallBox>
-            <p>Step 1</p>
-            <p>Renew</p>
-          </SmallBox>
-          <SmallBox>
-            <p>Step 1</p>
-            <p>Renew</p>
-          </SmallBox>
-        </MainBoxThree>
+        <MedBox/>
       </MainBoxSmall>
-      <MainBox>
+      <MainBoxThree>
         <Typography variant="h3" sx={{ textAlign: "right" }}>
           Start with CC LOOK-1
         </Typography>
-      </MainBox>
-    </Wrapper>
+        <ImageElementLeft></ImageElementLeft>
+      </MainBoxThree>
+      <Footer />
+    </Wrapper></>
+
   );
 };
 

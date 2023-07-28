@@ -10,12 +10,24 @@ const theme = createTheme({
   palette: { primary: { main: "#000" }, secondary: { main: "#ccc" } },
   typography: {
     fontFamily: ["DIN"],
-    hero: { 
-      fontFamily: "DIN", 
-      fontSize: 64, 
+    hero: {
+      fontFamily: "DIN",
       fontWeight: 400,
-      color: grey[100]
-     },
+      color: grey[100],
+      wordBreak: "break-all",
+      "@media (max-width: 600px)": {
+        fontSize: "1rem", // Font size for extra-small (mobile) screens
+      },
+      "@media (min-width: 600px) and (max-width: 960px)": {
+        fontSize: "2rem", // Font size for small (tablet) screens
+      },
+      "@media (min-width: 960px) and (max-width: 1280px)": {
+        fontSize: "3rem", // Font size for medium (laptop) screens
+      },
+      "@media (min-width: 1280px)": {
+        fontSize: "4rem", // Font size for large (desktop) screens and above
+      },
+    },
     h1: {
       fontFamily: "Optima",
       fontWeight: 300,
@@ -32,7 +44,7 @@ const theme = createTheme({
     body1: {
       fontFamily: "DIN",
       fontWeight: 400,
-      fontSize: 18
+      fontSize: 18,
     },
   },
 });
