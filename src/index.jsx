@@ -3,8 +3,23 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import Landing from "./templates/Landing";
 import { ThemeProvider, createTheme } from "@mui/material";
-import { red, grey } from "@mui/material/colors";
+import { grey } from "@mui/material/colors";
 import CssBaseline from "@mui/material/CssBaseline";
+
+import ProductPage from "./templates/ProductPage";
+
+import { MemoryRouter, Routes, Route, Link, Outlet, useNavigate } from "react-router-dom";// import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+const routes = [
+  {
+    path: "/",
+    component: Landing,
+  },
+  {
+    path: "/corsica-clementine",
+    component: () => <ProductPage name="corsica clementine" />, // Wrap JSX in a function
+  },
+];
 
 const theme = createTheme({
   palette: { primary: { main: "#000" }, secondary: { main: "#ccc" } },
@@ -14,18 +29,18 @@ const theme = createTheme({
       fontFamily: "DIN",
       fontWeight: 400,
       color: grey[100],
-      wordBreak: "break-all",
+      // wordBreak: "break-all",
       "@media (max-width: 600px)": {
-        fontSize: "1rem", // Font size for extra-small (mobile) screens
+        fontSize: "2rem", // Font size for extra-small (mobile) screens
       },
       "@media (min-width: 600px) and (max-width: 960px)": {
-        fontSize: "2rem", // Font size for small (tablet) screens
+        fontSize: "3rem", // Font size for small (tablet) screens
       },
       "@media (min-width: 960px) and (max-width: 1280px)": {
-        fontSize: "3rem", // Font size for medium (laptop) screens
+        fontSize: "4rem", // Font size for medium (laptop) screens
       },
       "@media (min-width: 1280px)": {
-        fontSize: "4rem", // Font size for large (desktop) screens and above
+        fontSize: "5rem", // Font size for large (desktop) screens and above
       },
     },
     h1: {
@@ -52,8 +67,16 @@ const theme = createTheme({
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <Landing />
+    <MemoryRouter>
+    <CssBaseline />
+    <Routes>
+        {routes.map((route) => (
+          <Route key={route.path} path={route.path} element={<route.component />} />
+        ))}
+      </Routes>
+      
+      
+      </MemoryRouter>
     </ThemeProvider>
   </React.StrictMode>
 );

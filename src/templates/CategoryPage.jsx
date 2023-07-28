@@ -1,10 +1,10 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, Button } from "@mui/material";
 import styled from "@emotion/styled";
 import LookImage from "../assets/look_one.jpg";
 import LookImageTwo from "../assets/look_two.jpg";
 import Footer from "../components/Footer";
-import MedBox from "../components/CategoryPage/MedBox"
-
+import MedBox from "../components/CategoryPage/MedBox";
+import { useNavigate } from "react-router-dom";
 
 const CategoryPage = ({ journeySelection }) => {
   console.log(journeySelection);
@@ -16,22 +16,30 @@ const CategoryPage = ({ journeySelection }) => {
     flexGrow: 1,
   });
 
-  const MainBox = styled(Box)({
+  const HeroWrapper = styled(Box)({
     position: "relative",
-    margin: "0 auto",
     display: "flex",
     height: "70vh",
-    width: "90%",
     padding: 4 * 20,
     alignItems: "flex-start",
-    gap: 4 * 20,
     justifyContent: "space-between",
-    flexBasis: "0",
+  });
+
+  const Hero = styled.div({
+    position: "absolute",
+    top: "0",
+    left: "0",
+    right: "0",
+    height: "100%",
+    width: "100%",
+    padding: 4 * 10,
+    // backgroundColor: "grey",
+    // border: "1px solid grey",
   });
 
   const MainBoxOne = styled(Box)({
     margin: "0 auto",
-    width: "90%",
+    // width: "90%",
     display: "grid",
     gridTemplateColumns: "40% auto",
     gridTemplateRows: "1fr",
@@ -56,8 +64,7 @@ const CategoryPage = ({ journeySelection }) => {
     width: "50%",
     backgroundImage: `url(${LookImageTwo})`,
     backgroundSize: "cover",
-    marginBottom: 4*4,
-    
+    marginBottom: 4 * 4,
   });
 
   const MainBoxSmall = styled(Box)({
@@ -80,90 +87,97 @@ const CategoryPage = ({ journeySelection }) => {
     margin: 4 * 5,
   });
 
-  const ImageBox = styled.div({
-    height: "100%",
-    width: "100%",
-    margin: 4 * 5,
-    padding: 4 * 10,
-    border: "1px solid grey",
-    });
-
   const MainBoxThree = styled(Box)({
-    
     margin: "0 auto",
     width: "90%",
     display: "grid",
     gridTemplateColumns: "auto",
     gridTemplateRows: "1fr",
     padding: 4 * 40,
-})
+  });
+
+  let navigate = useNavigate();
+
+  const routeChange = (path) => {
+    navigate(path);
+  };
 
 
   return (
-    <><Wrapper>
-      <MainBox>
-        <ImageBox>
-          <Typography variant="hero">
-            Two women pose. One smiles bashfully and looks to the side. The
-            other is fierce and stares at the camera. Her skin sparkles like a
-            Christmas ornament.
-          </Typography>
-        </ImageBox>
-      </MainBox>
-      <MainBoxOne>
-        <FlexChild>
-          <Typography variant="h3" sx={{ textAlign: "left", paddingBottom: 2 }}>
-            Everyone has a story
-          </Typography>
-          <Typography variant="h6" sx={{ textAlign: "left", paddingBottom: 3 }}>
-            Yours begins here.
-          </Typography>
-          <Typography sx={{ textAlign: "left" }}>
-            <p>
-              We know life gets hard. You are expected to rise at the crack of
-              dawn, put on your best face, and move through the day while
-              supporting a family, a career, a house, whole lives other than
-              your own.
-            </p>
+    <>
+      <Wrapper>
+        <HeroWrapper>
+          <Hero>
+            <Typography variant="hero">
+              Two women pose. One smiles bashfully and looks to the side. The
+              other is fierce and stares at the camera. Her skin sparkles like a
+              Christmas ornament.
+            </Typography>
+          </Hero>
+        </HeroWrapper>
+        <MainBoxOne>
+          <FlexChild>
+            <Typography
+              variant="h3"
+              sx={{ textAlign: "left", paddingBottom: 2 }}
+            >
+              Everyone has a story
+            </Typography>
+            <Typography
+              variant="h6"
+              sx={{ textAlign: "left", paddingBottom: 3 }}
+            >
+              Yours begins here.
+            </Typography>
+            <Typography sx={{ textAlign: "left" }}>
+              <p>
+                We know life gets hard. You are expected to rise at the crack of
+                dawn, put on your best face, and move through the day while
+                supporting a family, a career, a house, whole lives other than
+                your own. But wellness doesn't have to be a problem. Not when
+                you've got The Solution.
+              </p>
 
-            <p>
-              But wellness doesn't have to be a problem. Not when you've got The
-              Solution.
-            </p>
-            <p>
-              How you look influences how you feel. We have the products to make
-              you look 100% so you can feel on top of the world. 200%. (Can
-              someone check the math on this?)
-            </p>
-            <p>
-              In our homegrown LOOK category, we derive the highest-quality
-              ingredients from the Mediterranean, India, and the Far East. These
-              solutions are tried and tested in our scientific labratories,
-              where some of the brightest minds come together to develop the
-              right balance of ingredients for you.
-            </p>
+              <p>
+                How you look influences how you feel. We have the products to
+                make you look 100% so you can feel on top of the world. 200%.
+              </p>
+              <p>
+                In our homegrown LOOK category, we derive the highest-quality
+                ingredients from the Mediterranean, India, and the Far East.
+                These solutions are tried and tested in our scientific
+                labratories, where some of the brightest minds come together to
+                develop the right balance of ingredients for you.
+              </p>
+            </Typography>
+          </FlexChild>
+          <ImageElement></ImageElement>
+        </MainBoxOne>
+        <MainBoxSmall>
+          <Typography
+            variant="h3"
+            sx={{ textAlign: "right", alignSelf: "flex-end" }}
+          >
+            As easy as 1-2-3
           </Typography>
-        </FlexChild>
-        <ImageElement></ImageElement>
-      </MainBoxOne>
-      <MainBoxSmall>
-        <Typography
-          variant="h3"
-          sx={{ textAlign: "right", alignSelf: "flex-end" }}
-        >
-          As easy as 1-2-3
-        </Typography>
-        <MedBox/>
-      </MainBoxSmall>
-      <MainBoxThree>
-        <Typography variant="h3" sx={{ textAlign: "right" }}>
-          Start with CC LOOK-1
-        </Typography>
-        <ImageElementLeft></ImageElementLeft>
-      </MainBoxThree>
-      <Footer />
-    </Wrapper></>
-
+          <MedBox />
+        </MainBoxSmall>
+        <MainBoxThree>
+          <Typography variant="h3" sx={{ textAlign: "right" }}>
+            Start with CC LOOK-1
+          </Typography>
+          <ImageElementLeft></ImageElementLeft>
+          <Button
+            onClick={() => {
+              routeChange("/corsica-clementine");
+            }}
+          >
+            Meet Clementine
+          </Button>
+        </MainBoxThree>
+        <Footer />
+      </Wrapper>
+    </>
   );
 };
 
