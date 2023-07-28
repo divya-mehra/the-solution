@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import Landing from "./templates/Landing";
+import CategoryPage from "./templates/CategoryPage";
 import { ThemeProvider, createTheme } from "@mui/material";
 import { grey } from "@mui/material/colors";
 import CssBaseline from "@mui/material/CssBaseline";
@@ -19,6 +20,11 @@ const routes = [
     path: "/corsica-clementine",
     component: () => <ProductPage name="corsica clementine" />, // Wrap JSX in a function
   },
+  {
+  path: "/look",
+  component: () => <CategoryPage journeySelection={"LOOK"}/>, // Wrap JSX in a function
+  }
+
 ];
 
 const theme = createTheme({

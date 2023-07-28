@@ -17,7 +17,7 @@ const ProductPageNav = () => {
   return (
     <>
       <ProductPageNav>
-        <div>S</div>
+        <NavLink to={'/look'}>look</NavLink>
       </ProductPageNav>
     </>
   );
