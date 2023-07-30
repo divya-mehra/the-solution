@@ -37,16 +37,16 @@ const theme = createTheme({
       color: grey[100],
       // wordBreak: "break-all",
       "@media (max-width: 600px)": {
-        fontSize: "2rem", // Font size for extra-small (mobile) screens
+        fontSize: "1.5rem", // Font size for extra-small (mobile) screens
       },
       "@media (min-width: 600px) and (max-width: 960px)": {
-        fontSize: "3rem", // Font size for small (tablet) screens
+        fontSize: "2rem", // Font size for small (tablet) screens
       },
       "@media (min-width: 960px) and (max-width: 1280px)": {
-        fontSize: "4rem", // Font size for medium (laptop) screens
+        fontSize: "3rem", // Font size for medium (laptop) screens
       },
       "@media (min-width: 1280px)": {
-        fontSize: "5rem", // Font size for large (desktop) screens and above
+        fontSize: "4rem", // Font size for large (desktop) screens and above
       },
     },
     h1: {

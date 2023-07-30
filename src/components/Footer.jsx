@@ -9,7 +9,7 @@ const Footer = () => {
     padding: 4 * 40,
   });
 
-  return <FooterElement>footer here</FooterElement>;
+  return <FooterElement></FooterElement>;
 };
 
 export default Footer;

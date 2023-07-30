@@ -1,183 +1,61 @@
-import { Box, Typography, Button } from "@mui/material";
-import styled from "@emotion/styled";
+import { Box, Typography } from "@mui/material";
 import LookImage from "../assets/look_one.jpg";
 import LookImageTwo from "../assets/look_two.jpg";
 import Footer from "../components/Footer";
-import MedBox from "../components/CategoryPage/MedBox";
-import { useNavigate } from "react-router-dom";
+
+import styles from "./templates.module.css";
+
+import BoxLgTypeA from "../components/Boxes/BoxLgTypeA";
+import BoxLgTypeB from "../components/Boxes/BoxLgTypeB";
 
 const CategoryPage = ({ journeySelection }) => {
   console.log(journeySelection);
 
-  const Wrapper = styled(Box)({
-    display: "flex",
-    flexDirection: "column",
-    height: "100%",
-    flexGrow: 1,
-  });
-
-  const HeroWrapper = styled(Box)({
-    position: "relative",
-    display: "flex",
-    height: "70vh",
-    padding: 4 * 20,
-    alignItems: "flex-start",
-    justifyContent: "space-between",
-  });
-
-  const Hero = styled.div({
-    position: "absolute",
-    top: "0",
-    left: "0",
-    right: "0",
-    height: "100%",
-    width: "100%",
-    padding: 4 * 10,
-    // backgroundColor: "grey",
-    // border: "1px solid grey",
-  });
-
-  const MainBoxOne = styled(Box)({
-    margin: "0 auto",
-    // width: "90%",
-    display: "grid",
-    gridTemplateColumns: "40% auto",
-    gridTemplateRows: "1fr",
-    padding: 4 * 40,
-  });
-
-  const ImageElement = styled.div({
-    position: "absolute",
-    right: 0,
-    // border: "1px solid black",
-    height: "700px",
-    width: "50%",
-    backgroundImage: `url(${LookImage})`,
-    backgroundSize: "cover",
-  });
-
-  const ImageElementLeft = styled.div({
-    position: "absolute",
-    left: 0,
-    // border: "1px solid black",
-    aspectRatio: "1/1",
-    width: "50%",
-    backgroundImage: `url(${LookImageTwo})`,
-    backgroundSize: "cover",
-    marginBottom: 4 * 4,
-  });
-
-  const MainBoxSmall = styled(Box)({
-    margin: "0 auto",
-    display: "flex",
-    flexDirection: "column",
-    width: "90%",
-    paddingTop: 4 * 30,
-    padding: 4 * 20,
-    gap: 4 * 20,
-    alignItems: "flex-start",
-    justifyContent: "space-between",
-    flexBasis: "0",
-  });
-
-  const FlexChild = styled.div({
-    flex: "1 1 0", // Make the flex children equal width
-    textAlign: "right",
-    height: "100%",
-    margin: 4 * 5,
-  });
-
-  const MainBoxThree = styled(Box)({
-    margin: "0 auto",
-    width: "90%",
-    display: "grid",
-    gridTemplateColumns: "auto",
-    gridTemplateRows: "1fr",
-    padding: 4 * 40,
-  });
-
-  let navigate = useNavigate();
-
-  const routeChange = (path) => {
-    navigate(path);
-  };
-
+  const categoryPageArr = [
+    {
+      description: [
+        "We know life gets hard. You are expected to rise at the crack of dawn, put on your best face, and move through the day while supporting a family, a career, a house, whole lives other than your own. But wellness doesn't have to be a problem. Not when you've got The Solution.",
+        "How you look influences how you feel. We have the products to make you look 100% so you can feel on top of the world. 200%.",
+        "In our homegrown LOOK category, we derive the highest-quality ingredients from the Mediterranean, India, and the Far East. These solutions are tried and tested in our scientific labratories, where some of the brightest minds come together to develop the right balance of ingredients for you.",
+      ],
+    },
+    {
+      description: [
+        "We know life gets hard. You are expected to rise at the crack of dawn, put on your best face, and move through the day while supporting a family, a career, a house, whole lives other than your own. But wellness doesn't have to be a problem. Not when you've got The Solution.",
+      ],
+    },
+  ];
 
   return (
-    <>
-      <Wrapper>
-        <HeroWrapper>
-          <Hero>
-            <Typography variant="hero">
-              Two women pose. One smiles bashfully and looks to the side. The
-              other is fierce and stares at the camera. Her skin sparkles like a
-              Christmas ornament.
-            </Typography>
-          </Hero>
-        </HeroWrapper>
-        <MainBoxOne>
-          <FlexChild>
-            <Typography
-              variant="h3"
-              sx={{ textAlign: "left", paddingBottom: 2 }}
-            >
-              Everyone has a story
-            </Typography>
-            <Typography
-              variant="h6"
-              sx={{ textAlign: "left", paddingBottom: 3 }}
-            >
-              Yours begins here.
-            </Typography>
-            <Typography sx={{ textAlign: "left" }}>
-              <p>
-                We know life gets hard. You are expected to rise at the crack of
-                dawn, put on your best face, and move through the day while
-                supporting a family, a career, a house, whole lives other than
-                your own. But wellness doesn't have to be a problem. Not when
-                you've got The Solution.
-              </p>
+    <Box className={styles.wrapper}>
+      <Box className={styles.hero}>
+        <Typography variant="hero">
+          Two women pose. One smiles bashfully and looks to the side. The other
+          is fierce and stares at the camera. Her skin sparkles like a Christmas
+          ornament.
+        </Typography>
+      </Box>
+      <BoxLgTypeA
+        title="Everyone has a story"
+        subtitle="Yours begins here"
+        description={categoryPageArr[0].description}
+        image={LookImage}
+        orientation="left"
+        hasButton={false}
+      />
 
-              <p>
-                How you look influences how you feel. We have the products to
-                make you look 100% so you can feel on top of the world. 200%.
-              </p>
-              <p>
-                In our homegrown LOOK category, we derive the highest-quality
-                ingredients from the Mediterranean, India, and the Far East.
-                These solutions are tried and tested in our scientific
-                labratories, where some of the brightest minds come together to
-                develop the right balance of ingredients for you.
-              </p>
-            </Typography>
-          </FlexChild>
-          <ImageElement></ImageElement>
-        </MainBoxOne>
-        <MainBoxSmall>
-          <Typography
-            variant="h3"
-            sx={{ textAlign: "right", alignSelf: "flex-end" }}
-          >
-            As easy as 1-2-3
-          </Typography>
-          <MedBox />
-        </MainBoxSmall>
-        <MainBoxThree>
-          <Typography variant="h3" sx={{ textAlign: "right" }}>
-            Start with CC LOOK-1
-          </Typography>
-          <ImageElementLeft></ImageElementLeft>
-          <Button
-            onClick={() => {
-              routeChange("/corsica-clementine");
-            }}
-          >
-            Meet Clementine
-          </Button>
-        </MainBoxThree>
-        <Footer />
-      </Wrapper>
-    </>
+      <BoxLgTypeB title={"As Easy As 1-2-3"} />
+
+      <BoxLgTypeA
+        title={"Start with CC LOOK-1"}
+        subtitle={"Or as we like to call her, Clementine"}
+        description={categoryPageArr[1].description}
+        orientation="right"
+        image={LookImageTwo}
+        hasButton={true}
+      />
+      <Footer />
+    </Box>
   );
 };
 

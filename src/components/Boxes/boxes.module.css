@@ -1,0 +1,51 @@
+.boxLg {
+    padding-top: 64px;
+    padding-bottom: 64px;
+}
+
+.boxLgTypeA {
+    position: relative;
+    overflow: visible;
+    margin: 0;
+    display: flex;
+    width: 100%;
+    /* padding-top: 64px;
+    padding-bottom: 64px; */
+}
+
+.flexChild {
+  /* flex: 1 1 0; */
+  height: 100%;
+  width: 40%;
+}
+
+.ImageLgRight {
+    position: absolute;
+    right: 0;
+    top: 64px;
+    height: 700px;
+    width: 50%;
+    background-size: cover;
+    margin-right: -96px;
+  }
+
+  .ImageLgLeft {
+    position: absolute;
+    top: 64px;
+    left: 0;
+    height: 700px;
+    width: 50%;
+    margin-left: -96px;
+    /* backgroundImage: `url(${LookImageTwo})`, */
+    background-size: cover;
+  };
+
+  .boxLgTypeB {
+    position: relative;
+    margin: 0 auto,
+  }
+
+  .boxSmWrapper {
+    display: flex;
+    width: 100%;
+  }

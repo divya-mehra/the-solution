@@ -1,7 +1,7 @@
 import { Box } from "@mui/material";
 import styled from "@emotion/styled";
 
-const SmallBox = ({ number, title, description }) => {
+const BoxSmTypeA = ({ number, title, description }) => {
   const SmallBox = styled(Box)({
     border: "1px solid black",
     flex: "1 1 1 0",
@@ -20,4 +20,4 @@ const SmallBox = ({ number, title, description }) => {
   );
 };
 
-export default SmallBox;
+export default BoxSmTypeA;
