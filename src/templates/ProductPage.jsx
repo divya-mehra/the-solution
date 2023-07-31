@@ -36,7 +36,6 @@ const ProductPage = ({ name }) => {
       <ProductHero title={'Corsica Clementine'} code={'CC LOOK-1'} desProduct={productPageArr[0].description}/>
       <BoxLgWithObserver/>
       <BoxLgTextOnly/>
-      <BoxLgTextOnly/>
       <BoxSmTypeB/>
       {/* Reccomendatations. See More:  */}
       <BoxLgWithSmCards title={"You might also like..."} arr={recProductArr}/>

@@ -5,7 +5,9 @@ import Landing from "./templates/Landing";
 import CategoryPage from "./templates/CategoryPage";
 import { ThemeProvider, createTheme } from "@mui/material";
 import { grey } from "@mui/material/colors";
+
 import CssBaseline from "@mui/material/CssBaseline";
+import ScrollToTop from "./components/navigation/ScrollToTop";
 
 import ProductPage from "./templates/ProductPage";
 
@@ -74,6 +76,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
     <MemoryRouter>
+    <ScrollToTop /> {/* This will scroll the user to the top on route changes */}
     <CssBaseline />
     <Routes>
         {routes.map((route) => (

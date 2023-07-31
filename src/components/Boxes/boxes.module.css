@@ -100,6 +100,12 @@
     border: 1px red dashed;
   }
 
+  .intersectionDiv {
+    position: absolute;
+    object-fit: cover;
+    width: 100%;
+  }
+
   .boxDetail {
     display: flex;
     flex-direction: column;
