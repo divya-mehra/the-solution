@@ -5,11 +5,3 @@
   flex-grow: 1;
   padding: 96px;
 }
-
-.hero {
-  position: relative;
-  display: flex;
-  height: 70vh;
-  align-items: flex-start;
-  justify-content: space-between;
-}

@@ -5,7 +5,7 @@ import CategoryPage from "../../templates/CategoryPage";
 
 const ProductPageNav = () => {
   const ProductPageNav = styled(Box)({
-    position: "sticky",
+    position: "relative",
     top: "0",
     height: "100px",
     left: "0",

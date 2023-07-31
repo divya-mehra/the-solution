@@ -2,7 +2,7 @@ import styles from "./boxes.module.css";
 import { Box, Typography, Button } from "@mui/material";
 import { useNavigate } from "react-router";
 
-const BoxLgTypeA = ({
+const BoxLgImageAndText = ({
   orientation,
   title,
   subtitle,
@@ -27,7 +27,7 @@ const BoxLgTypeA = ({
 
   return (
     <Box
-    className={`${styles.boxLgTypeA} ${styles.boxLg}`}
+    className={`${styles.boxLgImageAndText} ${styles.boxLg}`}
       sx={{
         // gridTemplateColumns: orientation === "left" ? "40% auto" : "auto 40%",
         margin: orientation === "left" ? "0 auto" : "auto 0",
@@ -73,4 +73,4 @@ const BoxLgTypeA = ({
   );
 };
 
-export default BoxLgTypeA;
+export default BoxLgImageAndText;

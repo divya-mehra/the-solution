@@ -1,9 +1,19 @@
 .boxLg {
-    padding-top: 64px;
-    padding-bottom: 64px;
+    margin-top: 64px;
+    margin-bottom: 64px;
 }
 
-.boxLgTypeA {
+.boxLgImageOnly {
+    position: relative;
+    height: 70vh;
+    width: 100%;
+    /* display: flex; */
+    /* align-items: flex-start;
+    justify-content: space-between; */
+    background-size: cover;
+  }  
+
+.boxLgImageAndText {
     position: relative;
     overflow: visible;
     margin: 0;
@@ -40,7 +50,7 @@
     background-size: cover;
   };
 
-  .boxLgTypeB {
+  .boxLgWithSmCards {
     position: relative;
     margin: 0 auto,
   }
@@ -50,4 +60,28 @@
     width: 100%;
     gap: 48px;
     padding: 64px;
+  }
+
+  .productHero {
+    height: 80vh;
+    /* border: 1px black solid; */
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+  }
+
+  .productHero > * {
+    margin: 48px;
+  }
+
+  .boxLgTextOnly {
+    height: 80vh;
+    border: 1px black solid;
+
+  }
+
+  .boxLgWithObserver {
+    height: 80vh;
+    border: 1px black solid;
+
   }

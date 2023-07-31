@@ -2,7 +2,7 @@ import { Box, Typography } from "@mui/material";
 import BoxSmTypeA from "./BoxSmTypeA";
 import styles from './boxes.module.css'
 
-const BoxLgTypeB = ({title}) => {
+const BoxLgWithSmCards = ({title, arr}) => {
 
   // const MainBoxSmall = styled(Box)({
   //     margin: "0 auto",
@@ -17,20 +17,8 @@ const BoxLgTypeB = ({title}) => {
   //     flexBasis: "0",
   //   });
 
-  const stepsArr = [
-    { number: 1, title: "Renew" },
-    {
-      number: 2,
-      title: "Refresh",
-    },
-    {
-      number: 3,
-      title: "Regenerate",
-    },
-  ];
-
   return (
-    <Box className={`${styles.boxLgTypeB} ${styles.boxLg}`}>
+    <Box className={`${styles.boxLgWithSmCards} ${styles.boxLg}`}>
       <Typography
         variant="h3"
         sx={{textAlign: "middle" }}
@@ -38,7 +26,7 @@ const BoxLgTypeB = ({title}) => {
         {title}
       </Typography>
       <div className={styles.boxSmWrapper}>
-      {stepsArr.map((s) => (
+      {arr.map((s) => (
         <BoxSmTypeA number={s.number} title={s.title} description={"des"} />
         
       ))}
@@ -47,4 +35,4 @@ const BoxLgTypeB = ({title}) => {
   );
 };
 
-export default BoxLgTypeB;
+export default BoxLgWithSmCards;

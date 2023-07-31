@@ -1,15 +1,34 @@
 import { Box, Typography } from "@mui/material";
+
 import LookImage from "../assets/look_one.jpg";
 import LookImageTwo from "../assets/look_two.jpg";
+import LookHero from "../assets/look_hero.jpg";
+
 import Footer from "../components/Footer";
 
 import styles from "./templates.module.css";
 
-import BoxLgTypeA from "../components/Boxes/BoxLgTypeA";
-import BoxLgTypeB from "../components/Boxes/BoxLgTypeB";
+import BoxLgImageAndText from "../components/Boxes/BoxLgImageAndText";
+import BoxLgWithSmCards from "../components/Boxes/BoxLgWithSmCards";
+import BoxLgImageOnly from "../components/Boxes/BoxLgImageOnly";
 
 const CategoryPage = ({ journeySelection }) => {
   console.log(journeySelection);
+
+  const stepsArr = [
+    {
+      subtitle: "Step 1",
+      title: "Renew",
+    },
+    {
+      subtitle: "Step 2",
+      title: "Refresh",
+    },
+    {
+      subtitle: "Step 3",
+      title: "Regenerate",
+    },
+  ];
 
   const categoryPageArr = [
     {
@@ -27,35 +46,31 @@ const CategoryPage = ({ journeySelection }) => {
   ];
 
   return (
-    <Box className={styles.wrapper}>
-      <Box className={styles.hero}>
-        <Typography variant="hero">
-          Two women pose. One smiles bashfully and looks to the side. The other
-          is fierce and stares at the camera. Her skin sparkles like a Christmas
-          ornament.
-        </Typography>
+    <>
+      <BoxLgImageOnly image={{ LookHero }} />
+      <Box className={styles.wrapper}>
+        <BoxLgImageAndText
+          title="Everyone has a story"
+          subtitle="Yours begins here"
+          description={categoryPageArr[0].description}
+          image={LookImage}
+          orientation="left"
+          hasButton={false}
+        />
+
+        <BoxLgWithSmCards title={"As Easy As 1-2-3"} arr={stepsArr} />
+
+        <BoxLgImageAndText
+          title={"Start with CC LOOK-1"}
+          subtitle={"Or as we like to call her, Clementine"}
+          description={categoryPageArr[1].description}
+          orientation="right"
+          image={LookImageTwo}
+          hasButton={true}
+        />
+        <Footer />
       </Box>
-      <BoxLgTypeA
-        title="Everyone has a story"
-        subtitle="Yours begins here"
-        description={categoryPageArr[0].description}
-        image={LookImage}
-        orientation="left"
-        hasButton={false}
-      />
-
-      <BoxLgTypeB title={"As Easy As 1-2-3"} />
-
-      <BoxLgTypeA
-        title={"Start with CC LOOK-1"}
-        subtitle={"Or as we like to call her, Clementine"}
-        description={categoryPageArr[1].description}
-        orientation="right"
-        image={LookImageTwo}
-        hasButton={true}
-      />
-      <Footer />
-    </Box>
+    </>
   );
 };
 

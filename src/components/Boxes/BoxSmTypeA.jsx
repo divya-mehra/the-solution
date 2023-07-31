@@ -1,7 +1,7 @@
 import { Box } from "@mui/material";
 import styled from "@emotion/styled";
 
-const BoxSmTypeA = ({ number, title, description }) => {
+const BoxSmTypeA = ({ subtitle, title, description, icon }) => {
   const SmallBox = styled(Box)({
     border: "0.5px solid black",
     aspectRatio: "3/2",
@@ -11,10 +11,10 @@ const BoxSmTypeA = ({ number, title, description }) => {
 
   return (
     <SmallBox>
-      <p>Step {number}</p>
+      <p>{subtitle}</p>
       <p>{title}</p>
       <p>{description}</p>
-      <p>Icon here</p>
+      <p>{icon}</p>
     </SmallBox>
   );
 };
