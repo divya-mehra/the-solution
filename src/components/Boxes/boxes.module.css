@@ -81,16 +81,23 @@
   }
 
   .boxLgWithObserver {
-    height: 300vh;
+    height: 400vh;
     position: relative;
     display: flex;
     justify-content: space-between;
     gap: 48px;
+    
   }
 
   .boxLgWithObserver > * {
+    flex-basis: 50%;
     flex-grow: 1;
     border: 1px black solid;
+  }
+
+  .observerTextPanel {
+    height: 100vh;
+    border: 1px red dashed;
   }
 
   .boxDetail {
