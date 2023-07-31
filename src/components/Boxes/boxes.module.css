@@ -81,13 +81,32 @@
   }
 
   .boxLgWithObserver {
-    height: 80vh;
-    border: 1px black solid;
+    height: 300vh;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    gap: 48px;
+  }
 
+  .boxLgWithObserver > * {
+    flex-grow: 1;
+    border: 1px black solid;
   }
 
   .boxDetail {
     display: flex;
-    border: 1px black solid;
+    flex-direction: column;
+    height: 200px;
+    gap: 32px;
+    margin-top: 16px;
+    width: 100%;
+    flex-grow: 1;
+  }
+
+  .boxDetailElement {
+    border: 1px black dashed;
+    flex-grow: 1;
+    width: 100%;
     padding: 8px;
   }
+
