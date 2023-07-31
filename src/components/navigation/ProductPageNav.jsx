@@ -7,17 +7,17 @@ const ProductPageNav = () => {
   const ProductPageNav = styled(Box)({
     position: "relative",
     top: "0",
-    height: "100px",
+    height: "50px",
     left: "0",
     right: "0",
-    backgroundColor: "red",
+    backgroundColor: "black",
     opacity: "0.5",
   });
 
   return (
     <>
       <ProductPageNav>
-        <NavLink to={'/look'}>look</NavLink>
+        <NavLink style={{color: "white"}} to={'/look'}>look</NavLink>
       </ProductPageNav>
     </>
   );

@@ -85,3 +85,9 @@
     border: 1px black solid;
 
   }
+
+  .boxDetail {
+    display: flex;
+    border: 1px black solid;
+    padding: 8px;
+  }

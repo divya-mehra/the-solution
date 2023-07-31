@@ -1,14 +1,12 @@
 import { Box, Typography } from "@mui/material";
 import styles from "./boxes.module.css";
-import image from "../../assets/bottle.jpg"
+import image from "../../assets/bottle.jpg";
+import BoxDetail from "../Boxes/BoxDetail"
 
-const ProductHero = ({title, code, desProduct, ingredients, bestFor, }) => {
-    return ( 
-    
+const ProductHero = ({ title, code, desProduct, ingredients, bestFor }) => {
+  return (
     <Box className={`${styles.productHero} ${styles.boxLg}`}>
-        <div
-        className={styles.flexChild}
-      >
+      <div className={styles.flexChild}>
         <Typography variant="h3" sx={{ textAlign: "left", paddingBottom: 2 }}>
           {title}
         </Typography>
@@ -20,26 +18,22 @@ const ProductHero = ({title, code, desProduct, ingredients, bestFor, }) => {
             <p>{p}</p>
           ))}
         </Typography>
+        <BoxDetail/>
       </div>
 
-      
       {/* Image */}
       <div
         style={{
           backgroundImage: `url(${image})`,
           width: "50%",
-          backgroundSize: "cover"
-        }}>
-      </div>
-{/* Product Des on left */}
-{/* Product InfoBox on left */}
-{/* Product ImagewithButton on left */}
+          backgroundSize: "cover",
+        }}
+      ></div>
+      {/* Product Des on left */}
+      {/* Product InfoBox on left */}
+      {/* Product ImagewithButton on left */}
+    </Box>
+  );
+};
 
-
-
-
-
-    </Box> );
-}
- 
 export default ProductHero;

@@ -20,7 +20,6 @@ const ProductPage = ({ name }) => {
               description: [
                 "We know life gets hard. You are expected to rise at the crack of dawn, put on your best face, and move through the day while supporting a family, a career, a house, whole lives other than your own. But wellness doesn't have to be a problem. Not when you've got The Solution.",
                 "How you look influences how you feel. We have the products to make you look 100% so you can feel on top of the world. 200%.",
-                "In our homegrown LOOK category, we derive the highest-quality ingredients from the Mediterranean, India, and the Far East. These solutions are tried and tested in our scientific labratories, where some of the brightest minds come together to develop the right balance of ingredients for you.",
               ],
             },
             {
@@ -34,7 +33,7 @@ const ProductPage = ({ name }) => {
     <>
     <Box className={styles.wrapper}>
       <ProductPageNav />
-      <ProductHero title={'hi'} code={'88sd'} desProduct={productPageArr[0].description}/>
+      <ProductHero title={'Corsica Clementine'} code={'CC LOOK-1'} desProduct={productPageArr[0].description}/>
       <BoxLgWithObserver/>
       <BoxLgTextOnly/>
       <BoxLgTextOnly/>
