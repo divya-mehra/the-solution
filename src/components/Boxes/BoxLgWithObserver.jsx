@@ -11,8 +11,11 @@ const BoxLgWithObserver = () => {
     position: "sticky",
     top: 0,
     height: "100vh",
+    zIndex: 1
     }}>
-        <img src={imageOne} alt="Image One" style={{ width: "100%", objectFit: "cover" }}/>
+        <img src={imageOne} alt="Image One" style={{ width: "100%", objectFit: "cover", position: "absolute" }}/>
+        <img src={imageTwo} alt="Image Two" style={{ width: "100%", objectFit: "cover", position: "absolute", visibility: "hidden" }}/>
+        <img src={imageThree} alt="Image Three" style={{ width: "100%", objectFit: "cover", position: "absolute", visibility: "visible" }}/>
 
     </div>
 <div style={{
