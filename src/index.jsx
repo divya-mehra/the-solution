@@ -23,6 +23,10 @@ const routes = [
     component: () => <ProductPage name="corsica clementine" />, // Wrap JSX in a function
   },
   {
+    path: "/superwoman",
+    component: () => <ProductPage name="superwoman" />, // Wrap JSX in a function
+  },
+  {
   path: "/look",
   component: () => <CategoryPage journeySelection={"LOOK"}/>, // Wrap JSX in a function
   }
