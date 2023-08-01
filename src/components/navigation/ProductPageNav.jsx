@@ -1,25 +1,18 @@
 import { Box } from "@mui/material";
-import styled from "@emotion/styled";
+import styles from "./nav.module.css";
 import { NavLink } from "react-router-dom";
-import CategoryPage from "../../templates/CategoryPage";
 
 const ProductPageNav = () => {
-  const ProductPageNav = styled(Box)({
-    position: "relative",
-    top: "0",
-    height: "50px",
-    left: "0",
-    right: "0",
-    backgroundColor: "black",
-    opacity: "0.5",
-  });
-
   return (
-    <>
-      <ProductPageNav>
-        <NavLink style={{color: "white"}} to={'/look'}>look</NavLink>
-      </ProductPageNav>
-    </>
+    <Box className={styles.productPageNav}>
+      <NavLink
+        className={styles.productPageNavItem}
+        style={{ color: "white" }}
+        to={"/look"}
+      >
+        look
+      </NavLink>
+    </Box>
   );
 };
 

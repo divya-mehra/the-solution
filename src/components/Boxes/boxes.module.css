@@ -1,25 +1,26 @@
 .boxLg {
-    margin-top: 64px;
-    margin-bottom: 64px;
+  margin-top: 64px;
+  margin-bottom: 64px;
 }
 
 .boxLgImageOnly {
-    position: relative;
-    height: 70vh;
-    width: 100%;
-    /* display: flex; */
-    /* align-items: flex-start;
+  position: relative;
+  height: 70vh;
+  width: 100%;
+  /* display: flex; */
+  /* align-items: flex-start;
     justify-content: space-between; */
-    background-size: cover;
-  }  
+  background-size: cover;
+}
 
 .boxLgImageAndText {
-    position: relative;
-    overflow: visible;
-    margin: 0;
-    display: flex;
-    width: 100%;
-    /* padding-top: 64px;
+  position: relative;
+  overflow: visible;
+  /* margin: 0; */
+  display: flex;
+  width: 100%;
+  /* margin-bottom: 160px; */
+  /* padding-top: 64px;
     padding-bottom: 64px; */
 }
 
@@ -30,96 +31,111 @@
 }
 
 .ImageLgRight {
-    position: absolute;
-    right: 0;
-    top: 64px;
-    height: 700px;
-    width: 50%;
-    background-size: cover;
-    margin-right: -96px;
-  }
+  position: absolute;
+  right: 0;
+  top: 64px;
+  height: 500px;
+  width: 50%;
+  background-size: cover;
+  margin-right: -96px;
+}
 
-  .ImageLgLeft {
-    position: absolute;
-    top: 64px;
-    left: 0;
-    height: 700px;
-    width: 50%;
-    margin-left: -96px;
-    /* backgroundImage: `url(${LookImageTwo})`, */
-    background-size: cover;
-  };
+.ImageLgLeft {
+  position: absolute;
+  top: 64px;
+  left: 0;
+  height: 700px;
+  width: 50%;
+  margin-left: -96px;
+  /* backgroundImage: `url(${LookImageTwo})`, */
+  background-size: cover;
+}
 
-  .boxLgWithSmCards {
-    position: relative;
-    margin: 0 auto,
-  }
+.boxLgWithSmCards {
+  margin-top: 96px;
+  margin-bottom: 96px;
+  position: relative;
+  width: 100%;
+  /* margin: 0 auto; */
+}
 
-  .boxSmWrapper {
-    display: flex;
-    width: 100%;
-    gap: 48px;
-    padding: 64px;
-  }
+.boxSmWrapper {
+  display: flex;
+  width: 100%;
+  gap: 48px;
+  padding: 64px;
+}
 
-  .productHero {
-    height: 80vh;
-    /* border: 1px black solid; */
-    display: flex;
-    margin: 0 auto;
-    justify-content: space-between;
-  }
+.productHero {
+  height: 80vh;
+  /* border: 1px black solid; */
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-between;
+}
 
-  .productHero > * {
-    margin: 48px;
-  }
+.productHero > * {
+  margin: 48px;
+}
 
-  .boxLgTextOnly {
-    height: 80vh;
-    border: 1px black solid;
+.boxLgTextOnly {
+  height: 50vh;
+  /* border: 1px black dashed; */
+  padding: 48px;
+}
 
-  }
+.boxLgWithObserver {
+  height: 400vh;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  gap: 48px;
+}
 
-  .boxLgWithObserver {
-    height: 400vh;
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    gap: 48px;
-    
-  }
+.boxLgWithObserver > * {
+  flex-basis: 50%;
+  flex-grow: 1;
+  /* border: 1px black solid; */
+}
 
-  .boxLgWithObserver > * {
-    flex-basis: 50%;
-    flex-grow: 1;
-    border: 1px black solid;
-  }
+.observerTextPanel {
+  height: 100vh;
+  /* border: 1px red dashed; */
+  padding: 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
-  .observerTextPanel {
-    height: 100vh;
-    border: 1px red dashed;
-  }
+.intersectionDiv {
+  position: absolute;
+  object-fit: cover;
+  width: 100%;
+  /* top: 10%; */
+}
 
-  .intersectionDiv {
-    position: absolute;
-    object-fit: cover;
-    width: 100%;
-  }
+.boxDetail {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 32px;
+  margin-top: 16px;
+  width: 100%;
+  /* flex-grow: 1; */
+}
 
-  .boxDetail {
-    display: flex;
-    flex-direction: column;
-    height: 200px;
-    gap: 32px;
-    margin-top: 16px;
-    width: 100%;
-    flex-grow: 1;
-  }
+.boxDetailElement {
+  border: 1px black dashed;
+  /* flex-grow: 1; */
+  width: 100%;
+  padding: 8px;
+}
 
-  .boxDetailElement {
-    border: 1px black dashed;
-    flex-grow: 1;
-    width: 100%;
-    padding: 8px;
-  }
-
+.boxSmTypeB {
+  text-align: center;
+  padding: 96px;
+  background-color: #004654;
+  margin-left: calc(-1 * var(--wrapper-margin));
+  margin-right: calc(-1 * var(--wrapper-margin));
+  color: white;
+}

@@ -14,7 +14,7 @@ const BoxLgImageOnly = () => {
 
   return (
     <div
-      className={`${styles.boxLgImageOnly} ${styles.boxLg}`}
+      className={`${styles.boxLgImageOnly} `}
       style={{
         backgroundImage: `url(${LookHero})`,
       }}

@@ -51,6 +51,11 @@ const theme = createTheme({
         fontSize: "4rem", // Font size for large (desktop) screens and above
       },
     },
+    story: {
+      fontFamily: "Optima",
+      fontSize: 18,
+
+    },
     h1: {
       fontFamily: "Optima",
       fontWeight: 300,

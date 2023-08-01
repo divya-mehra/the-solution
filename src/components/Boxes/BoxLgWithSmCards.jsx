@@ -29,6 +29,7 @@ const BoxLgWithSmCards = ({title, arr}) => {
       {arr.map((s) => (
         <BoxSmTypeA number={s.number} title={s.title} description={"des"} />
         
+        
       ))}
       </div>
     </Box>

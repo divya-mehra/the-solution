@@ -1,7 +1,12 @@
+:root {
+  --wrapper-margin: 96px;
+}
+
 .wrapper {
   display: flex;
   flex-direction: column;
   height: 100%;
   flex-grow: 1;
   padding: 96px;
+  background-color: #fefefe;
 }

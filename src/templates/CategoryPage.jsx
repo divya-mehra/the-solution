@@ -53,7 +53,7 @@ const CategoryPage = ({ journeySelection }) => {
           title="Everyone has a story"
           subtitle="Yours begins here"
           description={categoryPageArr[0].description}
-          image={LookImage}
+          image={LookImageTwo}
           orientation="left"
           hasButton={false}
         />
@@ -65,7 +65,7 @@ const CategoryPage = ({ journeySelection }) => {
           subtitle={"Or as we like to call her, Clementine"}
           description={categoryPageArr[1].description}
           orientation="right"
-          image={LookImageTwo}
+          image={LookImage}
           hasButton={true}
         />
         <Footer />

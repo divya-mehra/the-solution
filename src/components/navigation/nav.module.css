@@ -1,0 +1,16 @@
+.productPageNav {
+    position: absolute;
+    display: flex;
+    top: 0;
+    height: 100px;
+    left: 0;
+    right: 0;
+    background-color: #004654;
+
+    color: white;
+    align-items: center;
+}
+
+.productPageNavItem {
+    padding: 16px;
+}
