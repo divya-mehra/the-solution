@@ -16,47 +16,34 @@ const BoxLgImageOnly = () => {
   const [showTextCover, setShowTextCover] = useState(false);
 
   const mouseOverHandler = () => {
-    setTimeout(() => {setShowTextCover(true)}, 2000);
-    // setShowTextCover(true)
-    setTimeout(() => {setShowTextCover(false)}, 4000);
+    setShowTextCover(true)
+    // setTimeout(() => {setShowTextCover(false)}, 4000);
   };
 
-//   const mouseOutHandler = () => {
-//     setShowTextCover(false)
-//   };
+  const mouseOutHandler = () => {
+    setShowTextCover(false)
+  };
 
   return (
     <div
       className={`${styles.boxLgImageOnly} `}
       style={{
         backgroundImage: `url(${LookHero})`,
-        backgroundColor: "rgba(0, 0, 0, 0.4)",
-        color: "#ffffff40",
-        // opacity: showTextCover ? 0 : 1,
-        transition: "ease all 1s"
       }}
       onMouseOver={mouseOverHandler}
-    //   onMouseOut={mouseOutHandler}
+      onMouseOut={mouseOutHandler}
     >
       <div
-        className="textCover"
+        className={styles.textCover}
         style={{
-          backgroundColor: "rgba(255, 255, 255, 0.5)",
-          width: "100%",
-          height: "100%",
-          position: "absolute",
-          top: 0,
-          left: 0,
           opacity: showTextCover ? 1 : 0,
-          transition: "ease all 1s"
-
         }}
       >
         <Typography variant="hero" sx={{ color: "#ffffff" }}>
-          A woman looks on, her eyes closed. She is serene. She is fierce. She
-          is zen. She is beautiful.{" "}
-          <span style={{ color: "#ff00ff" }}>Her skin sparkles</span> like a
-          Christmas ornament. She is surrounded my saturated fruit and leaves.
+          A woman facing forward, eyes closed. She is strong and
+          serene. She is beautiful and white, but not overly threatening.   
+          <span style={{ color: "#FFD700" }}> Her skin sparkles</span> like a
+          Christmas ornament, surrounded by fruit and leaves. 
         </Typography>
       </div>
     </div>

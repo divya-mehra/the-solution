@@ -38,8 +38,8 @@ const theme = createTheme({
   typography: {
     fontFamily: ["DIN"],
     hero: {
-      fontFamily: "Optima",
-      fontWeight: 400,
+      fontFamily: "DIN",
+      fontWeight: 300,
       color: grey[100],
       // wordBreak: "break-all",
       "@media (max-width: 600px)": {

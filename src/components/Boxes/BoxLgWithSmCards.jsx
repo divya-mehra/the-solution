@@ -27,7 +27,7 @@ const BoxLgWithSmCards = ({title, arr}) => {
       </Typography>
       <div className={styles.boxSmWrapper}>
       {arr.map((s) => (
-        <BoxSmTypeA number={s.number} title={s.title} description={"des"} />
+        <BoxSmTypeA number={s.number} title={s.title} description={s.description} />
         
         
       ))}

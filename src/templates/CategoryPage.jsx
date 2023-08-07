@@ -1,6 +1,6 @@
 import { Box, Typography } from "@mui/material";
 
-import LookImage from "../assets/look_one.jpg";
+import LookImage from "../assets/look_one.png";
 import LookImageTwo from "../assets/look_two.jpg";
 import LookHero from "../assets/look_hero.jpg";
 
@@ -19,6 +19,7 @@ const CategoryPage = ({ journeySelection }) => {
     {
       subtitle: "Step 1",
       title: "Renew",
+      description: "Renew yourself."
     },
     {
       subtitle: "Step 2",

@@ -1,7 +1,7 @@
 import { Button, Typography, Box } from "@mui/material";
 import styled from "@emotion/styled";
 import { useState } from "react";
-import Image from "../assets/bottle.jpg";
+import Image from "../assets/bottle.png";
 import "../index.css";
 
 const Splash = ({ landing, setLanding }) => {
@@ -28,7 +28,7 @@ const Splash = ({ landing, setLanding }) => {
           justifyContent: "center",
           minHeight: "100vh",
           backgroundImage: backgroundImage,
-          backgroundSize: "80%",
+          backgroundSize: "150%",
           position: "absolute",
           top: "0",
           left: "0",

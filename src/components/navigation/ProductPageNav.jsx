@@ -7,10 +7,10 @@ const ProductPageNav = () => {
     <Box className={styles.productPageNav}>
       <NavLink
         className={styles.productPageNavItem}
-        style={{ color: "white" }}
+        style={{ color: "white", textTransform: "uppercase" }}
         to={"/look"}
       >
-        look
+        back to look
       </NavLink>
     </Box>
   );
