@@ -1,7 +1,7 @@
 import { Button, Typography, Box } from "@mui/material";
 import styled from "@emotion/styled";
 import { useState } from "react";
-import Image from "../assets/bottle.png";
+import Image from "/assets/bottle.png";
 import "../index.css";
 
 const Splash = ({ landing, setLanding }) => {

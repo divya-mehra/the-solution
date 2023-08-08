@@ -1,8 +1,8 @@
 import { Box, Typography } from "@mui/material";
 import styles from "./boxes.module.css";
-import image1 from "../../assets/red.png";
-import image2 from "../../assets/redblue.png";
-import image3 from "../../assets/redblueyellow.png";
+import image1 from "/assets/red.png";
+import image2 from "/assets/redblue.png";
+import image3 from "/assets/redblueyellow.png";
 import { useLayoutEffect, useEffect, useState } from "react";
 
 const BoxLgWithObserver = () => {
@@ -126,7 +126,7 @@ const BoxLgWithObserver = () => {
         }}
       >
         <div className={styles.observerTextPanel} id={"panel-1"}>
-          <Typography variant="story">
+          <Typography variant="story" className={styles.observerTextDetail}>
             <p>
               Clementine is astounded by all this. Mo ricochets through her
               bathroom door and screams the truth: we have no time! He stands
@@ -145,7 +145,7 @@ const BoxLgWithObserver = () => {
           </Typography>
         </div>
         <div className={`${styles.observerTextPanel}`} id={"panel-2"}>
-          <Typography variant="story">
+          <Typography variant="story" className={styles.observerTextDetail}>
             <p>
               It wasn’t always like this, the woman thinks, but then maybe it
               was. Maybe she has no idea what it was really like. The woman
@@ -161,7 +161,7 @@ const BoxLgWithObserver = () => {
           </Typography>
         </div>
         <div className={`${styles.observerTextPanel}`} id={"panel-3"}>
-          <Typography variant="story">
+        <Typography variant="story" className={styles.observerTextDetail}>
             <p>
               After a final wash and dry, she dabs around her eyes and over her
               cheeks. When she is done, her face is blurred, ethereal. As a
@@ -179,7 +179,7 @@ const BoxLgWithObserver = () => {
           </Typography>
         </div>
         <div className={`${styles.observerTextPanel} `} id={"panel-4"}>
-          <Typography variant="story">
+        <Typography variant="story" className={styles.observerTextDetail}>
             “I’m peachy, Mo.” She rubs her skin to demonstrate. “If you say so.”
             What an aggravating thing to say: if you say so. The more she says
             it, the stranger is sounds, and her skin starts to peel. Her fingers

@@ -1,6 +1,6 @@
 import { Box, Typography } from "@mui/material";
 import styles from "./boxes.module.css";
-import image from "../../assets/bottle.png";
+import image from "/assets/bottle.png";
 import BoxDetail from "../Boxes/BoxDetail";
 
 const ProductHero = ({ title, code, desProduct, ingredients, bestFor }) => {

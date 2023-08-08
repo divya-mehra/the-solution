@@ -1,8 +1,8 @@
 import { Box, Button, Typography } from "@mui/material";
 import { useState } from "react";
 import styled from "@emotion/styled";
-import LookCover from "../assets/cover-look.jpg";
-import FeelCover from "../assets/cover-feel.jpg";
+import LookCover from "/assets/cover-look.jpg";
+import FeelCover from "/assets/cover-feel.jpg";
 
 const MainCategoryDecisionPage = ({ landing, setLanding, journeySelection, setJourneySelection }) => {
   // Styles

@@ -1,6 +1,6 @@
 import styles from "./boxes.module.css";
 import { Box, Typography } from "@mui/material";
-import LookHero from "../../assets/look_hero.jpg";
+import LookHero from "/assets/look_hero.jpg";
 import { useEffect, useState } from "react";
 
 {

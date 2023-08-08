@@ -1,8 +1,9 @@
 import { Box, Typography } from "@mui/material";
 
-import LookImage from "../assets/look_one.png";
-import LookImageTwo from "../assets/look_two.jpg";
-import LookHero from "../assets/look_hero.jpg";
+// images
+import LookImage from "/assets/look_one.png";
+import LookImageTwo from "/assets/look_two.jpg";
+import LookHero from "/assets/look_hero.jpg";
 
 import Footer from "../components/Footer";
 
@@ -18,30 +19,37 @@ const CategoryPage = ({ journeySelection }) => {
   const stepsArr = [
     {
       subtitle: "Step 1",
-      title: "Renew",
-      description: "Renew yourself."
+      title: "Reset",
+      description: "Prepare yourself for the transformation ahead.",
+      image: "/assets/icons/1.png"
     },
     {
       subtitle: "Step 2",
-      title: "Refresh",
+      title: "Rebuild",
+      description: "Rebuild your foundations from the ground up.",
+      image: "/assets/icons/2.png"
     },
     {
       subtitle: "Step 3",
-      title: "Regenerate",
+      title: "Regrow",
+      description: "Continue to grow well past the three step system.",
+      image: "/assets/icons/3.png"
     },
   ];
 
   const categoryPageArr = [
     {
       description: [
-        "We know life gets hard. You are expected to rise at the crack of dawn, put on your best face, and move through the day while supporting a family, a career, a house, whole lives other than your own. But wellness doesn't have to be a problem. Not when you've got The Solution.",
-        "How you look influences how you feel. We have the products to make you look 100% so you can feel on top of the world. 200%.",
-        "In our homegrown LOOK category, we derive the highest-quality ingredients from the Mediterranean, India, and the Far East. These solutions are tried and tested in our scientific labratories, where some of the brightest minds come together to develop the right balance of ingredients for you.",
+        
+        "How you look influences how you feel. Our Solutions make you look 100% so you can feel on top of the world.",
+        "In our homegrown LOOK category, we derive the highest-quality ingredients from the Mediterranean, India, and the Far East. These combinations are tried and tested in our scientific laboratories, where some of the brightest minds come together to develop the right balance of ingredients just for you.",
+        "We believe that wellness is for everyone and are on a mission to make this come true.",
+        
       ],
     },
     {
       description: [
-        "We know life gets hard. You are expected to rise at the crack of dawn, put on your best face, and move through the day while supporting a family, a career, a house, whole lives other than your own. But wellness doesn't have to be a problem. Not when you've got The Solution.",
+        "Clementine is our signature Reset product. Start with her and you won't ever look back.",
       ],
     },
   ];
@@ -62,7 +70,7 @@ const CategoryPage = ({ journeySelection }) => {
         <BoxLgWithSmCards title={"As Easy As 1-2-3"} arr={stepsArr} />
 
         <BoxLgImageAndText
-          title={"Start with CC LOOK-1"}
+          title={"Reset with Corsica Clementine"}
           subtitle={"Or as we like to call her, Clementine"}
           description={categoryPageArr[1].description}
           orientation="right"

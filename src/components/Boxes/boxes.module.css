@@ -117,6 +117,10 @@
   justify-content: center;
 }
 
+.observerTextDetail::first-line {
+  font-weight: bold;
+}
+
 .intersectionDiv {
   position: absolute;
   object-fit: cover;
