@@ -3,11 +3,9 @@ import { Box, Typography, Button } from "@mui/material";
 import { useNavigate } from "react-router";
 
 const BoxLgImageAndText = ({
-  orientation,
   title,
   subtitle,
   description,
-  image,
   hasButton,
 }) => {
   let navigate = useNavigate();
@@ -27,21 +25,18 @@ const BoxLgImageAndText = ({
 
   return (
     <Box
-    className={`${styles.boxLgImageAndText} ${styles.boxLg}`}
+    className={`${styles.boxLg}`}
       sx={{
-        // gridTemplateColumns: orientation === "left" ? "40% auto" : "auto 40%",
-        margin: orientation === "left" ? "0 auto" : "auto 0",
-        flexDirection: orientation === "left" ? "row" : "row-reverse",
         alignItems: "center",
       }}
     >
       <div
-        className={styles.flexChild}
         style={{
+          padding: "64px"
           // order: orientation === "left" ? "1" : "2",
-          marginLeft: orientation === "right" ? "auto" : 0,
-          paddingLeft: orientation === "right" ? 0 : "64px",
-          paddingRight: orientation === "right" ? "64px" : 0,
+          // marginLeft: orientation === "right" ? "auto" : 0,
+          // paddingLeft: orientation === "right" ? 0 : "64px",
+          // paddingRight: orientation === "right" ? "64px" : 0,
         }}
       >
         <Typography variant="h3" sx={{ textAlign: "left", paddingBottom: 2 }}>
@@ -58,17 +53,6 @@ const BoxLgImageAndText = ({
         {(hasButton) ? button : null}
       </div>
 
-      
-
-      {/* Image */}
-      <div
-        style={{
-          backgroundImage: `url(${image})`,
-        }}
-        className={
-          orientation === "left" ? styles.ImageLgRight : styles.ImageLgLeft
-        }
-      ></div>
     </Box>
   );
 };

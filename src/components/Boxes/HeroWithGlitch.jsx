@@ -11,7 +11,7 @@ import { useEffect, useState } from "react";
 </Typography> */
 }
 
-const BoxLgImageOnly = () => {
+const HeroWithGlitch = () => {
 
   const [showTextCover, setShowTextCover] = useState(false);
 
@@ -50,4 +50,4 @@ const BoxLgImageOnly = () => {
   );
 };
 
-export default BoxLgImageOnly;
+export default HeroWithGlitch;

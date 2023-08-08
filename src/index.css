@@ -2,24 +2,24 @@
 
 @font-face {
   font-family: 'Barbara';
-  src: url('/src/assets/BarbaraBT-Regular.otf') format('opentype');
+  src: url('/assets/fonts/BarbaraBT-Regular.otf') format('opentype');
 }
 
 @font-face {
   font-family: 'DIN';
-  src: url('/src/assets/DIN.ttf') format('truetype');
+  src: url('/assets/fonts/DIN.ttf') format('truetype');
   font-weight: 400;
 }
 
 @font-face {
   font-family: 'DIN';
-  src: url('/src/assets/DIN Medium.ttf') format('truetype');
+  src: url('/assets/fonts/DIN Medium.ttf') format('truetype');
   font-weight: 500;
 }
 
 @font-face {
   font-family: 'DIN';
-  src: url('/src/assets/DIN\ Bold.ttf') format('truetype');
+  src: url('/assets/fonts/DIN Bold.ttf') format('truetype');
   font-weight: 600;
 }
 
