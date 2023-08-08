@@ -3,7 +3,7 @@ import styles from './boxes.module.css'
 
 // Using this for product wrap up descriptions
 
-const BoxSmTypeB = () => {
+const ProductEnd = () => {
   return (
   
   <Box className={styles.boxSmTypeB}>
@@ -16,4 +16,4 @@ const BoxSmTypeB = () => {
   )
 };
 
-export default BoxSmTypeB;
+export default ProductEnd;

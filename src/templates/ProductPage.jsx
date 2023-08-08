@@ -2,7 +2,7 @@ import { Box, Grid } from "@mui/material";
 import styles from "./templates.module.css";
 import ProductPageNav from "../components/navigation/ProductPageNav";
 import ProductHero from "../components/Boxes/ProductHero";
-import BoxSmTypeB from "../components/Boxes/BoxSmTypeB";
+import ProductEnd from "../components/Boxes/ProductEnd";
 import ProductStory from "../components/Boxes/ProductStory";
 
 // import story data
@@ -36,13 +36,7 @@ const ProductPage = ({ name }) => {
         <ProductStory text={stories[`${current_product}`].text} />
       </Grid>
       <Grid item xs={12}>
-        <BoxSmTypeB />
-      </Grid>
-      <Grid item xs={12}>
-        {/* <BoxLgWithSmCards
-          title={"You might also like..."}
-          arr={recProductArr}
-        /> */}
+        <ProductEnd />
       </Grid>
     </Grid>
   );

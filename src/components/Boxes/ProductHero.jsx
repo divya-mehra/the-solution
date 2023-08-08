@@ -1,22 +1,12 @@
 import { Box, Typography } from "@mui/material";
 import styles from "./boxes.module.css";
 import image from "/assets/bottle.png";
-import BoxDetail from "../Boxes/BoxDetail";
+import ProductDetail from "./ProductDetail";
 
 const ProductHero = ({ title, code, description, ingredients, bestFor }) => {
   return (
     <Box className={`${styles.boxLg}`}>
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "space-between",
-          alignItems: "space-between",
-          //   gap: "96px",
-          height: "100%",
-        }}
-      >
-        <div>
+
           <Typography variant="h3" sx={{ textAlign: "left", paddingBottom: 2 }}>
             {title}
           </Typography>
@@ -26,10 +16,10 @@ const ProductHero = ({ title, code, description, ingredients, bestFor }) => {
           <Typography sx={{ textAlign: "left" }}>
             {description}
           </Typography>
-        </div>
+        
 
-        <BoxDetail />
-      </div>
+        <ProductDetail />
+      
 
 
       {/* Product Des on left */}

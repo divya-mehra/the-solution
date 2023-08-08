@@ -1,7 +1,7 @@
 import { Box } from "@mui/material";
 import styles from "./boxes.module.css";
 
-const BoxDetail = () => {
+const ProductDetail = () => {
   return (
   <Box className={styles.boxDetail}>
   <Box className={styles.boxDetailElement}>What's Inside</Box>
@@ -10,4 +10,4 @@ const BoxDetail = () => {
   )
 };
 
-export default BoxDetail;
+export default ProductDetail;
