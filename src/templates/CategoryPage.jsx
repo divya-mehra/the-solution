@@ -73,8 +73,8 @@ const CategoryPage = ({ journeySelection }) => {
             </Grid>
           </Grid>
         </Grid>
-        <div className={boxStyles.boxLg}>
-          <Typography variant="h3" sx={{ textAlign: "center", padding: "48px" }}>
+        <div className={boxStyles.boxLg} style={{backgroundColor: "grey", padding: "24px", marginLeft: "-96px", marginRight: "-96px"}}>
+          <Typography variant="h3" sx={{ textAlign: "center", padding: "48px"}}>
             As Easy As 1-2-3
           </Typography>
           <Grid container spacing={12} justifyContent="space-around">

@@ -3,7 +3,7 @@ import styles from "./boxes.module.css";
 import image from "/assets/bottle.png";
 import BoxDetail from "../Boxes/BoxDetail";
 
-const ProductHero = ({ title, code, desProduct, ingredients, bestFor }) => {
+const ProductHero = ({ title, code, description, ingredients, bestFor }) => {
   return (
     <Box className={`${styles.boxLg}`}>
       <div
@@ -24,9 +24,7 @@ const ProductHero = ({ title, code, desProduct, ingredients, bestFor }) => {
             {code}
           </Typography>
           <Typography sx={{ textAlign: "left" }}>
-            {desProduct.map((p) => (
-              <p>{p}</p>
-            ))}
+            {description}
           </Typography>
         </div>
 

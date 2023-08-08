@@ -4,33 +4,14 @@ import ProductPageNav from "../components/navigation/ProductPageNav";
 import ProductHero from "../components/Boxes/ProductHero";
 import BoxSmTypeB from "../components/Boxes/BoxSmTypeB";
 import ProductStory from "../components/Boxes/ProductStory";
-import BoxLgWithSmCards from "../components/Boxes/BoxLgWithSmCards";
+
+// import story data
+import stories from "../data/stories";
 
 const ProductPage = ({ name }) => {
-  const recProductArr = [
-    {
-      title: "Superwoman",
-    },
-    {
-      title: "Glow Getter",
-    },
-    {
-      subtitle: "Product",
-    },
-  ];
+  console.log(stories["corsica clementine"]);
 
-  const productPageArr = [
-    {
-      description: [
-        "The eastern plains of Corsica run twenty degrees colder than the rest of the island. Clementines grow in abundance and are harvested by hand in family-run orchards. They flood the sun-drenched earth in orange. The fruit’s oil extract brightens and tones; its peel reverses time; its juice firms your skin. It runs deep through your pores, leaving you fresh-faced and brand new. This is our promise.",
-      ],
-    },
-    {
-      description: [
-        "We know life gets hard. You are expected to rise at the crack of dawn, put on your best face, and move through the day while supporting a family, a career, a house, whole lives other than your own. But wellness doesn't have to be a problem. Not when you've got The Solution.",
-      ],
-    },
-  ];
+  let current_product = "corsica clementine";
 
   return (
     <Grid container className={styles.wrapper}>
@@ -38,31 +19,30 @@ const ProductPage = ({ name }) => {
         <ProductPageNav />
       </Grid>
       <Grid item xs={12}>
-        <Grid container>
+        <Grid container spacing={16}>
           <Grid item md={6}>
             <ProductHero
-              title={"Corsica Clementine"}
-              code={"CC LOOK-1"}
-              desProduct={productPageArr[0].description}
+              title={stories[`${current_product}`].title}
+              code={stories[`${current_product}`].code}
+              description={stories[`${current_product}`].description}
             />
           </Grid>
           <Grid item md={6}>
-            <img width="100%"></img>
+            <img src="/assets/product_cc.jpg" width="100%"></img>
           </Grid>
         </Grid>
       </Grid>
       <Grid item xs={12}>
-        <ProductStory />
+        <ProductStory text={stories[`${current_product}`].text} />
       </Grid>
       <Grid item xs={12}>
         <BoxSmTypeB />
-        {/* Reccomendatations. See More:  */}
       </Grid>
       <Grid item xs={12}>
-        <BoxLgWithSmCards
+        {/* <BoxLgWithSmCards
           title={"You might also like..."}
           arr={recProductArr}
-        />
+        /> */}
       </Grid>
     </Grid>
   );

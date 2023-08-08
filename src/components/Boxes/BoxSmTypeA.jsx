@@ -8,7 +8,7 @@ const BoxSmTypeA = ({ subtitle, title, description, image }) => {
   console.log(image);
 
   return (
-    <div className={styles.smallBox}>
+    <div className={styles.smallBox} style={{color: "black"}}>
       <Typography
       variant="h5"
         sx={{ textTransform: "uppercase", fontWeight: 600, padding:  "16px"  }}
