@@ -5,7 +5,7 @@ import image2 from "/assets/redblue.png";
 import image3 from "/assets/redblueyellow.png";
 import { useLayoutEffect, useEffect, useState } from "react";
 
-const BoxLgWithObserver = () => {
+const ProductStory = () => {
   // set an array with the image panels
   const [imagePanels, setImagePanels] = useState([]);
   //  set image visibility for each image
@@ -191,4 +191,4 @@ const BoxLgWithObserver = () => {
   );
 };
 
-export default BoxLgWithObserver;
+export default ProductStory;

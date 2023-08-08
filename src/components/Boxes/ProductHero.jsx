@@ -5,9 +5,8 @@ import BoxDetail from "../Boxes/BoxDetail";
 
 const ProductHero = ({ title, code, desProduct, ingredients, bestFor }) => {
   return (
-    <Box className={`${styles.productHero} ${styles.boxLg}`}>
+    <Box className={`${styles.boxLg}`}>
       <div
-        className={styles.flexChild}
         style={{
           display: "flex",
           flexDirection: "column",
@@ -34,14 +33,7 @@ const ProductHero = ({ title, code, desProduct, ingredients, bestFor }) => {
         <BoxDetail />
       </div>
 
-      {/* Image */}
-      <div
-        style={{
-          backgroundImage: `url(${image})`,
-          width: "50%",
-          backgroundSize: "cover",
-        }}
-      ></div>
+
       {/* Product Des on left */}
       {/* Product InfoBox on left */}
       {/* Product ImagewithButton on left */}

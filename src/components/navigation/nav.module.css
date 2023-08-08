@@ -2,10 +2,11 @@
     position: absolute;
     display: flex;
     top: 0;
-    height: 100px;
+    height: 50px;
     left: 0;
     right: 0;
-    background-color: #004654;
+    background-color: #00000050;
+
 
     color: white;
     align-items: center;

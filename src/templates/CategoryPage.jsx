@@ -8,9 +8,10 @@ import LookHero from "/assets/look_hero.jpg";
 import Footer from "../components/Footer";
 
 import styles from "./templates.module.css";
+import boxStyles from "../components/Boxes/boxes.module.css"
 
 import BoxLgImageAndText from "../components/Boxes/BoxLgImageAndText";
-import BoxLgWithSmCards from "../components/Boxes/BoxLgWithSmCards";
+import BoxSmTypeA from "../components/Boxes/BoxSmTypeA";
 import HeroWithGlitch from "../components/Boxes/HeroWithGlitch";
 
 const CategoryPage = ({ journeySelection }) => {
@@ -55,11 +56,10 @@ const CategoryPage = ({ journeySelection }) => {
   return (
     <>
       <HeroWithGlitch image={{ LookHero }} />
-      <Grid container className={styles.wrapper}>
+      <Grid container className={styles.wrapper} rowSpacing={16}>
         <Grid item xs={12}>
-          <Grid container>
+          <Grid container columnSpacing={16}>
             <Grid item md={6}>
-            
               <BoxLgImageAndText
                 title="Everyone has a story"
                 subtitle="Yours begins here"
@@ -73,11 +73,27 @@ const CategoryPage = ({ journeySelection }) => {
             </Grid>
           </Grid>
         </Grid>
+        <div className={boxStyles.boxLg}>
+          <Typography variant="h3" sx={{ textAlign: "center", padding: "48px" }}>
+            As Easy As 1-2-3
+          </Typography>
+          <Grid container spacing={12} justifyContent="space-around">
+          {stepsArr.map((s, i) => (
+            <Grid item xs={3} key={i}>
+              <BoxSmTypeA
+                number={s.number}
+                title={s.title}
+                description={s.description}
+                subtitle={s.subtitle}
+                image={s.image}
+              />
+            </Grid>
+          ))}
+          </Grid>
+        </div>
+
         <Grid item xs={12}>
-          <BoxLgWithSmCards title={"As Easy As 1-2-3"} arr={stepsArr} />
-        </Grid>
-        <Grid item xs={12}>
-          <Grid container>
+          <Grid container columnSpacing={16}>
             <Grid item md={6}>
               <Box>
                 <img src={LookImage} width="100%"></img>

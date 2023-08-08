@@ -1,9 +1,9 @@
-import { Box } from "@mui/material";
+import { Box, Grid } from "@mui/material";
 import styles from "./templates.module.css";
 import ProductPageNav from "../components/navigation/ProductPageNav";
 import ProductHero from "../components/Boxes/ProductHero";
 import BoxSmTypeB from "../components/Boxes/BoxSmTypeB";
-import BoxLgWithObserver from "../components/Boxes/BoxLgWithObserver";
+import ProductStory from "../components/Boxes/ProductStory";
 import BoxLgWithSmCards from "../components/Boxes/BoxLgWithSmCards";
 
 const ProductPage = ({ name }) => {
@@ -33,23 +33,38 @@ const ProductPage = ({ name }) => {
   ];
 
   return (
-    <>
-      <Box className={styles.wrapper}>
+    <Grid container className={styles.wrapper}>
+      <Grid item xs={12}>
         <ProductPageNav />
-        <ProductHero
-          title={"Corsica Clementine"}
-          code={"CC LOOK-1"}
-          desProduct={productPageArr[0].description}
-        />
-        <BoxLgWithObserver />
+      </Grid>
+      <Grid item xs={12}>
+        <Grid container>
+          <Grid item md={6}>
+            <ProductHero
+              title={"Corsica Clementine"}
+              code={"CC LOOK-1"}
+              desProduct={productPageArr[0].description}
+            />
+          </Grid>
+          <Grid item md={6}>
+            <img width="100%"></img>
+          </Grid>
+        </Grid>
+      </Grid>
+      <Grid item xs={12}>
+        <ProductStory />
+      </Grid>
+      <Grid item xs={12}>
         <BoxSmTypeB />
         {/* Reccomendatations. See More:  */}
+      </Grid>
+      <Grid item xs={12}>
         <BoxLgWithSmCards
           title={"You might also like..."}
           arr={recProductArr}
         />
-      </Box>
-    </>
+      </Grid>
+    </Grid>
   );
 };
 
