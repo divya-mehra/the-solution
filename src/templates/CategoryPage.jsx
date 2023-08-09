@@ -19,21 +19,21 @@ const CategoryPage = ({ journeySelection }) => {
 
   const stepsArr = [
     {
-      subtitle: "Step 1",
+      // subtitle: "1",
       title: "Reset",
       description: "Prepare yourself for the transformation ahead.",
       image: "/assets/icons/1.png",
     },
     {
-      subtitle: "Step 2",
+      // subtitle: "2",
       title: "Rebuild",
       description: "Rebuild your foundations from the ground up.",
       image: "/assets/icons/2.png",
     },
     {
-      subtitle: "Step 3",
+      // subtitle: "3",
       title: "Regrow",
-      description: "Continue to grow well past the three step system.",
+      description: "Continue to grow well past the 3 step system.",
       image: "/assets/icons/3.png",
     },
   ];
@@ -75,7 +75,7 @@ const CategoryPage = ({ journeySelection }) => {
         </Grid>
         {/* "#b24923" */}
         <div className={boxStyles.boxLg} style={{backgroundImage: `url('/assets/tex/terracotta.jpg')`, backgroundSize: "cover", padding: "24px", marginLeft: "-96px", marginRight: "-96px", height: "70vh", display: "flex", flexDirection: "column", justifyContent: "center"}}>
-          <Typography variant="h3" sx={{ textAlign: "center", padding: "48px"}}>
+          <Typography variant="h3" sx={{ textAlign: "center", padding: "48px", color: "white"}}>
             As Easy As 1-2-3
           </Typography>
           <Grid container spacing={12} justifyContent="space-around">
@@ -85,7 +85,7 @@ const CategoryPage = ({ journeySelection }) => {
                 number={s.number}
                 title={s.title}
                 description={s.description}
-                subtitle={s.subtitle}
+                // subtitle={s.subtitle}
                 image={s.image}
               />
             </Grid>
@@ -102,7 +102,7 @@ const CategoryPage = ({ journeySelection }) => {
             </Grid>
             <Grid item md={6}>
               <BoxLgImageAndText
-                title={"Reset with Corsica Clementine"}
+                title={"Reset with CC LOOK-1"}
                 subtitle={"Or as we like to call her, Clementine"}
                 description={categoryPageArr[1].description}
                 orientation="right"

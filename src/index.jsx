@@ -67,6 +67,8 @@ const theme = createTheme({
     },
     h3: {
       fontFamily: "Optima",
+      fontWeight: 600,
+      fontSize: 54,
     },
     h5: {
       fontFamily: "DIN",

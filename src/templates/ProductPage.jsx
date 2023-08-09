@@ -15,7 +15,7 @@ const ProductPage = ({ name }) => {
   let current_product = "corsica clementine";
 
   return (
-    <Grid container className={styles.wrapper}>
+    <Grid container className={styles.wrapper} rowSpacing={16}>
       <Grid item xs={12}>
         <ProductPageNav />
       </Grid>

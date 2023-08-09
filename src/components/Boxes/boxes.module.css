@@ -43,17 +43,24 @@
   gap: 48px;
   padding: 64px;
   justify-content: center;
+  
 }
 
 .smallBox {
+  color: black;
+  height: 100%;
   background-color: "white";
-  border-radius: 8px;
+  border-radius: 50%;
+  background-color: #fffffa70;
+  padding: 40px;
   /* padding: 48px; */
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center; /* Center horizontally */
   text-align: center;
-  margin-bottom: 48px;
+  /* margin-bottom: 48px; */
+
 }
 
 
@@ -92,6 +99,13 @@
 
 .observerTextDetail::first-line {
   font-weight: bold;
+}
+
+.observerTextPanel:first-of-type .observerTextDetail::first-letter {
+  font-size: 4em; /* Adjust the font size as desired */
+  float: left; /* Ensures that the letter takes up its own space */
+  line-height: 1; /* Reset line height for the first letter */
+  margin-right: 4px; /* Add some spacing to separate the first letter from the content */
 }
 
 .intersectionDiv {
