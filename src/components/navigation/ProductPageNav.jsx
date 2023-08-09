@@ -4,10 +4,8 @@ import { NavLink } from "react-router-dom";
 
 const ProductPageNav = () => {
 
-let product_color = "#c35b37"
-
   return (
-    <Box className={styles.productPageNav} style={{backgroundColor: product_color}}>
+    <Box className={styles.productPageNav} style={{backgroundColor: "#00000070"}}>
       <NavLink
         className={styles.productPageNavItem}
         style={{ color: "white", textTransform: "uppercase"}}
