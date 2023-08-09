@@ -83,13 +83,17 @@ const ProductStory = ({ text }) => {
   }, []);
 
   return (
-    <Box className={`${styles.boxLgWithObserver} ${styles.boxLg}`}>
+    <Box
+      className={`${styles.boxLgWithObserver} ${styles.boxLg}`}
+      
+    >
       <div
         style={{
           position: "sticky",
           top: 0,
           height: "100vh",
           zIndex: 1,
+          // backgroundColor: "black"
         }}
       >
         <img

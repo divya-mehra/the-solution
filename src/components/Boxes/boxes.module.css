@@ -135,10 +135,9 @@
 .productFullWidth {
   text-align: center;
   padding: 96px;
-  background-color: #000;
+  /* background-color: #000; */
   margin-left: calc(-1 * var(--wrapper-margin));
   margin-right: calc(-1 * var(--wrapper-margin));
   color: white;
 }
-
 
