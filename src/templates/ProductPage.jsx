@@ -15,12 +15,18 @@ const ProductPage = ({ name }) => {
   let current_product = "corsica clementine";
 
   return (
-    <Grid container className={styles.wrapper} rowSpacing={16}>
+    // 
+    // removed spacing of 16 for columns
+    <Grid container spacing={16} className={styles.wrapper}>
       <Grid item xs={12}>
         <ProductPageNav />
       </Grid>
-      <Grid item xs={12}>
-        <Grid container spacing={16}>
+      <Grid
+        item
+        xs={12}  
+        
+      >
+        <Grid container spacing={16} >
           <Grid item md={6}>
             <ProductHero
               title={stories[`${current_product}`].title}
@@ -28,7 +34,10 @@ const ProductPage = ({ name }) => {
               description={stories[`${current_product}`].description}
             />
           </Grid>
-          <Grid item md={6}>
+          <Grid
+            item
+            md={6}
+          >
             <img src="/assets/product_cc.jpg" width="100%"></img>
           </Grid>
         </Grid>

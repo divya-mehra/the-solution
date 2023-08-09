@@ -122,6 +122,7 @@
   gap: 32px;
   margin-top: 16px;
   width: 100%;
+  justify-content: space-around;
   /* flex-grow: 1; */
 }
 
