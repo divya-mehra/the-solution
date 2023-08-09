@@ -4,12 +4,14 @@ const stories = {
     code: "CC LOOK-1",
     description:
       "The eastern plains of Corsica run twenty degrees colder than the rest of the island. Clementines grow in abundance and are harvested by hand in family-run orchards. They flood the sun-drenched earth in orange. The fruit’s oil extract brightens and tones; its peel reverses time; its juice firms your skin. It runs deep through your pores, leaving you fresh-faced and brand new. This is our promise.",
+    description_two: ["Picture this: the Corsican coast dotted with tourists, a stray man and woman seeking answers to discontent in foreign tongue, who grow familiar with one another, wrapping around. Natural beauties draped. He learns to fish. She spins warmth of air. Her skin is soft to the touch, an ethereal glow that people say only comes with a human baking inside.","They take a boat westward and sail so far for so long that while crossing the Strait of Gibraltar, the woman gives birth to a baby girl. They name her Clementine in honor of their beginning. "],  
     inside: "",
     bestfor: "",
     text: {
       one: [
-        `Clementine is astounded by all this. Mo ricochets through her bathroom door and screams the truth: we have no time! He stands there, pointing at his bare wrist and gesticulating wildly, and she wonders how he can look so graceful and wild at the same time. Time, time, time.`,
-        `She finds time to scrub her face silly. The face of it, the pure
+        `Clementine doesn't know any of this yet. Mo ricochets through her bathroom door and screams the truth: you have no time! He stands there, pointing at his bare wrist and gesticulating wildly, and she wonders how he can look so graceful and wild at the same time. 
+        `,
+        `She scrubs her face. The face of it, the pure
             syrupy, glazed donut face of the matter is that: 200 years after
             Chaucer described beauty as “bright, rosy, fresh, and new,”
             Elizabeth I of England caked herself in lead, masking her scars of

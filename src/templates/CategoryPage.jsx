@@ -11,7 +11,7 @@ import styles from "./templates.module.css";
 import boxStyles from "../components/Boxes/boxes.module.css"
 
 import BoxLgImageAndText from "../components/Boxes/BoxLgImageAndText";
-import BoxSmTypeA from "../components/Boxes/BoxSmTypeA";
+import SmallCard from "../components/Boxes/SmallCard";
 import HeroWithGlitch from "../components/Boxes/HeroWithGlitch";
 
 const CategoryPage = ({ journeySelection }) => {
@@ -73,14 +73,15 @@ const CategoryPage = ({ journeySelection }) => {
             </Grid>
           </Grid>
         </Grid>
-        <div className={boxStyles.boxLg} style={{backgroundColor: "grey", padding: "24px", marginLeft: "-96px", marginRight: "-96px"}}>
+        {/* "#b24923" */}
+        <div className={boxStyles.boxLg} style={{backgroundImage: `url('/assets/tex/terracotta.jpg')`, backgroundSize: "cover", padding: "24px", marginLeft: "-96px", marginRight: "-96px", height: "70vh", display: "flex", flexDirection: "column", justifyContent: "center"}}>
           <Typography variant="h3" sx={{ textAlign: "center", padding: "48px"}}>
             As Easy As 1-2-3
           </Typography>
           <Grid container spacing={12} justifyContent="space-around">
           {stepsArr.map((s, i) => (
             <Grid item xs={3} key={i}>
-              <BoxSmTypeA
+              <SmallCard
                 number={s.number}
                 title={s.title}
                 description={s.description}

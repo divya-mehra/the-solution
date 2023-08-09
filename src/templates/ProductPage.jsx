@@ -2,6 +2,7 @@ import { Box, Grid } from "@mui/material";
 import styles from "./templates.module.css";
 import ProductPageNav from "../components/navigation/ProductPageNav";
 import ProductHero from "../components/Boxes/ProductHero";
+import ProductStart from "../components/Boxes/ProductStart";
 import ProductEnd from "../components/Boxes/ProductEnd";
 import ProductStory from "../components/Boxes/ProductStory";
 
@@ -32,6 +33,12 @@ const ProductPage = ({ name }) => {
           </Grid>
         </Grid>
       </Grid>
+      <Grid item xs={12}>
+        <ProductStart
+          description_two={stories[`${current_product}`].description_two}
+        ></ProductStart>
+      </Grid>
+
       <Grid item xs={12}>
         <ProductStory text={stories[`${current_product}`].text} />
       </Grid>
