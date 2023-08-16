@@ -57,8 +57,8 @@ const MainCategoryDecisionPage = ({ landing, setLanding, journeySelection, setJo
 
   const CategoryButton = styled(Button)(
     {
-      fontWeight: '800px',
-      fontSize: '92px',
+      fontWeight: '400',
+      fontSize: '108px',
       textTransform: 'uppercase',
       color: 'white',
       fontFamily: 'DIN'

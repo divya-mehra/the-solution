@@ -23,6 +23,17 @@
   padding: 48px;
 }
 
+.ProductHeroMainInfoLeft {
+  
+  padding: 16px;
+}
+
+.productHeroDescription {
+  /* background-color: #041c04ce; */
+  padding: 16px;
+
+}
+
 .boxLgTextOnly {
   height: 50vh;
   /* border: 1px black dashed; */
@@ -78,11 +89,13 @@
   margin-top: 16px;
   width: 100%;
   justify-content: space-around;
+  
   /* flex-grow: 1; */
 }
 
 .boxDetailElement {
   border: 1px black dashed;
+  
   /* flex-grow: 1; */
   width: 100%;
   padding: 8px;
