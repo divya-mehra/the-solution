@@ -74,7 +74,7 @@ const ProductPage = ({ name }) => {
           <Grid item md={6} className={styles.imageContainer}>
             <img
               style={{ padding: "48px" }}
-              src="/assets/product_cc.jpg"
+              // src="/assets/splash.png"
               className={`${styles.centeredImage}`}
             ></img>
           </Grid>

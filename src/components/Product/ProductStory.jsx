@@ -129,6 +129,7 @@ const ProductStory = ({ text }) => {
         style={{
           display: "flex",
           flexDirection: "column",
+          paddingRight: "48px",
         }}
       >
         <div className={styles.observerTextPanel} id={"panel-1"}>

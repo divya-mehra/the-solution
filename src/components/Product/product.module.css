@@ -95,18 +95,26 @@
 
 .boxDetailElement {
   border: 1px black dashed;
-  
+  /* color: #041c04aa */
   /* flex-grow: 1; */
   width: 100%;
   padding: 8px;
 }
 
+.productStart {
+  position: relative;
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: rgb(255, 184, 53);
+}
+
 .productFullWidth {
   text-align: center;
   padding: 96px;
-  /* background-color: #000; */
-  /* margin-left: calc(-1 * var(--wrapper-margin));
-  margin-right: calc(-1 * var(--wrapper-margin)); */
   color: white;
 }
 

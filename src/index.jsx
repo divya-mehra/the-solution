@@ -54,7 +54,7 @@ const theme = createTheme({
     },
     story: {
       fontFamily: "Optima",
-      fontSize: 18,
+      fontSize: 20,
 
     },
     h1: {
