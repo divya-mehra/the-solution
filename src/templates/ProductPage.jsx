@@ -1,18 +1,52 @@
-import { Box, Grid } from "@mui/material";
+import { Grid } from "@mui/material";
 import styles from "./templates.module.css";
+import { useState, useEffect } from "react";
+
 import ProductPageNav from "../components/navigation/ProductPageNav";
-import ProductHero from "../components/Boxes/ProductHero";
-import ProductStart from "../components/Boxes/ProductStart";
-import ProductEnd from "../components/Boxes/ProductEnd";
-import ProductStory from "../components/Boxes/ProductStory";
+import ProductHero from "../components/Product/ProductHero";
+import ProductStart from "../components/Product/ProductStart";
+import ProductEnd from "../components/Product/ProductEnd";
+import ProductStory from "../components/Product/ProductStory";
 
 // import story data
 import stories from "../data/stories";
 
+const preloadImage = () => {
+  return new Promise((resolve, reject) => {
+    const image = new Image();
+    image.src = src;
+
+    image.onload = () => {
+      resolve(image);
+    };
+
+    image.onerror = (error) => {
+      reject(error);
+    };
+  });
+};
+
 const ProductPage = ({ name }) => {
   console.log(stories["corsica clementine"]);
 
-  let current_product = "corsica clementine";
+  let current_product = "corsica clementine"
+
+  const [imagesLoaded, setImagesLoaded] = useState(false);
+
+  useEffect(() => {
+    Promise.all([
+      preloadImage("/assets/look_nowoman.png"),
+      preloadImage("/assets/product_cc.jpg"),
+    ])
+      .then(() => {
+        setImagesLoaded(true);
+      })
+      .catch((error) => {
+        console.error("Error preloading images:", error);
+      });
+  }, []);
+
+  
 
   return (
     //
@@ -26,7 +60,7 @@ const ProductPage = ({ name }) => {
           container
           columnSpacing={8}
           style={{
-            backgroundImage: "url(/assets/product_cc_2.jpg)",
+            backgroundImage: "url(/assets/look_nowoman.png)",
             backgroundSize: "cover",
           }}
         >
@@ -39,8 +73,9 @@ const ProductPage = ({ name }) => {
           </Grid>
           <Grid item md={6} className={styles.imageContainer}>
             <img
+              style={{ padding: "48px" }}
               src="/assets/product_cc.jpg"
-              className={styles.centeredImage}
+              className={`${styles.centeredImage}`}
             ></img>
           </Grid>
         </Grid>

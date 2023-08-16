@@ -58,10 +58,10 @@ const MainCategoryDecisionPage = ({ landing, setLanding, journeySelection, setJo
   const CategoryButton = styled(Button)(
     {
       fontWeight: '800px',
-      fontSize: '64px',
+      fontSize: '92px',
       textTransform: 'uppercase',
       color: 'white',
-      fontFamily: 'Optima'
+      fontFamily: 'DIN'
       
     }
   )
@@ -83,11 +83,11 @@ const MainCategoryDecisionPage = ({ landing, setLanding, journeySelection, setJo
     <CategoryWrapperBox>
       <LeftCategoryBox>
         <CategoryButton onClick={categoryClickHandler}>Look</CategoryButton>
-        <Typography sx={{color: "white"}}>Seductive, non-threatening. Freckled skin, but not overdone. Anon face.</Typography>
+        {/* <Typography sx={{color: "white"}}>Seductive, non-threatening. Freckled skin, but not overdone. Anon face.</Typography> */}
       </LeftCategoryBox>
       <RightCategoryBox>
         <CategoryButton onClick={categoryClickHandler}>Feel</CategoryButton>
-        <Typography sx={{color: "white"}}>Something that could be anything. Dewy petals? Glittery sleeve? Light & floaty.</Typography>
+        {/* <Typography sx={{color: "white"}}>Something that could be anything. Dewy petals? Glittery sleeve? Light & floaty.</Typography> */}
       </RightCategoryBox>
     </CategoryWrapperBox>
   );

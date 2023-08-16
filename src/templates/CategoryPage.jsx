@@ -3,16 +3,15 @@ import { Box, Typography, Grid } from "@mui/material";
 // images
 import LookImage from "/assets/look_one.png";
 import LookImageTwo from "/assets/look_two.jpg";
-import LookHero from "/assets/look_hero.jpg";
 
 import Footer from "../components/Footer";
 
 import styles from "./templates.module.css";
-import boxStyles from "../components/Boxes/boxes.module.css"
+import boxStyles from "../components/Category/category.module.css"
 
-import BoxLgImageAndText from "../components/Boxes/BoxLgImageAndText";
-import SmallCard from "../components/Boxes/SmallCard";
-import HeroWithGlitch from "../components/Boxes/HeroWithGlitch";
+import BoxLgImageAndText from "../components/Category/BoxLgImageAndText";
+import SmallCard from "../components/Category/SmallCard";
+import HeroWithGlitch from "../components/Category/HeroWithGlitch";
 
 const CategoryPage = ({ journeySelection }) => {
   console.log(journeySelection);
@@ -41,9 +40,9 @@ const CategoryPage = ({ journeySelection }) => {
   const categoryPageArr = [
     {
       description: [
-        "How you look influences how you feel. Our Solutions make you look 100% so you can feel on top of the world.",
-        "In our homegrown LOOK category, we derive the highest-quality ingredients from the Mediterranean, India, and the Far East. These combinations are tried and tested in our scientific laboratories, where some of the brightest minds come together to develop the right balance of ingredients just for you.",
-        "We believe that wellness is for everyone and are on a mission to make this come true.",
+        "We know that how you look influences how you feel. Our Solutions make you look 100% so you can feel on top of the world.",
+        "For our homegrown Look products, we derive the highest-quality ingredients from the Mediterranean, India, and the Far East. These combinations are tested in our scientific laboratories, where some of the brightest minds come together to develop the right balance of ingredients just for you.",
+        "You deserve your Solution. So what are you waiting for?",
       ],
     },
     {
@@ -55,7 +54,7 @@ const CategoryPage = ({ journeySelection }) => {
 
   return (
     <>
-      <HeroWithGlitch image={{ LookHero }} />
+      <HeroWithGlitch />
       <Grid container className={styles.wrapper} rowSpacing={16}>
         <Grid item xs={12}>
           <Grid container columnSpacing={16}>
