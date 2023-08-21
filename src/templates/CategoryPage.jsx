@@ -40,8 +40,9 @@ const CategoryPage = ({ journeySelection }) => {
   const categoryPageArr = [
     {
       description: [
-        "We know that how you look influences how you feel. Our Solutions make you look 100% so you can feel on top of the world.",
-        "For our homegrown Look products, we derive the highest-quality ingredients from the Mediterranean, India, and the Far East. These combinations are tested in our scientific laboratories, where some of the brightest minds come together to develop the right balance of ingredients just for you.",
+        "How you look influences how you feel.",
+        "Our Solutions make you look 100% so you can feel on top of the world.",
+        "For our homegrown ~look~ products, we derive the highest-quality ingredients from the Mediterranean, India, and the Far East. These combinations are tested in our scientific laboratories, where some of the brightest minds come together to develop the right balance of ingredients just for you.",
         "You deserve your Solution. So what are you waiting for?",
       ],
     },

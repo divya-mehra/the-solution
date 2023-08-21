@@ -7,7 +7,9 @@ const ProductStart = ({ description_two }) => {
       <div className={`${styles.productStart} ${styles.productFullWidth} `}>
         <p
           style={{
-            color: "black",
+            color: "#041c04",
+            fontWeight: "600",
+            
           }}
         >
           {description_two}

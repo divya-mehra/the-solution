@@ -46,9 +46,11 @@
   display: flex;
   justify-content: space-between;
   gap: 48px;
+  
 }
 
 .boxLgWithObserver > * {
+  padding: 96px;
   flex-basis: 50%;
   flex-grow: 1;
   /* border: 1px black solid; */

@@ -3,6 +3,7 @@ import styles from "./product.module.css";
 import image1 from "/assets/red.png";
 import image2 from "/assets/redblue.png";
 import image3 from "/assets/redblueyellow.png";
+import image4 from "/assets/last.png";
 import { useLayoutEffect, useEffect, useState } from "react";
 
 const ProductStory = ({ text }) => {
@@ -119,7 +120,7 @@ const ProductStory = ({ text }) => {
         />
         <img
           className={styles.intersectionDiv}
-          src={image1}
+          src={image4}
           id={"image-4"}
           alt="Image Three"
           style={{ opacity: visibleImage4 ? 1 : 0 }}

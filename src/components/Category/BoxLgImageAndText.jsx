@@ -25,7 +25,8 @@ const BoxLgImageAndText = ({ title, subtitle, description, hasButton }) => {
           padding: "64px",
         }}
       >
-        <Typography variant="h3" sx={{ textAlign: "left", paddingBottom: 2 }}>
+        <Typography variant="h3" sx={{ textAlign: "left", paddingBottom: 2, color: "#000" }}>
+        {/* ffb835 */}
           {title}
         </Typography>
         <Typography variant="h6" sx={{ textAlign: "left", paddingBottom: 3 }}>
