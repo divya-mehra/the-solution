@@ -3,6 +3,7 @@ import { useState } from "react";
 import styled from "@emotion/styled";
 import LookCover from "/assets/cover-look.jpg";
 import FeelCover from "/assets/cover-feel.jpg";
+import ProtoDialog from "../components/utilities/ProtoDialog";
 
 const MainCategoryDecisionPage = ({ landing, setLanding, journeySelection, setJourneySelection }) => {
   // Styles
@@ -68,12 +69,25 @@ const MainCategoryDecisionPage = ({ landing, setLanding, journeySelection, setJo
 
   // End Styles
 
+  const [open, setOpen] = useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+
+
   const categoryClickHandler = (e) => {
     let text = e.target.innerText;
     if(text === "LOOK") {
         setJourneySelection("look")
     } else if (text === "FEEL") {
-        setJourneySelection("feel")
+        // setJourneySelection("feel")
+      handleClickOpen()
     } else {
         console.log('error')
     }
@@ -89,6 +103,7 @@ const MainCategoryDecisionPage = ({ landing, setLanding, journeySelection, setJo
         <CategoryButton onClick={categoryClickHandler}>Feel</CategoryButton>
         {/* <Typography sx={{color: "white"}}>Something that could be anything. Dewy petals? Glittery sleeve? Light & floaty.</Typography> */}
       </RightCategoryBox>
+      <ProtoDialog open={open} setOpen = {setOpen} handleClose={handleClose} />
     </CategoryWrapperBox>
   );
 };

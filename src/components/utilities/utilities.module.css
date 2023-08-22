@@ -1,0 +1,8 @@
+.dialogWrapper {
+    text-align: center;
+}
+
+.dialogButtons {
+    display: flex;
+    justify-content: center;
+}
