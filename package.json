@@ -1,7 +1,7 @@
 {
-  "homepage": "https://divya-mehra.github.io/websites",
+  "homepage": "https://divya-mehra.github.io/websites/",
   "name": "the-solution",
-  "private": true,
+  "private": false,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
