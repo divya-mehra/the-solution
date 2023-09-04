@@ -34,14 +34,13 @@
   
   .smallBox {
     color: black;
-    min-height: 200px;
-    min-width: 200px;
-    background-color: "white";
+    min-height: 300px;
+    min-width: 300px;
     
-    border: 1px black solid;
+    /* border: 1px black solid; */
     border-radius: 50%;
     aspect-ratio: 1;
-    background-color: #fffffa70;
+    /* background-color: #cb462f70; */
     padding: 40px;
     /* padding: 48px; */
     display: flex;
@@ -52,3 +51,6 @@
     /* margin-bottom: 48px; */
   
   }
+
+  /* Buttons */
+

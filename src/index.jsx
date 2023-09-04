@@ -82,6 +82,11 @@ const theme = createTheme({
       fontWeight: 600,
       fontSize: 21,
     },
+    h7: {
+      fontFamily: "DIN",
+      fontWeight: 500,
+      fontSize: 14,
+    },
     body1: {
       fontFamily: "DIN",
       fontWeight: 400,

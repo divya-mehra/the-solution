@@ -11,6 +11,7 @@ const ProductHero = ({ title, code, description, ingredients, bestFor }) => {
         display: "flex",
         flexDirection: "column",
         justifyContent: "space-around",
+        height: "70vh"
       }}
     >
       <div className={styles.ProductHeroMainInfoLeft}>

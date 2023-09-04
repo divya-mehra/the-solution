@@ -7,11 +7,13 @@ import LookImageTwo from "/assets/look_two.jpg";
 import Footer from "../components/Footer";
 
 import styles from "./templates.module.css";
-import boxStyles from "../components/Category/category.module.css"
+import boxStyles from "../components/Category/category.module.css";
 
 import BoxLgImageAndText from "../components/Category/BoxLgImageAndText";
 import SmallCard from "../components/Category/SmallCard";
 import HeroWithGlitch from "../components/Category/HeroWithGlitch";
+
+import ProductPageNav from "../components/navigation/ProductPageNav";
 
 const CategoryPage = ({ journeySelection }) => {
   console.log(journeySelection);
@@ -55,7 +57,11 @@ const CategoryPage = ({ journeySelection }) => {
 
   return (
     <>
+
       <HeroWithGlitch />
+      {/* <Grid item xs={12}>
+        <ProductPageNav hasBackground={false} linkTo={"MainCategory"}/>
+      </Grid> */}
       <Grid container className={styles.wrapper} rowSpacing={16}>
         <Grid item xs={12}>
           <Grid container columnSpacing={16}>
@@ -74,30 +80,54 @@ const CategoryPage = ({ journeySelection }) => {
           </Grid>
         </Grid>
         {/* "#b24923" */}
-        
-        <div className={boxStyles.boxLg} style={{padding: "24px", marginLeft: "-96px", marginRight: "-96px", height: "80vh", display: "flex", flexDirection: "column", justifyContent: "space-around"}}>
-          <Typography variant="h3" sx={{ textAlign: "center", padding: "48px", color: "black"}}>
+
+        <div
+          className={boxStyles.boxLg}
+          style={{
+            padding: "32px",
+            marginLeft: "-96px",
+            marginRight: "-96px",
+            height: "80vh",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            gap: "48px"
+          }}
+        >
+          <Typography
+            variant="h3"
+            sx={{ textAlign: "center", padding: "48px", color: "black" }}
+          >
             As Easy As 1-2-3
           </Typography>
           <Grid container spacing={12} justifyContent="space-around">
-          {stepsArr.map((s, i) => (
-            <Grid item xs={3} key={i}>
-              <SmallCard
-                number={s.number}
-                title={s.title}
-                description={s.description}
-                // subtitle={s.subtitle}
-                image={s.image}
-              />
-            </Grid>
-          ))}
+            {stepsArr.map((s, i) => (
+              <Grid item xs={3} key={i}>
+                <SmallCard
+                  number={s.number}
+                  title={s.title}
+                  description={s.description}
+                  // subtitle={s.subtitle}
+                  image={s.image}
+                />
+              </Grid>
+            ))}
           </Grid>
         </div>
 
-          <div 
+        <div
           className={styles.bottomBox}
-          style={{padding: "96px", backgroundImage: `url('/assets/tex/terracotta.jpg')`, backgroundSize: "cover", marginLeft: "-96px", marginRight: "-96px", marginBottom: "-96px", height: "100%"}}>
-          <Grid container columnSpacing={16}  >
+          style={{
+            padding: "96px",
+            backgroundImage: `url('/assets/tex/terracotta.jpg')`,
+            backgroundSize: "cover",
+            marginLeft: "-96px",
+            marginRight: "-96px",
+            marginBottom: "-96px",
+            height: "100%",
+          }}
+        >
+          <Grid container columnSpacing={16}>
             <Grid item md={6}>
               <Box>
                 <img src={LookImage} width="100%"></img>
@@ -113,8 +143,8 @@ const CategoryPage = ({ journeySelection }) => {
               />
             </Grid>
           </Grid>
-          </div>
-        </Grid>
+        </div>
+      </Grid>
     </>
   );
 };

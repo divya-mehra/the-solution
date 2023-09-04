@@ -37,7 +37,7 @@ const HeroWithGlitch = () => {
       <div
         className={styles.textCover}
         style={{
-          opacity: showTextCover ? 0.6 : 0,
+          opacity: showTextCover ? 0.9 : 0,
         }}
       >
         <Typography variant="hero" sx={{ color: "#ffffff" }}>

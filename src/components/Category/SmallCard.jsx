@@ -5,13 +5,11 @@ import bgSkin from "/assets/cover-look.jpg";
 
 const SmallCard = ({ subtitle, title, description, image }) => {
   return (
-    <div className={styles.smallBox}>
-      {/* <Typography
-        variant="h5"
-        sx={{ textTransform: "uppercase", fontWeight: 600, padding: "8px" }}
-      >
-        {subtitle}
-      </Typography> */}
+    <div 
+    className={styles.smallBox}
+    style={{backgroundImage: `url('/assets/tex/terracotta_white.png')`, backgroundSize: "cover"}}
+    >
+
       <img
         src={image}
         alt={title}

@@ -8,7 +8,9 @@ const ProductStart = ({ description_two }) => {
         <p
           style={{
             color: "#041c04",
-            fontWeight: "600",
+            fontWeight: 600,
+            fontSize: 18,
+            // fontFamily: "Optima"
             
           }}
         >

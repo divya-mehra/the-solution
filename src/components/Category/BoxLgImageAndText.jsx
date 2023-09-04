@@ -9,7 +9,7 @@ const BoxLgImageAndText = ({ title, subtitle, description, hasButton }) => {
   };
 
   let button = (
-    <Button
+    <Button style={{fontWeight: 600}}
       onClick={() => {
         routeChange("/corsica-clementine");
       }}

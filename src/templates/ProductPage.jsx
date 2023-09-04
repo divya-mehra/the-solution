@@ -38,7 +38,7 @@ const ProductPage = ({ name }) => {
     <>
       <Grid container columns={12}>
         <Grid item xs={12}>
-          <ProductPageNav />
+          <ProductPageNav hasBackground={true} linkTo={"/look"} />
         </Grid>
         <Grid item xs={12} className={styles.cardWrapper}>
           <Grid
