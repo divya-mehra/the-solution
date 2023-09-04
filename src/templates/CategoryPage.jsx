@@ -74,8 +74,9 @@ const CategoryPage = ({ journeySelection }) => {
           </Grid>
         </Grid>
         {/* "#b24923" */}
-        <div className={boxStyles.boxLg} style={{backgroundImage: `url('/assets/tex/terracotta.jpg')`, backgroundSize: "cover", padding: "24px", marginLeft: "-96px", marginRight: "-96px", height: "70vh", display: "flex", flexDirection: "column", justifyContent: "center"}}>
-          <Typography variant="h3" sx={{ textAlign: "center", padding: "48px", color: "white"}}>
+        
+        <div className={boxStyles.boxLg} style={{padding: "24px", marginLeft: "-96px", marginRight: "-96px", height: "80vh", display: "flex", flexDirection: "column", justifyContent: "space-around"}}>
+          <Typography variant="h3" sx={{ textAlign: "center", padding: "48px", color: "black"}}>
             As Easy As 1-2-3
           </Typography>
           <Grid container spacing={12} justifyContent="space-around">
@@ -93,8 +94,10 @@ const CategoryPage = ({ journeySelection }) => {
           </Grid>
         </div>
 
-        <Grid item xs={12}>
-          <Grid container columnSpacing={16}>
+          <div 
+          className={styles.bottomBox}
+          style={{padding: "96px", backgroundImage: `url('/assets/tex/terracotta.jpg')`, backgroundSize: "cover", marginLeft: "-96px", marginRight: "-96px", marginBottom: "-96px", height: "100%"}}>
+          <Grid container columnSpacing={16}  >
             <Grid item md={6}>
               <Box>
                 <img src={LookImage} width="100%"></img>
@@ -110,9 +113,8 @@ const CategoryPage = ({ journeySelection }) => {
               />
             </Grid>
           </Grid>
+          </div>
         </Grid>
-        {/* <Footer /> */}
-      </Grid>
     </>
   );
 };

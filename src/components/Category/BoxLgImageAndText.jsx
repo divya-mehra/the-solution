@@ -22,7 +22,7 @@ const BoxLgImageAndText = ({ title, subtitle, description, hasButton }) => {
     <Box className={`${styles.boxLg}`}>
       <div
         style={{
-          padding: "64px",
+          padding: "32px",
         }}
       >
         <Typography variant="h3" sx={{ textAlign: "left", paddingBottom: 2, color: "#000" }}>

@@ -18,6 +18,22 @@ const ProductPage = ({ name }) => {
 
   const [imagesLoaded, setImagesLoaded] = useState(false);
 
+  useEffect(() => {
+    const img = new Image();
+    img.src = "/assets/look_nowoman.png";
+    img.onload = () => {
+      setImagesLoaded(true);
+    };
+    img.onerror = () => {
+      // Handle image loading error here
+    };
+  }, []);
+
+  if (!imagesLoaded) {
+    // Return a loading indicator or fallback content
+    return <div>Loading...</div>;
+  }
+
   return (
     <>
       <Grid container columns={12}>

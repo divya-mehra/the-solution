@@ -5,7 +5,7 @@
 
 .boxLgImageOnly {
     position: relative;
-    height: 70vh;
+    height: 90vh;
     width: 100%;
     transition: ease all 2s;
     background-size: cover;
@@ -37,6 +37,8 @@
     min-height: 200px;
     min-width: 200px;
     background-color: "white";
+    
+    border: 1px black solid;
     border-radius: 50%;
     aspect-ratio: 1;
     background-color: #fffffa70;

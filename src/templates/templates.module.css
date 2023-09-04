@@ -9,7 +9,9 @@
   width: 100vw;
   flex-grow: 1;
   padding: 96px;
-  background-color: #fffffa;
+  padding-top: 128px;
+  /* background-color: #fffffa; */
+  background-color: #eee8e0; 
   cursor: default;
 }
 
