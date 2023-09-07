@@ -96,11 +96,11 @@
 }
 
 .boxDetailElement {
-  border: 1px black dashed;
-  /* color: #041c04aa */
+  /* border: 1px white solid; */
   /* flex-grow: 1; */
   width: 100%;
-  padding: 8px;
+  padding: 36px;
+  background-color: #000000bb;
 }
 
 .productStart {

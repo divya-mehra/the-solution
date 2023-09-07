@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 const ProductPageNav = ({hasBackground, linkTo}) => {
 
   return (
-    <Box className={styles.productPageNav} style={{backgroundColor: (hasBackground) ? "#00000070": "transparent"}}>
+    <Box className={styles.productPageNav} style={{backgroundColor: (hasBackground) ? "#000000bb": "transparent"}}>
       <NavLink
         className={styles.productPageNavItem}
         style={{ color: "white", textTransform: "uppercase"}}

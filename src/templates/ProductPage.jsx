@@ -16,6 +16,8 @@ const ProductPage = ({ name }) => {
 
   let current_product = "corsica clementine";
 
+  // Image Loading
+
   const [imagesLoaded, setImagesLoaded] = useState(false);
 
   useEffect(() => {
@@ -59,7 +61,7 @@ const ProductPage = ({ name }) => {
             <Grid item md={6} className={styles.imageContainer}>
               <img
                 style={{ padding: "48px" }}
-                // src="/assets/splash.png"
+                src="/assets/product_cc.png"
                 className={`${styles.centeredImage}`}
               ></img>
             </Grid>

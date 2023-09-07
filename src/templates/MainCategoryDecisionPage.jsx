@@ -1,11 +1,17 @@
 import { Box, Button, Typography } from "@mui/material";
 import { useState } from "react";
 import styled from "@emotion/styled";
+import styles from "./templates.module.css";
 import LookCover from "/assets/cover-look.jpg";
 import FeelCover from "/assets/cover-feel.jpg";
 import ProtoDialog from "../components/utilities/ProtoDialog";
 
-const MainCategoryDecisionPage = ({ landing, setLanding, journeySelection, setJourneySelection }) => {
+const MainCategoryDecisionPage = ({
+  landing,
+  setLanding,
+  journeySelection,
+  setJourneySelection,
+}) => {
   // Styles
 
   const CategoryWrapperBox = styled(Box)([
@@ -26,7 +32,7 @@ const MainCategoryDecisionPage = ({ landing, setLanding, journeySelection, setJo
 
     landing && {
       opacity: "1",
-      visibility: "visible"
+      visibility: "visible",
     },
   ]);
 
@@ -41,6 +47,7 @@ const MainCategoryDecisionPage = ({ landing, setLanding, journeySelection, setJo
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
+    cursor: "pointer",
   });
 
   const RightCategoryBox = styled(Box)({
@@ -56,17 +63,6 @@ const MainCategoryDecisionPage = ({ landing, setLanding, journeySelection, setJo
     justifyContent: "center",
   });
 
-  const CategoryButton = styled(Button)(
-    {
-      fontWeight: '400',
-      fontSize: '108px',
-      textTransform: 'uppercase',
-      color: 'white',
-      fontFamily: 'DIN'
-      
-    }
-  )
-
   // End Styles
 
   const [open, setOpen] = useState(false);
@@ -79,31 +75,33 @@ const MainCategoryDecisionPage = ({ landing, setLanding, journeySelection, setJo
     setOpen(false);
   };
 
-
-
   const categoryClickHandler = (e) => {
     let text = e.target.innerText;
-    if(text === "LOOK") {
-        setJourneySelection("look")
+    if (text === "LOOK") {
+      setJourneySelection("look");
     } else if (text === "FEEL") {
-        // setJourneySelection("feel")
-      handleClickOpen()
+      // setJourneySelection("feel")
+      handleClickOpen();
     } else {
-        console.log('error')
+      console.log("error");
     }
-  }
+  };
 
   return (
     <CategoryWrapperBox>
       <LeftCategoryBox>
-        <CategoryButton onClick={categoryClickHandler}>Look</CategoryButton>
+        <div className={styles.categoryButton} onClick={categoryClickHandler}>
+          Look
+        </div>
         {/* <Typography sx={{color: "white"}}>Seductive, non-threatening. Freckled skin, but not overdone. Anon face.</Typography> */}
       </LeftCategoryBox>
       <RightCategoryBox>
-        <CategoryButton onClick={categoryClickHandler}>Feel</CategoryButton>
+        <div className={styles.categoryButton} onClick={categoryClickHandler}>
+          Feel
+        </div>
         {/* <Typography sx={{color: "white"}}>Something that could be anything. Dewy petals? Glittery sleeve? Light & floaty.</Typography> */}
       </RightCategoryBox>
-      <ProtoDialog open={open} setOpen = {setOpen} handleClose={handleClose} />
+      <ProtoDialog open={open} setOpen={setOpen} handleClose={handleClose} />
     </CategoryWrapperBox>
   );
 };

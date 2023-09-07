@@ -1,11 +1,10 @@
 import { Button, Typography, Box } from "@mui/material";
-import styled from "@emotion/styled";
+import styles from "./templates.module.css";
 import { useState } from "react";
 import Image from "/assets/bottle.png";
 import "../index.css";
 
 const Splash = ({ landing, setLanding }) => {
-  const CustomButton = styled(Button)({ padding: 4 * 2, margin: 4 * 4 });
 
   const [backgroundImage, setBackgroundImage] = useState(`url(${Image})`);
 
@@ -28,7 +27,7 @@ const Splash = ({ landing, setLanding }) => {
           justifyContent: "center",
           minHeight: "100vh",
           backgroundImage: backgroundImage,
-          backgroundSize: "150%",
+          backgroundSize: "cover",
           position: "absolute",
           top: "0",
           left: "0",
@@ -49,7 +48,7 @@ const Splash = ({ landing, setLanding }) => {
         Welcome to The Solution<sup>TM</sup>
       </Typography>
       <Typography variant="h5">We're thrilled to have you here.</Typography>
-      <CustomButton onClick={enterButtonClickHandler}> Enter </CustomButton>
+      <div className={styles.enterButton} onClick={enterButtonClickHandler}> Enter </div>
     </Box>
   );
 };

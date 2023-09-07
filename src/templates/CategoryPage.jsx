@@ -1,4 +1,5 @@
 import { Box, Typography, Grid } from "@mui/material";
+import { useState, useEffect } from "react";
 
 // images
 import LookImage from "/assets/look_one.png";
@@ -55,9 +56,28 @@ const CategoryPage = ({ journeySelection }) => {
     },
   ];
 
+  // Image Loading
+
+  const [imagesLoaded, setImagesLoaded] = useState(false);
+
+  useEffect(() => {
+    const img = new Image();
+    img.src = "/assets/look_hero.png";
+    img.onload = () => {
+      setImagesLoaded(true);
+    };
+    img.onerror = () => {
+      // Handle image loading error here
+    };
+  }, []);
+
+  if (!imagesLoaded) {
+    // Return a loading indicator or fallback content
+    return <div>Loading...</div>;
+  }
+
   return (
     <>
-
       <HeroWithGlitch />
       {/* <Grid item xs={12}>
         <ProductPageNav hasBackground={false} linkTo={"MainCategory"}/>
@@ -91,7 +111,7 @@ const CategoryPage = ({ journeySelection }) => {
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
-            gap: "48px"
+            gap: "48px",
           }}
         >
           <Typography

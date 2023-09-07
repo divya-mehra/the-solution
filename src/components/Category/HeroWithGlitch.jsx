@@ -2,14 +2,6 @@ import styles from "./category.module.css";
 import { Box, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 
-{
-  /* <Typography variant="hero">
-    Two women pose. One smiles bashfully and looks to the side. The other
-    is fierce and stares at the camera. Her skin sparkles like a Christmas
-    ornament.
-</Typography> */
-}
-
 const HeroWithGlitch = () => {
 
   const [showTextCover, setShowTextCover] = useState(false);
@@ -22,6 +14,8 @@ const HeroWithGlitch = () => {
   const mouseOutHandler = () => {
     setShowTextCover(false)
   };
+
+  
 
   return (
     <div
@@ -41,10 +35,10 @@ const HeroWithGlitch = () => {
         }}
       >
         <Typography variant="hero" sx={{ color: "#ffffff" }}>
-          A woman facing forward, eyes closed. She is strong and
-          serene. She is beautiful and white, but not overly threatening.   
+          A woman facing forward, eyes gently closed. She is strong and
+          serene. She is beautiful (white), but not overly threatening.   
           <span style={{ color: "#ce6952" }}> Her skin sparkles</span> like a
-          Christmas ornament, surrounded by fruit and leaves. 
+          Christmas ornament. She is surrounded by fruit and leaves. We don't know how she got here.
         </Typography>
       </div>
     </div>

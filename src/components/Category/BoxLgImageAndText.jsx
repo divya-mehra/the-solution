@@ -9,13 +9,15 @@ const BoxLgImageAndText = ({ title, subtitle, description, hasButton }) => {
   };
 
   let button = (
-    <Button style={{fontWeight: 600}}
+    <div className={styles.productButton}
+      
       onClick={() => {
         routeChange("/corsica-clementine");
       }}
-    >
+      >
+    
       Meet Clementine
-    </Button>
+      </div>
   );
 
   return (
