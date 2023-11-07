@@ -33,7 +33,7 @@ const ProductPage = ({ name }) => {
 
   if (!imagesLoaded) {
     // Return a loading indicator or fallback content
-    return <div>Loading...</div>;
+    return <div></div>;
   }
 
   return (
