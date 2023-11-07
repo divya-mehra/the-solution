@@ -18,22 +18,16 @@ const HeroWithGlitch = () => {
   
 
   return (
-    <div
-      className={`${styles.boxLgImageOnly} `}
-      style={{
-        backgroundImage: `url("/assets/look_hero.png")`,
-        backgroundSize: "cover",
-        backgroundPosition: "center"
-      }}
-      onMouseOver={mouseOverHandler}
-      onMouseOut={mouseOutHandler}
-    >
+   
       <div
-        className={styles.textCover}
+        className={styles.boxLgImageOnly}
         style={{
-          opacity: showTextCover ? 0.9 : 0,
-        }}
-      >
+          // backgroundImage: `url("/assets/look_hero.png")`,
+          // backgroundSize: "cover",
+          // backgroundPosition: "center"
+          backgroundColor: "black"
+  
+        }}>
         <Typography variant="hero" sx={{ color: "#ffffff" }}>
           A woman facing forward, eyes gently closed. She is strong and
           serene. She is beautiful (white), but not overly threatening.   
@@ -41,7 +35,6 @@ const HeroWithGlitch = () => {
           Christmas ornament. She is surrounded by fruit and leaves. We don't know how she got here.
         </Typography>
       </div>
-    </div>
   );
 };
 
