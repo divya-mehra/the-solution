@@ -1,8 +1,8 @@
-import styles from "./category.module.css";
+import styles from "../category.module.css";
 import { Box, Typography, Button } from "@mui/material";
 import { useNavigate } from "react-router";
 
-const BoxLgImageAndText = ({ title, subtitle, description, hasButton }) => {
+const ProductTile = ({ title, subtitle, description, hasButton }) => {
   let navigate = useNavigate();
   const routeChange = (path) => {
     navigate(path);
@@ -45,4 +45,4 @@ const BoxLgImageAndText = ({ title, subtitle, description, hasButton }) => {
   );
 };
 
-export default BoxLgImageAndText;
+export default ProductTile;

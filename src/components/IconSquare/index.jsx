@@ -1,13 +1,11 @@
 import { Box, Typography, Grid } from "@mui/material";
-import styles from "./category.module.css";
-import styled from "@emotion/styled";
-import bgSkin from "/assets/cover-look.jpg";
+import styles from "../category.module.css";
 
-const SmallCard = ({ subtitle, title, description, image }) => {
+const IconSquare = ({ subtitle, title, description, image }) => {
   return (
     <div 
     className={styles.smallBox}
-    style={{backgroundImage: `url('/assets/tex/terracotta_white.png')`, backgroundSize: "cover"}}
+    style={{backgroundColor: "black", backgroundSize: "cover", color: "white"}}
     >
 
       <img
@@ -28,4 +26,4 @@ const SmallCard = ({ subtitle, title, description, image }) => {
   );
 };
 
-export default SmallCard;
+export default IconSquare;

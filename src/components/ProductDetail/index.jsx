@@ -1,8 +1,7 @@
 import { Box, Typography } from "@mui/material";
-import styles from "./product.module.css";
-import ProductDetail from "./ProductDetail";
+import styles from "../product.module.css";
 
-const ProductHero = ({ title, code, description, ingredients, bestFor }) => {
+const ProductDetail = ({ title, code, description, ingredients, bestFor }) => {
   return (
     <Box
       className={`${styles.boxLg}`}
@@ -11,7 +10,7 @@ const ProductHero = ({ title, code, description, ingredients, bestFor }) => {
         display: "flex",
         flexDirection: "column",
         justifyContent: "space-around",
-        height: "70vh"
+        height: "70vh",
       }}
     >
       <div className={styles.ProductHeroMainInfoLeft}>
@@ -22,12 +21,11 @@ const ProductHero = ({ title, code, description, ingredients, bestFor }) => {
           {code}
         </Typography>
       </div>
-      <ProductDetail description={description} />
-      {/* Product Des on left */}
-      {/* Product InfoBox on left */}
-      {/* Product ImagewithButton on left */}
+      <Box className={styles.boxDetail}>
+        <Box className={styles.boxDetailElement}>{description}</Box>
+      </Box>
     </Box>
   );
 };
 
-export default ProductHero;
+export default ProductDetail;

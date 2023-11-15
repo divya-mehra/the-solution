@@ -1,7 +1,6 @@
-import styles from "./product.module.css";
-import { Box, Typography } from "@mui/material";
+import styles from "../product.module.css";
 
-const ProductStart = ({ description_two }) => {
+const StoryStart = ({ description_two }) => {
   return (
     <>
       <div className={`${styles.productStart} ${styles.productFullWidth} `}>
@@ -22,4 +21,4 @@ const ProductStart = ({ description_two }) => {
   );
 };
 
-export default ProductStart;
+export default StoryStart;

@@ -1,5 +1,5 @@
 import { Button, Typography, Box } from "@mui/material";
-import styles from "./templates.module.css";
+import styles from "./pages.module.css";
 import { useState } from "react";
 import Image from "/assets/bottle.png";
 import "../index.css";

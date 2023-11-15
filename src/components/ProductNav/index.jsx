@@ -1,8 +1,8 @@
 import { Box, Typography } from "@mui/material";
-import styles from "./nav.module.css";
+import styles from "../nav.module.css";
 import { NavLink } from "react-router-dom";
 
-const ProductPageNav = ({hasBackground, linkTo}) => {
+const ProductNav = ({hasBackground, linkTo}) => {
 
   return (
     <Box className={styles.productPageNav} style={{backgroundColor: (hasBackground) ? "#000000bb": "transparent"}}>
@@ -19,4 +19,4 @@ const ProductPageNav = ({hasBackground, linkTo}) => {
   );
 };
 
-export default ProductPageNav;
+export default ProductNav;

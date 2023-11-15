@@ -1,14 +1,13 @@
-import styles from "./category.module.css";
+import styles from "../category.module.css";
 import { Box, Typography } from "@mui/material";
 import { useEffect, useState } from "react";
 
-const HeroWithGlitch = () => {
+const Hero = () => {
 
   const [showTextCover, setShowTextCover] = useState(false);
 
   const mouseOverHandler = () => {
     setShowTextCover(true)
-    // setTimeout(() => {setShowTextCover(false)}, 4000);
   };
 
   const mouseOutHandler = () => {
@@ -22,9 +21,6 @@ const HeroWithGlitch = () => {
       <div
         className={styles.boxLgImageOnly}
         style={{
-          // backgroundImage: `url("/assets/look_hero.png")`,
-          // backgroundSize: "cover",
-          // backgroundPosition: "center"
           backgroundColor: "black"
   
         }}>
@@ -38,4 +34,4 @@ const HeroWithGlitch = () => {
   );
 };
 
-export default HeroWithGlitch;
+export default Hero;

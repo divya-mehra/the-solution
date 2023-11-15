@@ -1,22 +1,21 @@
 import { Box, Typography, Grid } from "@mui/material";
 import { useState, useEffect } from "react";
 
-// images
+// components
+import Hero from "../components/Hero";
+import IconSquare from "../components/IconSquare";
+import ProductTile from "../components/ProductTile";
+
+// assets
 import LookImage from "/assets/look_one.png";
 import LookImageTwo from "/assets/look_two.jpg";
 
-import Footer from "../components/Footer";
+// styles
+import styles from "./pages.module.css";
+import boxStyles from "../components/category.module.css";
 
-import styles from "./templates.module.css";
-import boxStyles from "../components/Category/category.module.css";
 
-import BoxLgImageAndText from "../components/Category/BoxLgImageAndText";
-import SmallCard from "../components/Category/SmallCard";
-import HeroWithGlitch from "../components/Category/HeroWithGlitch";
-
-import ProductPageNav from "../components/navigation/ProductPageNav";
-
-const CategoryPage = ({ journeySelection }) => {
+const Category = ({ journeySelection }) => {
   console.log(journeySelection);
 
   const stepsArr = [
@@ -78,15 +77,12 @@ const CategoryPage = ({ journeySelection }) => {
 
   return (
     <>
-      <HeroWithGlitch />
-      {/* <Grid item xs={12}>
-        <ProductPageNav hasBackground={false} linkTo={"MainCategory"}/>
-      </Grid> */}
+      <Hero />
       <Grid container className={styles.wrapper} rowSpacing={16}>
         <Grid item xs={12}>
           <Grid container columnSpacing={16}>
             <Grid item md={6}>
-              <BoxLgImageAndText
+              <ProductTile
                 title="Everyone has a story"
                 subtitle="Yours begins here"
                 description={categoryPageArr[0].description}
@@ -123,7 +119,7 @@ const CategoryPage = ({ journeySelection }) => {
           <Grid container spacing={12} justifyContent="space-around">
             {stepsArr.map((s, i) => (
               <Grid item xs={3} key={i}>
-                <SmallCard
+                <IconSquare
                   number={s.number}
                   title={s.title}
                   description={s.description}
@@ -154,7 +150,7 @@ const CategoryPage = ({ journeySelection }) => {
               </Box>
             </Grid>
             <Grid item md={6}>
-              <BoxLgImageAndText
+              <ProductTile
                 title={"Reset with CC LOOK-1"}
                 subtitle={"Or as we like to call her, Clementine"}
                 description={categoryPageArr[1].description}
@@ -169,4 +165,4 @@ const CategoryPage = ({ journeySelection }) => {
   );
 };
 
-export default CategoryPage;
+export default Category;

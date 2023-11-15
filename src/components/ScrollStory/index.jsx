@@ -1,12 +1,12 @@
 import { Box, Typography } from "@mui/material";
-import styles from "./product.module.css";
+import styles from "../product.module.css";
 import image1 from "/assets/red.png";
 import image2 from "/assets/redblue.png";
 import image3 from "/assets/redblueyellow.png";
 import image4 from "/assets/last.png";
 import { useLayoutEffect, useEffect, useState } from "react";
 
-const ProductStory = ({ text }) => {
+const ScrollStory = ({ text }) => {
   // set an array with the image panels
   const [imagePanels, setImagePanels] = useState([]);
   //  set image visibility for each image
@@ -166,4 +166,4 @@ const ProductStory = ({ text }) => {
   );
 };
 
-export default ProductStory;
+export default ScrollStory;

@@ -1,6 +1,6 @@
-import Splash from "./Splash";
-import MainCategoryDecisionPage from "./MainCategoryDecisionPage";
-import CategoryPage from "./CategoryPage";
+import Splash from "./splash";
+import Nav from "./nav";
+import CategoryPage from "./category";
 import { useState } from "react";
 
 const Landing = () => {
@@ -12,7 +12,7 @@ const Landing = () => {
   ) : (
     <div>
       <Splash landing={landing} setLanding={setLanding} />
-      <MainCategoryDecisionPage landing={landing} setLanding={setLanding} journeySelection={journeySelection} setJourneySelection={setJourneySelection}/>
+      <Nav landing={landing} setLanding={setLanding} journeySelection={journeySelection} setJourneySelection={setJourneySelection}/>
     </div>
   );
 };

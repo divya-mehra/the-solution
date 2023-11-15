@@ -2,11 +2,12 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 
-import Landing from "./templates/Landing";
-import CategoryPage from "./templates/CategoryPage";
-import ProductPage from "./templates/ProductPage";
 
-import ScrollToTop from "./components/navigation/ScrollToTop";
+import Landing from "./pages/landing";
+import Category from "./pages/category";
+import Product from "./pages/product";
+
+import ScrollToTop from "./components/ScrollToTop";
 
 import { ThemeProvider, createTheme } from "@mui/material";
 import { grey } from "@mui/material/colors";
@@ -16,10 +17,8 @@ import {
   BrowserRouter,
   Routes,
   Route,
-  Link,
-  Outlet,
-  useNavigate,
 } from "react-router-dom"; // import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
 
 const routes = [
   {
@@ -28,11 +27,11 @@ const routes = [
   },
   {
     path: "/corsica-clementine",
-    component: () => <ProductPage name="corsica clementine" />, // Wrap JSX in a function
+    component: () => <Product name="corsica clementine" />, // Wrap JSX in a function
   },
   {
     path: "/look",
-    component: () => <CategoryPage journeySelection={"LOOK"} />, // Wrap JSX in a function
+    component: () => <Category journeySelection={"LOOK"} />, // Wrap JSX in a function
   },
 ];
 

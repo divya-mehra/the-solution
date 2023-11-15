@@ -1,12 +1,12 @@
 import { Box, Button, Typography } from "@mui/material";
 import { useState } from "react";
 import styled from "@emotion/styled";
-import styles from "./templates.module.css";
+import styles from "./pages.module.css";
 import LookCover from "/assets/cover-look.jpg";
 import FeelCover from "/assets/cover-feel.jpg";
 import ProtoDialog from "../components/utilities/ProtoDialog";
 
-const MainCategoryDecisionPage = ({
+const Nav = ({
   landing,
   setLanding,
   journeySelection,
@@ -106,4 +106,4 @@ const MainCategoryDecisionPage = ({
   );
 };
 
-export default MainCategoryDecisionPage;
+export default Nav;
