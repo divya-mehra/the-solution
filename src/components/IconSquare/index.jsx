@@ -5,23 +5,20 @@ const IconSquare = ({ subtitle, title, description, image }) => {
   return (
     <div 
     className={styles.smallBox}
-    style={{backgroundColor: "black", backgroundSize: "cover", color: "white"}}
+    style={{backgroundColor: "white", backgroundSize: "cover", color: "black"}}
     >
-
       <img
         src={image}
         alt={title}
-        style={{ width: "40%", height: "auto", padding: "8px" }}
+        style={{ width: "32px", height: "auto", padding: "8px" }}
       />
-      <Typography
-        variant="h6"
-        sx={{ textTransform: "uppercase"}}
+      <h6 style={{textTransform: "uppercase"}}
       >
         {title}
-      </Typography>
-      <Typography variant="body1" style={{ padding: "4px" }}>
+      </h6>
+      <p>
         {description}
-      </Typography>
+      </p>
     </div>
   );
 };

@@ -1,4 +1,6 @@
-import { Box, Typography, Grid } from "@mui/material";
+import Layout from "../components/Layout";
+
+import { Box, Grid } from "@mui/material";
 import { useState, useEffect } from "react";
 
 // components
@@ -76,10 +78,10 @@ const Category = ({ journeySelection }) => {
   }
 
   return (
-    <>
+    <Layout home={false}>
       <Hero />
-      <Grid container className={styles.wrapper} rowSpacing={16}>
-        <Grid item xs={12}>
+      {/* <Grid container className={styles.wrapper} rowSpacing={16}>
+        <Grid item xs={12}> */}
           <Grid container columnSpacing={16}>
             <Grid item md={6}>
               <ProductTile
@@ -93,42 +95,36 @@ const Category = ({ journeySelection }) => {
             <Grid item md={6}>
               <img src={LookImageTwo} width="100%"></img>
             </Grid>
-          </Grid>
+          {/* </Grid> */}
         </Grid>
         {/* "#b24923" */}
 
         <div
           className={boxStyles.boxLg}
           style={{
-            padding: "32px",
-            marginLeft: "-96px",
-            marginRight: "-96px",
             height: "80vh",
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
-            gap: "48px",
           }}
         >
-          <Typography
-            variant="h3"
-            sx={{ textAlign: "center", padding: "48px", color: "black" }}
+          <h3
+            style={{ textAlign: "center", padding: "48px", color: "black" }}
           >
             As Easy As 1-2-3
-          </Typography>
-          <Grid container spacing={12} justifyContent="space-around">
+          </h3>
+          {/* <div>
             {stepsArr.map((s, i) => (
-              <Grid item xs={3} key={i}>
+              <div style={{display: "flex"}}>
                 <IconSquare
                   number={s.number}
                   title={s.title}
                   description={s.description}
-                  // subtitle={s.subtitle}
                   image={s.image}
                 />
-              </Grid>
+              </div>
             ))}
-          </Grid>
+          </div> */}
         </div>
 
         <div
@@ -160,8 +156,8 @@ const Category = ({ journeySelection }) => {
             </Grid>
           </Grid>
         </div>
-      </Grid>
-    </>
+      
+    </Layout>
   );
 };
 

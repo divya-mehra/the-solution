@@ -1,0 +1,25 @@
+@import "./variables.scss";
+
+.page {
+  cursor: default;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #eee8e0;
+}
+
+.container {
+//   width: getGridWidth();
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  // height: 100%;
+  // flex-grow: 1;
+}
+
+.wrapper {
+  /* padding-top: 128px; */
+  /* background-color: #fffffa; */
+  background-color: #eee8e0;
+}

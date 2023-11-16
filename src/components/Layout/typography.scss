@@ -1,0 +1,81 @@
+
+@import './variables.scss';
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500;1,700&family=Optima:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500;1,700&&display=swap");
+
+@font-face {
+  font-family: "Barbara";
+  src: url("/assets/fonts/BarbaraBT-Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "DIN";
+  src: url("/assets/fonts/DIN.ttf") format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "DIN";
+  src: url("/assets/fonts/DIN Medium.ttf") format("truetype");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "DIN";
+  src: url("/assets/fonts/DIN Bold.ttf") format("truetype");
+  font-weight: 600;
+}
+
+@mixin heading {
+    font-family: 'Barbara';
+}
+
+@mixin serif {
+    font-family: 'Optima';
+}
+
+@mixin sansserif {
+  font-family: 'Inter';
+}
+
+h1 {
+    @include serif();
+    font-size: $baseline * 20;
+    font-weight: 500;
+    line-height: $baseline * 6;
+}
+
+.hero {
+    @include sansserif();
+    font-size: $baseline * 20;
+    font-weight: 400;
+    line-height: $baseline * 20;
+    color: white;
+}
+
+h3 {
+    @include serif();
+    font-size: $baseline * 12;
+    font-weight: 600;
+}
+
+h5 {
+    @include sansserif();
+    font-size: $baseline * 7;
+    font-weight: 300;
+    line-height: $baseline * 3;
+    
+}
+
+h6 {
+    @include sansserif();
+    font-size: $baseline * 6;
+    font-weight: 500;
+    line-height: $baseline * 2;
+}
+
+p {
+    @include sansserif();
+    font-size: $baseline * 5;
+    font-weight: 300;
+}

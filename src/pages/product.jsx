@@ -2,7 +2,7 @@ import { Grid } from "@mui/material";
 import styles from "./pages.module.css";
 import { useState, useEffect } from "react";
 
-import ProductNav from "../components/ProductNav";
+import MainNav from "../components/MainNav";
 import ProductDetail from "../components/ProductDetail";
 import StoryStart from "../components/StoryStart";
 import StoryEnd from "../components/StoryEnd";
@@ -40,7 +40,7 @@ const Product = ({ name }) => {
     <>
       <Grid container columns={12}>
         <Grid item xs={12}>
-          <ProductNav hasBackground={true} linkTo={"/look"} />
+          <MainNav hasBackground={true} linkTo={"/look"} />
         </Grid>
         <Grid item xs={12} className={styles.cardWrapper}>
           <Grid

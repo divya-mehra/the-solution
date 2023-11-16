@@ -9,15 +9,14 @@ const ProductTile = ({ title, subtitle, description, hasButton }) => {
   };
 
   let button = (
-    <div className={styles.productButton}
-      
+    <div
+      className={styles.productButton}
       onClick={() => {
         routeChange("/corsica-clementine");
       }}
-      >
-    
+    >
       Meet Clementine
-      </div>
+    </div>
   );
 
   return (
@@ -27,18 +26,14 @@ const ProductTile = ({ title, subtitle, description, hasButton }) => {
           padding: "32px",
         }}
       >
-        <Typography variant="h3" sx={{ textAlign: "left", paddingBottom: 2, color: "#000" }}>
-        {/* ffb835 */}
+        <h3>
+          {/* ffb835 */}
           {title}
-        </Typography>
-        <Typography variant="h6" sx={{ textAlign: "left", paddingBottom: 3 }}>
-          {subtitle}
-        </Typography>
-        <Typography sx={{ textAlign: "left" }}>
-          {description.map((p) => (
-            <p>{p}</p>
-          ))}
-        </Typography>
+        </h3>
+        <h6>{subtitle}</h6>
+        {description.map((p) => (
+          <p>{p}</p>
+        ))}
         {hasButton ? button : null}
       </div>
     </Box>

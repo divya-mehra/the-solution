@@ -2,10 +2,9 @@ import { Button, Typography, Box } from "@mui/material";
 import styles from "./pages.module.css";
 import { useState } from "react";
 import Image from "/assets/bottle.png";
-import "../index.css";
+import "../components/Layout/base.scss";
 
 const Splash = ({ landing, setLanding }) => {
-
   const [backgroundImage, setBackgroundImage] = useState(`url(${Image})`);
 
   const enterButtonClickHandler = () => {
@@ -44,11 +43,14 @@ const Splash = ({ landing, setLanding }) => {
       ]}
       className={"active"}
     >
-      <Typography variant="h1">
+      <h1>
         Welcome to The Solution<sup>TM</sup>
-      </Typography>
-      <Typography variant="h5">We're thrilled to have you here.</Typography>
-      <div className={styles.enterButton} onClick={enterButtonClickHandler}> Enter </div>
+      </h1>
+      <h5>We're thrilled to have you here.</h5>
+      <div className={styles.enterButton} onClick={enterButtonClickHandler}>
+        {" "}
+        Enter{" "}
+      </div>
     </Box>
   );
 };

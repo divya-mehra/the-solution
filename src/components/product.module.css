@@ -92,12 +92,10 @@
   width: 100%;
   justify-content: space-around;
   
-  /* flex-grow: 1; */
 }
 
 .boxDetailElement {
-  /* border: 1px white solid; */
-  /* flex-grow: 1; */
+
   width: 100%;
   padding: 36px;
   background-color: #000000bb;

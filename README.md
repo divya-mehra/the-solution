@@ -4,6 +4,4 @@ The Solution is a website for Divya Mehra's NYU ITP thesis. It is a critique of 
 
 
 
-
-
-Made with React and vite. 
+#### Made with React and Vite. 

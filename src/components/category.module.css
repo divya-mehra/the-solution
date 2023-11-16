@@ -4,13 +4,15 @@
   }
 
 .boxLgImageOnly {
+  top: 0;
+  margin: 0;
     position: relative;
-    height: 90vh;
+    height: 80vh;
     width: 100%;
     transition: ease all 2s;
     background-size: cover;
     background-color: rgba(0, 0, 0, 0.90);
-    padding: 96px;
+    /* padding: 96px; */
   }
   
   
@@ -26,8 +28,8 @@
   
   .smallBox {
     color: black;
-    min-height: 300px;
-    min-width: 300px;
+    min-height: 100px;
+    min-width: 100px;
     
     /* border: 1px black solid; */
     border-radius: 50%;

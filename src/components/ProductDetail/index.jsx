@@ -14,15 +14,15 @@ const ProductDetail = ({ title, code, description, ingredients, bestFor }) => {
       }}
     >
       <div className={styles.ProductHeroMainInfoLeft}>
-        <Typography variant="h3" sx={{ textAlign: "left", paddingBottom: 2 }}>
+        <h3>
           {title}
-        </Typography>
-        <Typography variant="h6" sx={{ textAlign: "left", paddingBottom: 3 }}>
+        </h3>
+        <h6>
           {code}
-        </Typography>
+        </h6>
       </div>
       <Box className={styles.boxDetail}>
-        <Box className={styles.boxDetailElement}>{description}</Box>
+        <Box className={styles.boxDetailElement}><p>{description}</p></Box>
       </Box>
     </Box>
   );

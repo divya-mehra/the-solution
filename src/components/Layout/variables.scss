@@ -1,0 +1,23 @@
+// Spacing Variables
+
+$width: 1440px;
+$baseline: 4px;
+$inset: $baseline * 6;
+
+$space1: $baseline * 2;
+$space2: $baseline * 3;
+$space3: $baseline * 4;
+$space4: $baseline * 5;
+$space5: $baseline * 6;
+$space6: $baseline * 7;
+$space7: $baseline * 8;
+$space8: $baseline * 9;
+$space9: $baseline * 10;
+$space10: $baseline * 11;
+
+$margin: $space10; 
+
+@function getGridWidth() {
+    @return calc(min(#{$width}, 100vw) - 2 * #{$inset});
+  }
+  
