@@ -5,14 +5,11 @@ import { useState } from "react";
 
 const Landing = () => {
   const [landing, setLanding] = useState(false);
-  const [journeySelection, setJourneySelection] = useState(null);
 
-  return journeySelection ? (
-    <CategoryPage journeySelection={journeySelection}/>
-  ) : (
+  return (
     <div>
       <Splash landing={landing} setLanding={setLanding} />
-      <Nav landing={landing} setLanding={setLanding} journeySelection={journeySelection} setJourneySelection={setJourneySelection}/>
+      <Nav landing={landing} setLanding={setLanding}/>
     </div>
   );
 };

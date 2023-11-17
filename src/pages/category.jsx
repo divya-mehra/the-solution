@@ -16,7 +16,6 @@ import LookImageTwo from "/assets/look_two.jpg";
 import styles from "./pages.module.css";
 import boxStyles from "../components/category.module.css";
 
-
 const Category = ({ journeySelection }) => {
   console.log(journeySelection);
 
@@ -82,38 +81,36 @@ const Category = ({ journeySelection }) => {
       <Hero />
       {/* <Grid container className={styles.wrapper} rowSpacing={16}>
         <Grid item xs={12}> */}
-          <Grid container columnSpacing={16}>
-            <Grid item md={6}>
-              <ProductTile
-                title="Everyone has a story"
-                subtitle="Yours begins here"
-                description={categoryPageArr[0].description}
-                orientation="left"
-                hasButton={false}
-              />
-            </Grid>
-            <Grid item md={6}>
-              <img src={LookImageTwo} width="100%"></img>
-            </Grid>
-          {/* </Grid> */}
-        </Grid>
-        {/* "#b24923" */}
+      <div className="equal-grid">
+        <div>
+          <ProductTile
+            title="Everyone has a story"
+            subtitle="Yours begins here"
+            description={categoryPageArr[0].description}
+            orientation="left"
+            hasButton={false}
+          />
+        </div>
+        <div>
+          <img src={LookImageTwo} width="100%"></img>
+        </div>
+        {/* </Grid> */}
+      </div>
+      {/* "#b24923" */}
 
-        <div
-          className={boxStyles.boxLg}
-          style={{
-            height: "80vh",
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-          }}
-        >
-          <h3
-            style={{ textAlign: "center", padding: "48px", color: "black" }}
-          >
-            As Easy As 1-2-3
-          </h3>
-          {/* <div>
+      <div
+        className={boxStyles.boxLg}
+        style={{
+          height: "80vh",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+        }}
+      >
+        <h3 style={{ textAlign: "center", padding: "48px", color: "black" }}>
+          As Easy As 1-2-3
+        </h3>
+        {/* <div>
             {stepsArr.map((s, i) => (
               <div style={{display: "flex"}}>
                 <IconSquare
@@ -125,38 +122,31 @@ const Category = ({ journeySelection }) => {
               </div>
             ))}
           </div> */}
-        </div>
+      </div>
 
-        <div
-          className={styles.bottomBox}
-          style={{
-            padding: "96px",
-            backgroundImage: `url('/assets/tex/terracotta.jpg')`,
-            backgroundSize: "cover",
-            marginLeft: "-96px",
-            marginRight: "-96px",
-            marginBottom: "-96px",
-            height: "100%",
-          }}
-        >
-          <Grid container columnSpacing={16}>
-            <Grid item md={6}>
-              <Box>
-                <img src={LookImage} width="100%"></img>
-              </Box>
-            </Grid>
-            <Grid item md={6}>
-              <ProductTile
-                title={"Reset with CC LOOK-1"}
-                subtitle={"Or as we like to call her, Clementine"}
-                description={categoryPageArr[1].description}
-                orientation="right"
-                hasButton={true}
-              />
-            </Grid>
-          </Grid>
+      <div
+        className={styles.bottomBox}
+        style={{
+          // padding: "96px",
+          backgroundImage: `url('/assets/tex/terracotta.jpg')`,
+          backgroundSize: "cover",
+        }}
+      >
+        <div className="equal-grid">
+          <div>
+            <img src={LookImage} width="100%"></img>
+          </div>
+          <div>
+            <ProductTile
+              title={"Reset with CC LOOK-1"}
+              subtitle={"Or as we like to call her, Clementine"}
+              description={categoryPageArr[1].description}
+              orientation="right"
+              hasButton={true}
+            />
+          </div>
         </div>
-      
+      </div>
     </Layout>
   );
 };

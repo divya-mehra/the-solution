@@ -6,6 +6,7 @@ import "./components/Layout/base.scss"
 import Landing from "./pages/landing";
 import Category from "./pages/category";
 import Product from "./pages/product";
+import Nav from "./pages/nav";
 
 import ScrollToTop from "./components/ScrollToTop";
 
@@ -32,6 +33,10 @@ const routes = [
   {
     path: "/look",
     component: () => <Category journeySelection={"LOOK"} />, // Wrap JSX in a function
+  },
+  {
+    path: "/nav",
+    component: () => <Nav landing={true}  />, // Wrap JSX in a function
   },
 ];
 
