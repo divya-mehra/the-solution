@@ -2,20 +2,6 @@
   --wrapper-margin: 96px;
 }
 
-.wrapper {
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  width: 100vw;
-  flex-grow: 1;
-  padding: 96px;
-  /* padding-top: 128px; */
-  /* background-color: #fffffa; */
-  background-color: #eee8e0; 
-  cursor: default;
-}
-
 .cardWrapper > * {
   padding: 96px;
 }
@@ -31,28 +17,6 @@
   max-height: 100%;
   vertical-align: middle;
 }
-
-/* Buttons */
-
-.categoryButton {
-  display: inline-block; 
-    align-self: center;
-    font-weight: 400;
-    font-size: 6rem;
-    text-transform: uppercase;
-    color: white;
-    font-family: 'DIN';
-    cursor: pointer;
-    background-color: transparent; 
-    transition: background-color 0.3s, color 0.3s; 
-    /* width: 50%; */
-    padding: 8px 100px; 
-    
-  }
-
-  .categoryButton:hover {
-    border: 5px white solid;
-  }
 
   .enterButton {
     display: inline-block; 

@@ -1,22 +1,20 @@
-import { Box, Typography } from "@mui/material";
-import styles from "../nav.module.css";
 import { NavLink } from "react-router-dom";
+import "../Layout/base.scss";
 
-const ProductNav = ({hasBackground, linkTo}) => {
-
+const MainNav = ({ hasBackground, linkTo }) => {
+  // {styles.productPageNav}
   return (
-    <Box className={styles.productPageNav} style={{backgroundColor: (hasBackground) ? "#000000bb": "transparent"}}>
+    <div
+      className="main-nav"    >
       <NavLink
-        className={styles.productPageNavItem}
-        style={{ color: "white", textTransform: "uppercase"}}
+        
+        style={{ color: "white", textTransform: "uppercase" }}
         to={linkTo}
       >
-        <Typography variant="h7">
-        ← back
-        </Typography>
+        <h7>← back</h7>
       </NavLink>
-    </Box>
+    </div>
   );
 };
 
-export default ProductNav;
+export default MainNav;

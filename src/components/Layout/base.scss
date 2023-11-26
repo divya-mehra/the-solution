@@ -1,19 +1,44 @@
 @import "./typography";
 @import "./grid";
+@import "./scroll";
 
+// Includes buttons
 
-// Colors
+// Nav
 
-$dark: #1a1a1a;
-$light: #eee8e0;
+// .main-nav {
+//   display: fixed;
+//   background-color: transparent;
+// }
 
+// Buttons
 
+.category-button {
+  display: inline-block;
+  align-self: center;
+  font-weight: 400;
+  font-size: 6rem;
+  text-transform: uppercase;
+  color: white;
+  font-family: "DIN";
+  cursor: pointer;
+  background-color: transparent;
+  transition: background-color 0.3s, color 0.3s;
+  /* width: 50%; */
+  padding: 8px 100px;
+}
 
+.category-button.look-button {
+  color: $green;
+}
 
+.category-button:hover {
+  border: 5px white solid;
+}
 
-
-
-
+.category-button.look-button:hover {
+  border: 5px $green solid;
+}
 
 :root {
   margin: 0;

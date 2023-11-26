@@ -1,5 +1,4 @@
 import { Box, Typography } from "@mui/material";
-import styles from "../product.module.css";
 import image1 from "/assets/red.png";
 import image2 from "/assets/redblue.png";
 import image3 from "/assets/redblueyellow.png";
@@ -65,7 +64,7 @@ const ScrollStory = ({ text }) => {
   useLayoutEffect(() => {
     const observer = new IntersectionObserver(handleIntersection, options);
 
-    let panels = document.querySelectorAll(`.${styles.observerTextPanel}`);
+    let panels = document.querySelectorAll(`.observerTextPanel`);
     console.log(panels);
 
     panels.forEach((p) => {
@@ -79,13 +78,13 @@ const ScrollStory = ({ text }) => {
   }, []);
 
   useEffect(() => {
-    const images = document.querySelectorAll(`.${styles.intersectionDiv}`);
+    const images = document.querySelectorAll(`.intersectionDiv`);
     setImagePanels(images);
   }, []);
 
   return (
     <Box
-      className={`${styles.boxLgWithObserver} ${styles.boxLg}`}
+      className="boxLgWithObserver"
       
     >
       <div
@@ -98,28 +97,28 @@ const ScrollStory = ({ text }) => {
         }}
       >
         <img
-          className={styles.intersectionDiv}
+          className="intersectionDiv"
           src={image1}
           id={"image-1"}
           alt="Image One"
           style={{ visibility: visibleImage1 ? "visible " : "hidden" }}
         />
         <img
-          className={styles.intersectionDiv}
+          className="intersectionDiv"
           src={image2}
           id={"image-2"}
           alt="Image Two"
           style={{ visibility: visibleImage2 ? "visible " : "hidden" }}
         />
         <img
-          className={styles.intersectionDiv}
+          className="intersectionDiv"
           src={image3}
           id={"image-3"}
           alt="Image Three"
           style={{ opacity: visibleImage3 ? 1 : 0 }}
         />
         <img
-          className={styles.intersectionDiv}
+          className="intersectionDiv"
           src={image4}
           id={"image-4"}
           alt="Image Three"
@@ -133,29 +132,29 @@ const ScrollStory = ({ text }) => {
           paddingRight: "48px",
         }}
       >
-        <div className={styles.observerTextPanel} id={"panel-1"}>
-          <Typography variant="story" className={styles.observerTextDetail}>
+        <div className="observerTextPanel" id={"panel-1"}>
+          <Typography variant="story" className="observerTextDetail">
             {text.one.map((p, i) => {
               return <p>{p}</p>;
             })}
           </Typography>
         </div>
-        <div className={`${styles.observerTextPanel}`} id={"panel-2"}>
-          <Typography variant="story" className={styles.observerTextDetail}>
+        <div className="observerTextPanel" id={"panel-2"}>
+          <Typography variant="story" className="observerTextDetail">
             {text.two.map((p, i) => {
               return <p>{p}</p>;
             })}
           </Typography>
         </div>
-        <div className={`${styles.observerTextPanel}`} id={"panel-3"}>
-          <Typography variant="story" className={styles.observerTextDetail}>
+        <div className="observerTextPanel" id={"panel-3"}>
+          <Typography variant="story" className="observerTextDetail">
             {text.three.map((p, i) => {
               return <p>{p}</p>;
             })}
           </Typography>
         </div>
-        <div className={`${styles.observerTextPanel} `} id={"panel-4"}>
-          <Typography variant="story" className={styles.observerTextDetail}>
+        <div className="observerTextPanel" id={"panel-4"}>
+          <Typography variant="story" className="observerTextDetail">
             {text.four.map((p, i) => {
               return <p>{p}</p>;
             })}

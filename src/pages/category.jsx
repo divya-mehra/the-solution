@@ -1,12 +1,15 @@
 import Layout from "../components/Layout";
-
-import { Box, Grid } from "@mui/material";
 import { useState, useEffect } from "react";
 
 // components
-import Hero from "../components/Hero";
-import IconSquare from "../components/IconSquare";
+import StaticHero from "../components/StaticHero";
 import ProductTile from "../components/ProductTile";
+import ProductTransition from "../components/ProductTransition";
+import ProductHero from "../components/ProductHero";
+
+import StoryStart from "../components/StoryStart";
+import ScrollStory from "../components/ScrollStory";
+import StoryEnd from "../components/StoryEnd";
 
 // assets
 import LookImage from "/assets/look_one.png";
@@ -16,8 +19,13 @@ import LookImageTwo from "/assets/look_two.jpg";
 import styles from "./pages.module.css";
 import boxStyles from "../components/category.module.css";
 
+// import story data
+import stories from "../data/stories";
+
 const Category = ({ journeySelection }) => {
   console.log(journeySelection);
+
+  let current_product = "corsica clementine";
 
   const stepsArr = [
     {
@@ -78,7 +86,7 @@ const Category = ({ journeySelection }) => {
 
   return (
     <Layout home={false}>
-      <Hero />
+      <StaticHero />
       {/* <Grid container className={styles.wrapper} rowSpacing={16}>
         <Grid item xs={12}> */}
       <div className="equal-grid">
@@ -98,54 +106,38 @@ const Category = ({ journeySelection }) => {
       </div>
       {/* "#b24923" */}
 
-      <div
-        className={boxStyles.boxLg}
-        style={{
-          height: "80vh",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-        }}
+      <div className="equal-grid"
       >
-        <h3 style={{ textAlign: "center", padding: "48px", color: "black" }}>
-          As Easy As 1-2-3
-        </h3>
-        {/* <div>
-            {stepsArr.map((s, i) => (
-              <div style={{display: "flex"}}>
-                <IconSquare
-                  number={s.number}
-                  title={s.title}
-                  description={s.description}
-                  image={s.image}
-                />
-              </div>
-            ))}
-          </div> */}
+        <div></div>
+                  <ProductTile
+            title="As Easy As 1-2-3"
+            subtitle="If only you'd known"
+            description={categoryPageArr[0].description}
+            orientation="right"
+            hasButton={false}
+          />
+        
+          
+        
       </div>
 
-      <div
-        className={styles.bottomBox}
-        style={{
-          // padding: "96px",
-          backgroundImage: `url('/assets/tex/terracotta.jpg')`,
-          backgroundSize: "cover",
-        }}
-      >
-        <div className="equal-grid">
-          <div>
-            <img src={LookImage} width="100%"></img>
-          </div>
-          <div>
-            <ProductTile
-              title={"Reset with CC LOOK-1"}
-              subtitle={"Or as we like to call her, Clementine"}
-              description={categoryPageArr[1].description}
-              orientation="right"
-              hasButton={true}
-            />
-          </div>
+      <div className={styles.bottomBox}>
+        <div>
+          <ProductTransition
+            title={"Reset with CC LOOK-1"}
+            subtitle={"Or as we like to call her, Clementine"}
+            description={categoryPageArr[1].description}
+            image={LookImage}
+          />
         </div>
+      </div>
+      <ProductHero current_product={current_product} />
+      
+      <div>
+        <ScrollStory text={stories[`${current_product}`].text} />
+      </div>
+      <div>
+        <StoryEnd />
       </div>
     </Layout>
   );

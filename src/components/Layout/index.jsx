@@ -7,7 +7,7 @@ import MainNav from "../MainNav";
 const Layout = ({ children, home }) => {
   return (
     <div className="page">
-      {home ? null : <MainNav />}
+      {/* {home ? null : <MainNav />} */}
       <div className="container">{children}</div>
     </div>
   );
