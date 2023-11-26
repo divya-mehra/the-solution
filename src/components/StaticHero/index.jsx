@@ -1,4 +1,5 @@
 import { useState } from "react";
+import P5 from "../P5";
 
 const StaticHero = () => {
   const [showTextCover, setShowTextCover] = useState(false);
@@ -13,6 +14,7 @@ const StaticHero = () => {
 
   return (
     <div className="static-hero flex-column">
+      <P5/>
       <div className="hero-text-title">
         A woman facing forward, eyes gently closed. She is strong and serene.
         She is beautiful (white), but not overly threatening. Her skin sparkles
