@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import "./components/Layout/base.scss";
 
 
-import Landing from "./pages/landing";
+import Landing from "./pages/Landing";
 import Category from "./pages/category";
 import Nav from "./pages/nav";
 
