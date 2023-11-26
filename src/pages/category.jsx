@@ -7,7 +7,6 @@ import ProductTile from "../components/ProductTile";
 import ProductTransition from "../components/ProductTransition";
 import ProductHero from "../components/ProductHero";
 
-import StoryStart from "../components/StoryStart";
 import ScrollStory from "../components/ScrollStory";
 import StoryEnd from "../components/StoryEnd";
 
@@ -17,7 +16,6 @@ import LookImageTwo from "/assets/look_two.jpg";
 
 // styles
 import styles from "./pages.module.css";
-import boxStyles from "../components/category.module.css";
 
 // import story data
 import stories from "../data/stories";

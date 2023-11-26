@@ -1,11 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./components/Layout/base.scss"
+import "./components/Layout/base.scss";
 
 
 import Landing from "./pages/landing";
 import Category from "./pages/category";
-import Product from "./pages/product";
 import Nav from "./pages/nav";
 
 import ScrollToTop from "./components/ScrollToTop";
@@ -26,10 +25,6 @@ const routes = [
   {
     path: "/",
     component: Landing,
-  },
-  {
-    path: "/corsica-clementine",
-    component: () => <Product name="corsica clementine" />, // Wrap JSX in a function
   },
   {
     path: "/look",
