@@ -1,7 +1,7 @@
 const ProductTransition = ({ props }) => {
   return (
     <div
-      className="full-width static-hero flex-column"
+      className="full-width relative-hero flex-column"
       style={{
         backgroundImage: `url('/assets/look_one.png')`,
         backgroundSize: "cover",

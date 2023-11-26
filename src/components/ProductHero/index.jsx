@@ -1,6 +1,5 @@
 import { useState } from "react";
 import ProductDetail from "../ProductDetail";
-
 import stories from "../../data/stories";
 
 const ProductHero = ({current_product}) => {
