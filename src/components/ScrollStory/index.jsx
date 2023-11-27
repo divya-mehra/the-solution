@@ -1,9 +1,14 @@
+
+import "./index.scss";
+
 import { Box, Typography } from "@mui/material";
 import image1 from "/assets/red.png";
 import image2 from "/assets/redblue.png";
 import image3 from "/assets/redblueyellow.png";
 import image4 from "/assets/last.png";
 import { useLayoutEffect, useEffect, useState } from "react";
+
+
 
 const ScrollStory = ({ text }) => {
   // set an array with the image panels
@@ -83,18 +88,10 @@ const ScrollStory = ({ text }) => {
   }, []);
 
   return (
-    <Box
-      className="boxLgWithObserver"
-      
+    <div
+      className="scroll-story"
     >
-      <div
-        style={{
-          position: "sticky",
-          top: 0,
-          height: "100vh",
-          zIndex: 1,
-          // backgroundColor: "black"
-        }}
+      <div className="visual-side"
       >
         <img
           className="intersectionDiv"
@@ -126,11 +123,7 @@ const ScrollStory = ({ text }) => {
         />
       </div>
       <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          paddingRight: "48px",
-        }}
+        className="text-side"
       >
         <div className="observerTextPanel" id={"panel-1"}>
           <Typography variant="story" className="observerTextDetail">
@@ -161,7 +154,7 @@ const ScrollStory = ({ text }) => {
           </Typography>
         </div>
       </div>
-    </Box>
+    </div>
   );
 };
 

@@ -6,6 +6,7 @@ import StaticHero from "../components/StaticHero";
 import Background from "../components/Background";
 import IntroParallax from "../components/IntroParallax";
 import ProductTransition from "../components/ProductTransition";
+import Story from "../components/Story";
 
 import LookImage from "/assets/look_one.png";
 
@@ -51,17 +52,7 @@ const Category = ({ journeySelection }) => {
           description={"Clementine is our signature Reset product. Start with her and you won't ever look back."}
           image={LookImage}
         />
-      } hero = {<ProductHero current_product={current_product} />} />
-      
-
-      {/* <ProductHero current_product={current_product} />
-
-      <div>
-        <ScrollStory text={stories[`${current_product}`].text} />
-      </div>
-      <div>
-        <StoryEnd />
-      </div> */}
+      } story={<Story/>}/>
     </Layout>
   );
 };

@@ -1,12 +1,12 @@
-import "./index.scss"
-import ProductTransition from "../ProductTransition";
+import "./index.scss";
 
-const ProductParallax = ({transition, hero, story}) => {
-    return (
-        <>
-        {transition}
-    <div style={{ position: "relative", height: "100vh", color: "black"}}> {hero} </div>
-    </>);
-}
- 
+const ProductParallax = ({ transition, story }) => {
+  return (
+    <div style={{ overflow: "hidden" }}>
+      <div>{transition}</div>
+      <div>{story}</div>
+    </div>
+  );
+};
+
 export default ProductParallax;
