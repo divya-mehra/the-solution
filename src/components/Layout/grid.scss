@@ -13,8 +13,8 @@
 .container {
   margin: 0 auto;
   position: relative;
-  // display: flex;
-  // flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .wrapper {
@@ -33,14 +33,13 @@
 }
 
 .static-hero {
-  position: fixed;
+  // position: fixed;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 2;
   min-height: 100vh;
   padding: $baseline * 20;
   overflow: hidden;
-  // background-image: url("../assets/tex/terracotta.jpg");
 }
 
 .background {
@@ -50,10 +49,6 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-}
-
-.relative-hero {
-  min-height: 100vh;
 }
 
 .equal-grid {

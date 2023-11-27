@@ -4,11 +4,14 @@ import { useState, useEffect } from "react";
 // components
 import StaticHero from "../components/StaticHero";
 import Background from "../components/Background";
-import Parallax from "../components/Parallax";
+import IntroParallax from "../components/IntroParallax";
 
 
 // import story data
 import stories from "../data/stories";
+import ProductHero from "../components/ProductHero";
+import ScrollStory from "../components/ScrollStory";
+import ProductParallax from "../components/ProductParallax";
 
 const Category = ({ journeySelection }) => {
   console.log(journeySelection);
@@ -36,11 +39,9 @@ const Category = ({ journeySelection }) => {
 
   return (
     <Layout home={false}>
-      <Parallax hero = {<StaticHero/>} background={<Background/>} />
-
-      {/* Panel 2 */}
-
-      {/* Panel 2 end */}
+      <IntroParallax hero = {<StaticHero/>} background={<Background/>} />
+      <ProductParallax hero = {<ProductHero current_product={current_product} />} />
+      
 
       {/* <ProductHero current_product={current_product} />
 

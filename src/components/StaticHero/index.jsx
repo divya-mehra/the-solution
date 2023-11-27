@@ -17,7 +17,7 @@ const StaticHero = () => {
   return (
     <div className="static-hero flex-column">
       <P5/>
-      <div className="hero-text-title">
+      <div className="hero-text-title hide">
         A woman facing forward, eyes gently closed. She is strong and serene.
         She is beautiful (white), but not overly threatening. Her skin sparkles
         like a Christmas ornament. She is surrounded by fruit and leaves. 

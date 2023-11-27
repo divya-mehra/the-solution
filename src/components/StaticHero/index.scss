@@ -5,6 +5,9 @@
     @include sansserif();
     font-size: 3rem;
     font-weight: 300;
+}
+
+.hero-text-title.hide {
     color: $orange-light-2;
 }
 

@@ -1,13 +1,12 @@
 import { useSpring, animated } from "react-spring";
 import { useEffect } from "react";
 
-
-const Parallax = ({ hero, background }) => {
+const IntroParallax = ({ hero, background }) => {
   const [{ scroll }, set] = useSpring(() => ({ scroll: 0 }));
 
   // Update scroll value when the user scrolls
   const handleScroll = () => {
-    console.log(window.scrollY)
+    console.log(window.scrollY);
     set({ scroll: window.scrollY });
   };
 
@@ -20,19 +19,17 @@ const Parallax = ({ hero, background }) => {
   }, []);
 
   return (
-    <div style={{ overflow: "hidden" }}>
+    <div style={{ overflow: "hidden", position: "relative", height: "100%" }}>
       <animated.div
         style={{
-            transform: scroll.to((s) => `translate3d(0, ${s}px, 0)`),
+          transform: scroll.to((s) => `translate3d(0, ${s}px, 0)`),
         }}
       >
         {hero}
       </animated.div>
-      <div style={{ marginTop: "100vh" }}>
-      {background}
-      </div>
+      <div >{background}</div>
     </div>
   );
 };
 
-export default Parallax;
+export default IntroParallax;
