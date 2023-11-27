@@ -49,13 +49,6 @@ h1 {
     line-height: $baseline * 6;
 }
 
-.hero-text-title {
-    @include sansserif();
-    font-size: 3rem;
-    font-weight: 300;
-    // line-height: $baseline * 20;
-}
-
 h6 {
   @include sansserif();
   font-size: 1.4rem;

@@ -1,0 +1,20 @@
+
+@import "../Layout/base.scss";
+
+.hero-text-title {
+    @include sansserif();
+    font-size: 3rem;
+    font-weight: 300;
+    color: $orange-light-2;
+}
+
+.hero-text-subtitle {
+    color: $orange-light-2;
+}
+
+.highlight-text {
+    color: $light;
+    @include serif();
+    font-weight: 500;
+    font-size: 1.7rem;
+}

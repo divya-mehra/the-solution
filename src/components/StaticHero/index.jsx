@@ -1,3 +1,5 @@
+import "./index.scss"
+
 import { useState } from "react";
 import P5 from "../P5";
 
@@ -20,9 +22,9 @@ const StaticHero = () => {
         She is beautiful (white), but not overly threatening. Her skin sparkles
         like a Christmas ornament. She is surrounded by fruit and leaves. 
       </div>
-      <h6>
+      <h6 className="hero-text-subtitle">
         We don't know how she got here,
-        but she has The Solution.
+        <span className="highlight-text">but she has The Solution.</span>
       </h6>
     </div>
   );

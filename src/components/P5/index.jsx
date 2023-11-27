@@ -11,11 +11,15 @@ const P5 = () => {
               const canvas = p.createCanvas(sketchRef.current.clientWidth, sketchRef.current.clientHeight);
               // Place the canvas inside the div
               canvas.parent(sketchRef.current);
+              p.background(220, 5);
             };
       
             p.draw = () => {
-              p.background(220);
-              p.ellipse(p.mouseX, p.mouseY, 50, 50);
+              
+              p.noStroke()
+            // find a way to take orange2 from scss:
+            p.fill("#E3AE7550")
+              p.ellipse(p.mouseX, p.mouseY, 100, 100);
             };
       
             // Handle window resize to update canvas size
