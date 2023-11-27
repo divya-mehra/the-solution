@@ -7,7 +7,7 @@ const IntroParallax = ({ hero, background }) => {
 
   // Update scroll value when the user scrolls
   const handleScroll = () => {
-    console.log(window.scrollY)
+    
     set({ scroll: window.scrollY });
   };
 

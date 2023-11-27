@@ -3,15 +3,7 @@ import ProductDetail from "../ProductDetail";
 import stories from "../../data/stories";
 
 const ProductHero = ({current_product}) => {
-  const [showTextCover, setShowTextCover] = useState(false);
 
-  const mouseOverHandler = () => {
-    setShowTextCover(true);
-  };
-
-  const mouseOutHandler = () => {
-    setShowTextCover(false);
-  };
 
   return (
     <div className="static-hero flex-column">

@@ -1,17 +1,18 @@
 .scroll-story {
   height: 400vh;
-  position: relative;
+  //   position: relative;
   display: flex;
   justify-content: space-between;
   gap: 48px;
+  width: 100%;
 }
 
-.scroll-story > * {
-  padding: 96px;
-  flex-basis: 50%;
-  flex-grow: 1;
-  /* border: 1px black solid; */
-}
+// .scroll-story > * {
+//   padding: 96px;
+//   flex-basis: 50%;
+//   flex-grow: 1;
+//   /* border: 1px black solid; */
+// }
 
 .visual-side {
   position: sticky;
@@ -19,14 +20,14 @@
   width: 50%;
   top: 0;
   height: 100vh;
-  z-index: 0;
+  //   z-index: 0;
 }
 
 .text-side {
+  width: 50vw;
   display: flex;
   flex-direction: column;
   padding-right: 48px;
-  
 }
 
 .observerTextPanel {

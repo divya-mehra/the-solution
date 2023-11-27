@@ -15,7 +15,6 @@ import LookImage from "/assets/look_one.png";
 // import story data
 import stories from "../data/stories";
 import ProductHero from "../components/ProductHero";
-import ScrollStory from "../components/ScrollStory";
 import ProductParallax from "../components/ProductParallax";
 
 const Category = ({ journeySelection }) => {
