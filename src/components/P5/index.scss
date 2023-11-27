@@ -1,0 +1,21 @@
+@import "../Layout/base.scss";
+
+.hero-background {
+    min-width: 100vw;
+    min-height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -5;
+}
+
+.fix-button {
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    background-color: transparent;
+    border: 1px solid $light;
+    color: $light;
+    text-transform: uppercase;
+    font-weight: 600;
+}

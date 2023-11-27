@@ -1,12 +1,13 @@
 import "./index.scss";
 
 import { Typography } from "@mui/material";
+
 import { useLayoutEffect, useEffect, useState } from "react";
 
 const ScrollStory = ({ text }) => {
 
   return (
-    <div className="scroll-story" >
+    
   
       
       <div className="text-side" >
@@ -32,14 +33,14 @@ const ScrollStory = ({ text }) => {
           </Typography>
         </div>
         <div className="observerTextPanel" id={"panel-4"}>
-          <Typography variant="story" className="observerTextDetail">
+          <div className="observerTextDetail">
             {text.four.map((p, i) => {
               return <p>{p}</p>;
             })}
-          </Typography>
+          </div>
         </div>
       
-    </div>
+    
     </div>
   );
 };

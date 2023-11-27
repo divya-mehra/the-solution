@@ -1,43 +1,22 @@
-.scroll-story {
-  height: 400vh;
-  //   position: relative;
-  display: flex;
-  justify-content: space-between;
-  gap: 48px;
-  width: 100%;
-}
-
-// .scroll-story > * {
-//   padding: 96px;
-//   flex-basis: 50%;
-//   flex-grow: 1;
-//   /* border: 1px black solid; */
-// }
-
-.visual-side {
-  position: sticky;
-  left: 0;
-  width: 50%;
-  top: 0;
-  height: 100vh;
-  //   z-index: 0;
-}
+@import "../Layout//base.scss";
 
 .text-side {
-  width: 50vw;
+  margin: 0 auto;
+  padding: $baseline * 24;
+  width: 80%;
   display: flex;
   flex-direction: column;
-  padding-right: 48px;
+  //   padding-right: 48px;
 }
 
 .observerTextPanel {
-  height: 100vh;
-  /* border: 1px red dashed; */
-  padding: 48px;
+    @include serif();
+  padding: $baseline * 10;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
+
 
 .observerTextDetail::first-line {
   font-weight: bold;
@@ -48,13 +27,6 @@
   float: left; /* Ensures that the letter takes up its own space */
   line-height: 1; /* Reset line height for the first letter */
   margin-right: 4px; /* Add some spacing to separate the first letter from the content */
-}
-
-.intersectionDiv {
-  position: absolute;
-  object-fit: cover;
-  width: 100%;
-  /* top: 10%; */
 }
 
 .productFullWidth {
