@@ -17,7 +17,7 @@
 
 .highlight-text {
     color: $light;
-    @include serif();
-    font-weight: 500;
-    font-size: 1.7rem;
+    // color: $orange-light-2;
+    font-weight: 800;
+    z-index: 5;
 }

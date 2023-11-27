@@ -5,6 +5,10 @@ import { useState, useEffect } from "react";
 import StaticHero from "../components/StaticHero";
 import Background from "../components/Background";
 import IntroParallax from "../components/IntroParallax";
+import ProductTransition from "../components/ProductTransition";
+
+import LookImage from "/assets/look_one.png";
+
 
 
 // import story data
@@ -40,7 +44,14 @@ const Category = ({ journeySelection }) => {
   return (
     <Layout home={false}>
       <IntroParallax hero = {<StaticHero/>} background={<Background/>} />
-      <ProductParallax hero = {<ProductHero current_product={current_product} />} />
+      <ProductParallax transition={       
+        <ProductTransition
+          title={"Reset with CC LOOK-1"}
+          subtitle={"Or as we like to call her, Clementine"}
+          description={"Clementine is our signature Reset product. Start with her and you won't ever look back."}
+          image={LookImage}
+        />
+      } hero = {<ProductHero current_product={current_product} />} />
       
 
       {/* <ProductHero current_product={current_product} />

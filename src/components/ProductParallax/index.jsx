@@ -1,7 +1,12 @@
 import "./index.scss"
+import ProductTransition from "../ProductTransition";
 
-const ProductParallax = ({hero, story}) => {
-    return (<div style={{ position: "relative", zIndex: 0, height: "100vh", color: "black"}}> {hero} </div>);
+const ProductParallax = ({transition, hero, story}) => {
+    return (
+        <>
+        {transition}
+    <div style={{ position: "relative", height: "100vh", color: "black"}}> {hero} </div>
+    </>);
 }
  
 export default ProductParallax;

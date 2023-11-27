@@ -53,15 +53,6 @@ const Background = () => {
         hasButton={false}
       />
     </div>
-
-      <div>
-        <ProductTransition
-          title={"Reset with CC LOOK-1"}
-          subtitle={"Or as we like to call her, Clementine"}
-          description={categoryPageArr[1].description}
-          image={LookImage}
-        />
-      </div>
   </div>
 );
 }
