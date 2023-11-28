@@ -1,22 +1,22 @@
 import { useState } from "react";
 import ProductDetail from "../ProductDetail";
 import stories from "../../data/stories";
+import ProductImage from "../../assets/product_4.png";
 
-const ProductHero = ({current_product}) => {
-
-
+const ProductHero = ({ current_product }) => {
   return (
     <div className="static-hero flex-column">
-       <div className="equal-grid">
-      <ProductDetail
-                title={stories[`${current_product}`].title}
-                code={stories[`${current_product}`].code}
-                description={stories[`${current_product}`].description}
-              />
-              <div></div>
+      <div className="equal-grid">
+      <div style={{ display: "flex", flexDirection: "column" ,justifyContent: "center" }}>
+          <h3>{stories[`${current_product}`].title}</h3>
+          <h6>{stories[`${current_product}`].code}</h6>
+          <p>{stories[`${current_product}`].description}</p>
+        </div>
 
+        <div style={{ display: "flex", alignItems: "center" }}>
+          <img src={ProductImage} width={"100%"}></img>
+        </div>
       </div>
-
     </div>
   );
 };

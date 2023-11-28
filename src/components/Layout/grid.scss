@@ -11,6 +11,7 @@
 }
 
 .container {
+  max-width: 1440px;
   margin: 0 auto;
   position: relative;
   // display: flex;
@@ -92,7 +93,7 @@
 }
 
 .right-absolute {
-  background: #00000030;
+  
   position: absolute;
   width: 50%;
   right: 0;
