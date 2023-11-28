@@ -60,6 +60,7 @@ h3 {
     @include sansserif();
     font-size: 2.4rem;
     font-weight: 600;
+    margin-bottom: 0.2em;
 }
 
 h5 {
@@ -73,7 +74,11 @@ h5 {
 
 
 p {
-    @include sansserif();
+    @include serif();
     font-size: $baseline * 5;
     font-weight: 300;
+}
+
+.tile-text {
+  margin-top: 3em;
 }

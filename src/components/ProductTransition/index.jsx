@@ -6,6 +6,17 @@ const ProductTransition = ({ props }) => {
 
 let circle;
 
+// listen for the scroll
+
+const updateCircles = () => {
+
+  const newCircles = () => {
+    
+  }
+
+  const scrollPosition = window.scrollY;
+}
+
   return (
     <div
       className="full-width relative-hero flex-column"

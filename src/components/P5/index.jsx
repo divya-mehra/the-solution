@@ -7,6 +7,9 @@ const P5 = () => {
   const sketchRef = useRef();
 
   useEffect(() => {
+
+    let button;
+
     const sketch = new p5((p) => {
       p.setup = () => {
         const canvas = p.createCanvas(
@@ -16,18 +19,30 @@ const P5 = () => {
         // Place the canvas inside the div
         canvas.parent(sketchRef.current);
         p.background(220, 5);
-      };
 
-      p.draw = () => {
-        let button = p.createButton("Fix Me");
+        button = p.createButton("Fix Me");
         button.position(sketchRef.current.clientWidth - 200, 50);
         button.addClass("fix-button");
+        button.mousePressed(clearBackground)
+      };
+
+      const clearBackground= ()=> {
+        console.log("cleared")
+        button.remove();
+        p.clear();
+        button.add()
+      }
+
+      p.draw = () => {
+
 
         p.noStroke();
         // find a way to take orange2 from scss:
         p.fill("#E3AE7550");
         p.ellipse(p.mouseX, p.mouseY, 100, 100);
       };
+
+
 
       // Handle window resize to update canvas size
       p.windowResized = () => {
