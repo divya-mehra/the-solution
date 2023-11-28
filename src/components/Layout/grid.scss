@@ -11,11 +11,16 @@
 }
 
 .container {
-  max-width: 1440px;
+  // max-width: 1440px;
   margin: 0 auto;
   position: relative;
   // display: flex;
   // flex-direction: column;
+}
+
+.max-width {
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 .wrapper {
@@ -37,7 +42,6 @@
   position: relative;
   z-index: 2;
   height: 100vh;
-  padding: $baseline * 20;
   overflow: hidden;
 }
 
@@ -50,7 +54,6 @@
   flex-direction: column;
 }
 
-
 .equal-grid {
   display: grid;
   grid-auto-flow: column;
@@ -61,6 +64,7 @@
 
 .full-width {
   width: 100%;
+  margin: 0;
 }
 
 .centered {
@@ -93,10 +97,15 @@
 }
 
 .right-absolute {
-  
   position: absolute;
   width: 50%;
   right: 0;
   top: 0;
   bottom: 0;
+}
+
+.story-end {
+  text-align: center;
+  padding: $baseline * 14;
+  color: $light;
 }

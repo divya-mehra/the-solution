@@ -1,16 +1,14 @@
 // Product
 
 import ProductTransition from "../ProductTransition";
-import ProductTile from "../ProductTile"
+import ProductTile from "../ProductTile";
 
 // assets
 import LookImage from "/assets/look_one.png";
 import LookImageTwo from "/assets/look_two.jpg";
 
-
 const Background = () => {
-
-    let current_product = "corsica clementine";
+  let current_product = "corsica clementine";
 
   const categoryPageArr = [
     {
@@ -28,33 +26,35 @@ const Background = () => {
     },
   ];
 
-    return ( <div className="background">
-    <div className="equal-grid">
-      <div>
+  return (
+    <div className="background">
+      <div className="equal-grid max-width">
+        <div>
+          <ProductTile
+            title="Everyone has a story"
+            subtitle="Yours begins here"
+            description={categoryPageArr[0].description}
+            orientation="left"
+            hasButton={false}
+          />
+        </div>
+        <div>
+          <img src={LookImageTwo} width="100%"></img>
+        </div>
+      </div>
+      {/* <div className="equal-grid" style={{ height: "90vh" }}>
+        
+        <div></div>
         <ProductTile
-          title="Everyone has a story"
-          subtitle="Yours begins here"
+          title="As Easy As 1-2-3"
+          subtitle="If only you'd known"
           description={categoryPageArr[0].description}
-          orientation="left"
+          orientation="right"
           hasButton={false}
         />
-      </div>
-      <div>
-        <img src={LookImageTwo} width="100%"></img>
-      </div>
+      </div> */}
     </div>
-    <div className="equal-grid">
-      <div></div>
-      <ProductTile
-        title="As Easy As 1-2-3"
-        subtitle="If only you'd known"
-        description={categoryPageArr[0].description}
-        orientation="right"
-        hasButton={false}
-      />
-    </div>
-  </div>
-);
-}
- 
+  );
+};
+
 export default Background;
