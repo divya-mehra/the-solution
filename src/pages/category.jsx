@@ -8,38 +8,33 @@ import IntroParallax from "../components/IntroParallax";
 import ProductTransition from "../components/ProductTransition";
 import Story from "../components/Story";
 
-import LookImage from "/assets/look_one.png";
-
 
 
 // import story data
-import stories from "../data/stories";
-import ProductHero from "../components/ProductHero";
 import ProductParallax from "../components/ProductParallax";
 
 const Category = ({ journeySelection }) => {
   console.log(journeySelection);
 
-  let current_product = "corsica clementine";
   // Image Loading
 
-  const [imagesLoaded, setImagesLoaded] = useState(false);
+  // const [imagesLoaded, setImagesLoaded] = useState(false);
 
-  useEffect(() => {
-    const img = new Image();
-    img.src = "/assets/look_hero.png";
-    img.onload = () => {
-      setImagesLoaded(true);
-    };
-    img.onerror = () => {
-      // Handle image loading error here
-    };
-  }, []);
+  // useEffect(() => {
+  //   const img = new Image();
+  //   img.src = "/assets/look_hero.png";
+  //   img.onload = () => {
+  //     setImagesLoaded(true);
+  //   };
+  //   img.onerror = () => {
+  //     // Handle image loading error here
+  //   };
+  // }, []);
 
-  if (!imagesLoaded) {
-    // Return a loading indicator or fallback content
-    return <div></div>;
-  }
+  // if (!imagesLoaded) {
+  //   // Return a loading indicator or fallback content
+  //   return <div></div>;
+  // }
 
   return (
     <Layout home={false}>
@@ -49,7 +44,6 @@ const Category = ({ journeySelection }) => {
           title={"Reset with CC LOOK-1"}
           subtitle={"Or as we like to call her, Clementine"}
           description={"Clementine is our signature Reset product. Start with her and you won't ever look back."}
-          image={LookImage}
         />
       } story={<Story/>}/>
     </Layout>

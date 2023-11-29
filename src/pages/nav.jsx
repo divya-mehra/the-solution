@@ -1,6 +1,5 @@
 import Layout from "../components/Layout";
 import { useState } from "react";
-import LookCover from "/assets/cover-look.jpg";
 // import FeelCover from "/assets/tongue.jpg"
 import ProtoDialog from "../components/utilities/ProtoDialog";
 

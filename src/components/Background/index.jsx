@@ -4,7 +4,6 @@ import ProductTransition from "../ProductTransition";
 import ProductTile from "../ProductTile";
 
 // assets
-import LookImage from "/assets/look_one.png";
 import LookImageTwo from "/assets/look_two.jpg";
 
 const Background = () => {
