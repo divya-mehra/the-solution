@@ -7,10 +7,30 @@ const P5 = () => {
   const sketchRef = useRef();
 
   useEffect(() => {
-
-    let button;
-
     const sketch = new p5((p) => {
+      let button;
+
+      let positions = [
+        [100, 50],
+        [100, sketchRef.current.clientHeight - 200],
+        [sketchRef.current.clientWidth - 200, 50],
+        [
+          sketchRef.current.clientWidth - 200,
+          sketchRef.current.clientHeight - 200,
+        ],
+      ];
+
+      let currentPositionIndex = 0;
+      let currentPos = positions[currentPositionIndex];
+
+      const makeButton = () => {
+        console.log("make button fired");
+        button = p.createButton("Fix Me");
+        button.position(currentPos[0], currentPos[1]);
+        button.addClass("fix-button");
+        // button.mousePressed(clearBackground);
+      };
+
       p.setup = () => {
         const canvas = p.createCanvas(
           sketchRef.current.clientWidth,
@@ -23,26 +43,22 @@ const P5 = () => {
         button = p.createButton("Fix Me");
         button.position(sketchRef.current.clientWidth - 200, 50);
         button.addClass("fix-button");
-        button.mousePressed(clearBackground)
+        button.mousePressed(clearBackground);
       };
 
-      const clearBackground= ()=> {
-        console.log("cleared")
+      const clearBackground = () => {
+        console.log("cleared");
         button.remove();
         p.clear();
-        button.add()
-      }
-
-      p.draw = () => {
-
-
-        p.noStroke();
-        // find a way to take orange2 from scss:
-        p.fill("#E3AE7550");
-        p.ellipse(p.mouseX, p.mouseY, 100, 100);
+        makeButton();
       };
 
-
+      p.draw = () => {
+        p.noStroke();
+        // find a way to take orange2 from scss:
+        p.fill("#E3AE7530");
+        p.ellipse(p.mouseX, p.mouseY, 200, 200);
+      };
 
       // Handle window resize to update canvas size
       p.windowResized = () => {

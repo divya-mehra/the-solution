@@ -11,11 +11,18 @@
 
 .fix-button {
     border-radius: 50%;
-    height: 100px;
-    width: 100px;
+    height: 150px;
+    width: 150px;
     background-color: transparent;
     border: 1px solid $light;
     color: $light;
     text-transform: uppercase;
     font-weight: 600;
+}
+
+.fix-button:hover {
+    border: 1px solid $light;
+    color: $orange-light-2;
+    background-color: $light;
+
 }
