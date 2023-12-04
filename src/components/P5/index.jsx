@@ -10,6 +10,8 @@ const P5 = () => {
     const sketch = new p5((p) => {
       let button;
 
+      let usedPositions = [];
+
       let positions = [
         [100, 50],
         [100, sketchRef.current.clientHeight - 200],
@@ -20,15 +22,38 @@ const P5 = () => {
         ],
       ];
 
-      let currentPositionIndex = 0;
-      let currentPos = positions[currentPositionIndex];
-
       const makeButton = () => {
         console.log("make button fired");
-        button = p.createButton("Fix Me");
-        button.position(currentPos[0], currentPos[1]);
-        button.addClass("fix-button");
-        // button.mousePressed(clearBackground);
+
+        // filter all positions to only show available ones
+        // check if the position is in the usedPositions array
+        // if it isn't, then add it to the available array
+
+        const availPositions = positions.filter(
+          (pos) =>
+            !usedPositions.some(
+              (usedPos) => usedPos[0] === pos[0] && usedPos[1] === pos[1]
+            )
+        );
+
+        if (availPositions.length > 0) {
+          let randomIndex = Math.floor(Math.random() * availPositions.length);
+          let randomPosition = positions[randomIndex];
+
+          // Make the button
+
+          button = p.createButton("Fix Me");
+          button.position(randomPosition[0], randomPosition[1]);
+          button.addClass("fix-button");
+
+          //  add this to list of used
+          usedPositions.push(randomPosition);
+
+          // add clear background event
+          button.mousePressed(clearBackground);
+        } else {
+          console.log("no positions left");
+        }
       };
 
       p.setup = () => {
