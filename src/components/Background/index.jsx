@@ -1,6 +1,7 @@
+import "./index.scss";
+
 // Product
 
-import ProductTransition from "../ProductTransition";
 import ProductTile from "../ProductTile";
 
 // assets
@@ -27,7 +28,7 @@ const Background = () => {
 
   return (
     <div className="background">
-      <div className="equal-grid max-width">
+      <div className="equal-grid max-width lightest">
         <div>
           <ProductTile
             title="Everyone has a story"

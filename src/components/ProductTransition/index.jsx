@@ -1,37 +1,22 @@
 import "./index.scss";
+import { useEffect, useRef } from "react";
 
 const ProductTransition = ({ props }) => {
-  // defined by light orange color
+  const imageRefs = Array.from({ length: 62 });
 
-  let circle;
-
-  // listen for the scroll
-
-  const updateCircles = () => {
-    const newCircles = () => {};
-
-    const scrollPosition = window.scrollY;
-  };
 
   return (
-    <div
-      className="full-width relative-hero flex-column"
-      //   style={{
-      //     backgroundImage: `url('/assets/look_one.png')`,
-      //     backgroundSize: "cover",
-      //   }}
-    >
-      <div className="hero-text-title show centered">Reset with CC LOOK-1</div>
-      <h6 className="centered">Or as we like to call her, Clementine</h6>
-      <svg className="svg-hero-background" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="50%" cy="100%" r="100%" fill="#D76F0030"></circle>
-        <circle cx="50%" cy="100%" r="80%" fill="#D76F0030"></circle>
-        <circle cx="50%" cy="100%" r="60%" fill="#D76F0030"></circle>
-        <circle cx="50%" cy="100%" r="40%" fill="#D76F0030"></circle>
-        <circle cx="50%" cy="100%" r="20%" fill="#D76F0030"></circle>
-        <circle cx="50%" cy="100%" r="10%" fill="#D76F0030"></circle>
-      </svg>
-    </div>
+        <div className="transitionImageContainer">
+      {imageRefs.map((imageRef, index) => (
+        <img
+          key={index}
+          class="transitionImage"
+          src= {`/assets/animate/comp_${index + 100}.png`}
+          style={{ opacity: 0, transition: 'opacity 0.5s' }}
+        ></img>
+      ))}
+      </div>
+    
   );
 };
 

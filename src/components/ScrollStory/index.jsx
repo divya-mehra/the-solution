@@ -18,6 +18,7 @@ const ScrollStory = ({ text }) => {
             })}
           </Typography>
         </div>
+        <img className="iconBreak"src="/assets/leaf-1.png"></img>
         <div className="observerTextPanel" id={"panel-2"}>
           <Typography variant="story" className="observerTextDetail">
             {text.two.map((p, i) => {
@@ -25,6 +26,7 @@ const ScrollStory = ({ text }) => {
             })}
           </Typography>
         </div>
+        <img className="iconBreak"src="/assets/leaf-3.png"></img>
         <div className="observerTextPanel" id={"panel-3"}>
           <Typography variant="story" className="observerTextDetail">
             {text.three.map((p, i) => {
@@ -32,6 +34,7 @@ const ScrollStory = ({ text }) => {
             })}
           </Typography>
         </div>
+        <img className="iconBreak"src="/assets/leaf-4.png"></img>
         <div className="observerTextPanel" id={"panel-4"}>
           <div className="observerTextDetail">
             {text.four.map((p, i) => {

@@ -14,3 +14,18 @@
 .hero-text-title.show {
     z-index: 4;
 }
+
+.transitionImage {
+    width: 100%;
+    height: auto;
+}
+
+.transitionImageContainer {
+    position: relative;
+    height: 80vh;
+}
+
+.transitionImageContainer > * {
+    position: absolute;
+    top: 0;
+}
