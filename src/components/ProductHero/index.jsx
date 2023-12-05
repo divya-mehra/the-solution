@@ -1,7 +1,6 @@
 import { useState } from "react";
 import ProductDetail from "../ProductDetail";
 import stories from "../../data/stories";
-import ProductImage from "../../assets/product_4.png";
 
 const ProductHero = ({ current_product }) => {
   return (
@@ -14,7 +13,7 @@ const ProductHero = ({ current_product }) => {
         </div>
 
         <div style={{ display: "flex", alignItems: "center" }}>
-          <img src={ProductImage} width={"100%"}></img>
+          <img src="/assets/product_4.png" width={"100%"}></img>
         </div>
       </div>
     </div>

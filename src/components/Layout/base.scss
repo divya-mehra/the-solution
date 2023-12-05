@@ -22,7 +22,7 @@
   font-weight: 400;
   font-size: 6rem;
   text-transform: uppercase;
-  color: white;
+  color: $lightest;
   font-family: "DIN";
   cursor: pointer;
   background-color: transparent;
@@ -33,17 +33,17 @@
 }
 
 .category-button.look-button {
-  color: $green;
+  color: $green-mid-1;
   // border: 5px $green solid;
   background: none;
 }
 
 .category-button:hover {
-  border: 5px white solid;
+  border: 5px $lightest solid;
 }
 
 .category-button.look-button:hover {
-  border: 5px $green solid;
+  border: 5px $green-mid-1 solid;
 }
 
 :root {
