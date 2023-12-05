@@ -54,7 +54,7 @@ const ProductTransition = () => {
       ref={triggerRef}
       style={{backgroundImage: "url(/assets/woman.png"}}
     >
-      <div className="hero-text-title show centered">Reset with CC LOOK-1</div>
+      <h2 className="centered">Reset with CC LOOK-1</h2>
       <h6 className="centered">Or as we like to call her, Clementine</h6>
       
       {/* <svg className="svg-hero-background" xmlns="http://www.w3.org/2000/svg">
