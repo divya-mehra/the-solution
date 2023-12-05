@@ -4,7 +4,7 @@ import stories from "../../data/stories";
 
 const ProductHero = ({ current_product }) => {
   return (
-    <div className="static-hero flex-column">
+    <div className="static-hero flex-column light">
       <div className="equal-grid max-width">
       <div style={{ display: "flex", flexDirection: "column" ,justifyContent: "center" }}>
           <h3>{stories[`${current_product}`].title}</h3>

@@ -17,13 +17,15 @@
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
     "@mui/material": "^5.14.1",
+    "gsap": "^3.12.3",
     "p5": "^1.8.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-intersection-observer": "^9.5.3",
     "react-router": "^6.14.2",
     "react-router-dom": "^6.14.2",
-    "react-spring": "^9.7.3"
+    "react-spring": "^9.7.3",
+    "scrolltrigger": "^1.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.22.10",

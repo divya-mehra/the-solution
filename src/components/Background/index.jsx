@@ -28,8 +28,8 @@ const Background = () => {
 
   return (
     <div className="background">
-      <div className="equal-grid max-width lightest">
-        <div>
+      <div className="equal-grid max-width lightest" style={{"height": "100vh", display: "flex", alignItems: "center"}}>
+        
           <ProductTile
             title="Everyone has a story"
             subtitle="Yours begins here"
@@ -37,7 +37,7 @@ const Background = () => {
             orientation="left"
             hasButton={false}
           />
-        </div>
+        
         <div>
           <img src={LookImageTwo} width="100%"></img>
         </div>

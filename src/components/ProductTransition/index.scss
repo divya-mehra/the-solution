@@ -5,6 +5,7 @@
 .relative-hero {
     height: 100vh;
     position: relative;
+    background-color: $lightest;
 }
 
 .svg-hero-background {
@@ -15,6 +16,10 @@
 
 .hero-text-title.show {
     z-index: 4;
+}
+
+.transitionCircle {
+    opacity: 1;
 }
 
 .transitionImage {

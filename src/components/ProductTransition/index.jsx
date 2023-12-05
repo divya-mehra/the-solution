@@ -1,52 +1,63 @@
 import "./index.scss";
 import { useEffect, useRef, useState } from "react";
 import { useInView } from "react-intersection-observer";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const ProductTransition = () => {
   // set circles
 
-  let circles = [];
+  const circles = [
+    "circle-1",
+    "circle-2",
+    "circle-3",
+    "circle-4",
+    "circle-5",
+    "circle-6",
+  ];
 
   // intersection observer to check when element scrolls into view
-  const observedElementRef = useRef(null);
-  const [inViewRef, inView] = useInView({ threshold: 0.1 });
+//   const [inViewRef, inView] = useInView({ threshold: 0.1 });
 
-  // set scroll position
+  // Register the ScrollTrigger plugin
+  gsap.registerPlugin(ScrollTrigger);
 
-  const [scrollPosition, setScrollPosition] = useState(0);
-
-  const handleScroll = () => {
-    if (inView) {
-      const elementTop = observedElementRef.current.getBoundingClientRect().top;
-      const mappedScrollPosition = Math.max(0, window.scrollY - elementTop);
-
-      console.log(mappedScrollPosition)
-    }
-  };
+  
+  const triggerRef = useRef(null);
 
   useEffect(() => {
-    if (inView) {
-      window.addEventListener("scroll", handleScroll);
-    }
+    const triggerElement = triggerRef.current;
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [inView]);
+    // Check if the trigger element exists before applying GSAP animations
+    if (triggerElement) {
+        console.log("yes")
+
+        gsap.to("#target", {
+            opacity: 0,
+            duration: 1, 
+            scrollTrigger: {
+              trigger: "#target",
+              start: "-20%", 
+              end: "40%", 
+              scrub: true, // Pin the animation to the scrollbar
+            },
+          });
+
+    }
+  }, []); // Run the effect only once on component mount
+
 
   return (
     <div
-      className={`full-width relative-hero flex-column ${
-        inView ? "in-view" : ""
-      }`}
-      ref={(node) => {
-        inViewRef(node);
-        observedElementRef.current = node;
-      }}
+      className={`full-width relative-hero flex-column lightest` }
+      id="target"
+      ref={triggerRef}
+      style={{backgroundImage: "url(/assets/woman.png"}}
     >
       <div className="hero-text-title show centered">Reset with CC LOOK-1</div>
       <h6 className="centered">Or as we like to call her, Clementine</h6>
-      <svg className="svg-hero-background" xmlns="http://www.w3.org/2000/svg">
+      
+      {/* <svg className="svg-hero-background" xmlns="http://www.w3.org/2000/svg">
         <circle
           className="transitionCircle"
           id="circle-6"
@@ -95,7 +106,7 @@ const ProductTransition = () => {
           r="10%"
           fill="#D76F0030"
         ></circle>
-      </svg>
+      </svg> */}
     </div>
   );
 };
