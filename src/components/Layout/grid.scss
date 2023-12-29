@@ -41,7 +41,7 @@
 .static-hero {
   position: relative;
   z-index: 2;
-  height: 100vh;
+  min-height: 100vh;
   overflow: hidden;
 }
 
@@ -60,6 +60,13 @@
   grid-auto-columns: 1fr;
   padding: $baseline * 20;
   gap: $baseline * 20;
+}
+
+@media screen and (max-width: 900px) {
+  .equal-grid {
+    grid-auto-flow: row;
+  }
+  
 }
 
 .full-width {

@@ -1,3 +1,5 @@
+import './index.scss'
+
 const ProductTile = ({ title, subtitle, description }) => {
   return (
     <div>

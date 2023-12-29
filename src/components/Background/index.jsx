@@ -28,7 +28,7 @@ const Background = () => {
 
   return (
     <div className="background">
-      <div className="equal-grid max-width lightest" style={{"height": "100vh", display: "flex", alignItems: "center"}}>
+      <div className="equal-grid max-width lightest" style={{"min-height": "100vh", alignItems: "center"}}>
         
           <ProductTile
             title="Everyone has a story"
