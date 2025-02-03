@@ -47,10 +47,11 @@ const Splash = ({ landing, setLanding }) => {
         Welcome to The Solution<sup>TM</sup>
       </h1>
       <h5>We're thrilled to have you here.</h5>
-      <div className={styles.enterButton} onClick={enterButtonClickHandler}>
+      <p>We are currently under construction and will be back shortly.</p>
+      {/* <div className={styles.enterButton} onClick={enterButtonClickHandler}>
         {" "}
         Enter{" "}
-      </div>
+      </div> */}
     </Box>
   );
 };
